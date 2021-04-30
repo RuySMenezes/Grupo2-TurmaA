@@ -63,10 +63,10 @@ public class Intro {
 		
 		int escolha;
 		Scanner entrada = new Scanner (System.in);
-		Digita("[MESTRE]: O ano é 2018."
+		Digita("\n[MESTRE]: O ano é 2018."
 			+"\n[MESTRE]: Toninho finaliza seu dia de trabalho. Entra em seu carro (modelo) e dá partida no motor.\n"
 			+"\nVRUM...\n"
-			+"[MESTRE]: ele está com seu amigo e colega de empreitada, Cleytinho.\n"
+			+"\n[MESTRE]: ele está com seu amigo e colega de empreitada, Cleytinho.\n"
 			+"\nCleytinho: Bora tomar uma lá no bar do Bira ?\n"
 			+"\nSelecione a sua resposta de acordo com o numero correspondente: "
 				+"\n[1] AEHOOOO, bora!"
@@ -77,31 +77,31 @@ public class Intro {
 		switch(escolha) {
 			
 		case 1:
-			Digita("Cleytinho: AEHOOOO, hoje o couro vai cochar!\n"
-					+ "[MESTRE]: Cleytinho entra no carro e já vai aumentando o som.\n"
+			Digita("\nCleytinho: AEHOOOO, hoje o couro vai cochar!\n"
+					+ "\n[MESTRE]: Cleytinho entra no carro e já vai aumentando o som.\n"
 					+ "[MESTRE]: É uma tarde de sexta-feria e o sol começa a se pôr.\n"
 					+ "[MESTRE]: Os amigos chegam ao bar do Bira\n"
 					+ "\nToninho: AOWWWW BIRA VEIO, DESCE AQUELA GELADA QUE HOJE VOU VER VÍDEO NO ZAPZAP!\n"
 					+ "Bira: É pra já, campeão!\n"
 					+ "\n[MESTRE]: Os amigos sentam-se a mesa de plástico e discutem mundanindades.\n"
 					+ "\n[3 horas e muitas itaipavas depois...]\n"
-					+ "Cleytinho: Ô TONINHO, LEVANTA HOMEM!\n"
+					+ "\nCleytinho: Ô TONINHO, LEVANTA HOMEM!\n"
 					+ "Toninho: To não.\n"
 					+ "Cleytinho: Eu falo que você não aguenta beber, daqui a pouco vai começar a chorar pela ex de novo.\n"
 					+ "Toninho: To não.\n"
-					+ "***Toninho desmaia***\n"
+					+ "\n***Toninho desmaia***\n"
 					+ "\n[MESTRE]: Cleytinho, vendo ser infrutíferas suas tentativas de ajudar o colega, o arrasta para o carro e leva Toninho à sua casa."
 					+ "\n[MESTRE]: Toninho continua desmaiado e dormindo como se não houvesse o amanhã.",TimeUnit.MILLISECONDS, temp_dialog);
 			break;
 		case 2:
-			Digita("Cleytinho: Sai dessa, homi! Eu sei que você vai voltar para casa e ficar ligando pra Lucilene.\r\n"
+			Digita("\nCleytinho: Sai dessa, homi! Eu sei que você vai voltar para casa e ficar ligando pra Lucilene.\r\n"
 					+ "Toninho: Vou nada, amanhã vou assar umas bistecas logo cedo.\r\n"
 					+ "Cleytinho:... \r\n"
 					+ "\n[MESTRE]: Toninho segue para sua casa.\n"
 					+ "[MESTRE]: somente ele e a solidão em seu coração que já não é mais o mesmo após anos de consumo indiscriminado de gordura saturada.\r\n"
 					+ "[MESTRE]: Ao chegar, pensa consigo mesmo...\r\n"
 					+ "\nToninho: Vou tomar só uma pois sou merecedor. \r\n"
-					+ "[3 horas e muitas Itaipavas depois...]\r\n"
+					+ "\n[3 horas e muitas Itaipavas depois...]\r\n"
 					+ "\n[MESTRE]:  Em uma ligação com sua amada...\r\n"
 					+ "\nToninho: Volta pra mim, Lucilene!\r\n"
 					+ "Lucilene: Me esquece, ‘disgraça’!\r\n"
@@ -117,7 +117,7 @@ public class Intro {
 		}
 		}while(escolha != 1 && escolha != 2);
 		
-		Digita("[horas depois...]\r\n"
+		Digita("\n[horas depois...]\r\n"
 				+ "\n[MESTRE]:  Toninho acorda, ainda meio desorientado pelos eventos da noite anterior e não se lembra de nada exceto seu nome e sua profissão.\r\n"
 				+ "[MESTRE]: Acorda dentro de seu carro embora não o reconheça, coberto por uma densa neblina.\r\n"
 				+ "[blablablabla – inserir algo depois]\r\n"
