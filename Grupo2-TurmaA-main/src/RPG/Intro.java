@@ -3,14 +3,14 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Intro {
-static int u=0;
+	static int u=0;
 	 static int temp_dialog =70, temp_narrativa = 150, temp_transicao = 25; //Para rodar o jogo sem o delay nas mensagens, pode mudar o valor destas 3 variáveis para 0;
 	public static void main(String[] args) throws Exception{
 		
 		Digita("\nABANDONAI TODA A ESPERANÇA, Ó VÓS QUE ENTRAIS...\n",TimeUnit.MILLISECONDS, temp_dialog);
 		// System.out.println("ABANDONAI TODA A ESPERANÇA, Ó VÓS QUE ENTRAIS...\n");
 		// System.out.println(".::: THE ARCHITECT - A BRAZILIAN CHRONIQUE :::.\n");
-		nome();
+		
 		menu();
 	}
 	
@@ -59,51 +59,10 @@ static int u=0;
 
 //USAR SUPER AND SUBCLASSES. Inserir tudo em um só, dependendo da escolha do jogador.
 	static void jogo() { //metodo de inicio do jogo
-		int escolha_play;
-		Scanner input = new Scanner(System.in);
-		System.out.println("1 - Um jogador (Singleplayer)\n" + "2 - Dois jogadores (Multiplayer)");
-		escolha_play = input.nextInt();
 		
-		switch (escolha_play) {
-		case 1:
-			single();
-			break;
-		case 2:
-			multiplayer();
-			break;
-		}
-	}
-
-	static void single() { // metodo caso tenha escolhas da quantidades de  players
-		System.out.println("ta no single");
-		System.exit(0);
-	}
-
-	static void multiplayer() { 
-		System.out.println("ta no multi");
-		System.exit(0);
 	}
 
 	static void instrucoes() {  // instrução do jogo
-
-	}
-
-	static void nome() throws Exception { // em forma de funcao para facilitar caso o jogador decida mudar o nome.
-		Scanner input = new Scanner(System.in);
-		String nome;
-		byte conf_nome;
-		System.out.println("Para começarmos nossa aventura, insira seu nome: ");
-		nome = input.next();
-		System.out.println("Seja bem-vindo, " + nome + ". Deseja confirmar este nome? Digite 1 para sim e 2 para não.");
-		conf_nome = input.nextByte();
-		switch (conf_nome) {
-		case 1:
-			menu();
-
-		case 2:
-			nome();
-
-		}
 
 	}
 
