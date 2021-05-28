@@ -12,7 +12,7 @@ public class Intro {
 	static int D20 = rand.nextInt(21); // DADO DE 20 FACES - GLOBAL
 	static int D6 = rand.nextInt(7); // DADO DE 6 FACES - GLOBAL
 
-	// TEMPO DE DELAY DAS MENSAGENS: MODIFIQUE PARA ZERO PARA JOGAR SEM DELAY.
+	// TEMPO DE DELAY DAS MENSAGENS: MODIFIQUE PARA ZERO PARA JOGAR SEM DELAY. PADRÃO 70,150,25
 	static int temp_dialog = 0, temp_narrativa = 00, temp_transicao = 0;
 
 	public static void main(String[] args) throws Exception {
@@ -53,10 +53,10 @@ public class Intro {
 
 	static void jogo() throws Exception { // metodo de inicio do jogo
 		escolha_capitulo();
-		intro();
-		capitulo_1();
-		capitulo_2();
-		capitulo_3();
+		//intro();
+		//capitulo_1();
+		//capitulo_2();
+		//capitulo_3();
 
 	}
 
@@ -143,6 +143,11 @@ public class Intro {
 			}
 		} while (!escolha.equals("1") && !escolha.equals("2"));
 
+		
+	}
+
+	static void capitulo_1() throws Exception {
+		String escolha;
 		Digita("\n[horas depois...]\r\n"
 				+ "\n[MESTRE]:  Toninho acorda, ainda meio desorientado pelos eventos da noite anterior e não se lembra de nada exceto seu nome e sua profissão.\r\n"
 				+ "[MESTRE]: Acorda dentro de seu carro embora não o reconheça, coberto por uma densa neblina.\r\n"
@@ -158,12 +163,10 @@ public class Intro {
 				+ "[MESTRE]: Sheylla, visivelmente irada, assume a sua real forma de Erínia e avança em direção ao pedreiro\r\n"
 				+ "\nSheylla: NÃO OUSE ME IGNORAR, HUMANO!\r\n" + "Toninho: Eita, que viajem é essa vei\r\n"
 				+ "Sheylla: ACEITE O SEU DESTINO, MORTAL. \r\n", TimeUnit.MILLISECONDS, temp_dialog);
-	}
-
-	static void capitulo_1() throws Exception {
-		String escolha;
+		
 		Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-				+ "Toninho[1]: Pois bem, que seja. \r\n" + "Toninho[2]: Sem tempo, irmão.\r\n", TimeUnit.MILLISECONDS,
+				+ "Toninho[1]: Pois bem, que seja. \r\n" 
+				+ "Toninho[2]: Sem tempo, irmão.\r\n", TimeUnit.MILLISECONDS,
 				temp_dialog);
 		escolha = entrada.next();
 
@@ -191,10 +194,10 @@ public class Intro {
 		Digita("[MESTRE]: Sheylla, com um estalar de dedos, invoca seu Del Rey 1988\r\n"
 				+ "Toninho: Eita, um carro que anda sozinho? É aquele carro do Elton Muska? \r\n"
 				+ "Sheylla: Não, é um Del Rey. Já lhe disse Antônio, há muito mais nessa realidade que tua vivência ordinária lhe permite compreender. \r\n"
-				+ "[MESTRE]: Toninho aceita a resposta de forma silente e ambos entram no Del Rey.\r\n"
+				+ "\n[MESTRE]: Toninho aceita a resposta de forma silente e ambos entram no Del Rey.\r\n"
 				+ "[MESTRE]: Ambos entram no veículo com direção às entranhas de Diademmor.\r\n"
 				+ "[MESTRE]: Um arco com a inscrição “Abandonai toda esperança, ó vos que entrais” chama a atenção de nosso guerreiro. \r\n"
-				+ "Toninho: Ô dona Shirley, qual é dessa frase aí?\r\n"
+				+ "\nToninho: Ô dona Shirley, qual é dessa frase aí?\r\n"
 				+ "Sheylla: Pela última vez, é Sheylla, não Shirley. Creio que a sentença tenha sido clara o suficiente.\r\n"
 				+ "Sheylla: Esta realidade há muito abandonada por seu criador virou morada das mais horrendas criaturas e guarda os mais lúgubres segredos.\r\n"
 				+ "Sheylla: Prepare-se, meu caro. \r\n", TimeUnit.MILLISECONDS, temp_dialog);
@@ -230,12 +233,12 @@ public class Intro {
 		} while (!escolha.equals("1") && !escolha.equals("2") && !escolha.equals("3"));
 
 		Digita("[MESTRE]: Toninho digere apreensivamente as novas informações... \r\n"
-				+ "Sheylla: Você está bem, Antônio? Parece meio... pálido. \r\n" + "Toninho: Melhor impossível.\r\n"
+				+ "\nSheylla: Você está bem, Antônio? Parece meio... pálido. \r\n" + "Toninho: Melhor impossível.\r\n"
 				+ "Sheylla: Bom, precisarei de você atento de agora em diante. \r\n"
-				+ "[MESTRE]: Ouve-se um estrondo do lado de fora e pouco a pouco o Del Rey começa a perder velocidade.\r\n"
-				+ "Toninho: AAAAAAAAAAA É O DEMÔNIO!!!\r\n" + "Sheylla: RECOMPONHA-SE! \r\n"
-				+ "[MESTRE]: Sheylla, em sua frieza habitual, estaciona o carro em meio a densa neblina, e sai para checar o que houve. \r\n"
-				+ "Sheylla: Furou o pneu do carro. Você deve sair e trocar.\r\n"
+				+ "\n[MESTRE]: Ouve-se um estrondo do lado de fora e pouco a pouco o Del Rey começa a perder velocidade.\r\n"
+				+ "\nToninho: AAAAAAAAAAA É O DEMÔNIO!!!\r\n" + "Sheylla: RECOMPONHA-SE! \r\n"
+				+ "\n[MESTRE]: Sheylla, em sua frieza habitual, estaciona o carro em meio a densa neblina, e sai para checar o que houve. \r\n"
+				+ "\nSheylla: Furou o pneu do carro. Você deve sair e trocar.\r\n"
 				+ "Toninho: E eu que tenho de ficar atento, né? Deus me ajude... \r\n", TimeUnit.MILLISECONDS,
 				temp_dialog);
 
@@ -243,26 +246,26 @@ public class Intro {
 
 		Digita("[MESTRE] Após o conserto, Toninho e Sheylla seguem viagem. \r\n"
 				+ "Sheylla: Não foi tão ruim assim, foi, Antônio? \r\n" + "[blablabla]\r\n"
-				+ "[MESTRE] Após uma breve jornada, Sheylla e Toninho chegam ao destino pretendido. Observa-se uma cratera intransponível à frente, e o conteúdo que guarda o outro lado é obstruído pela ainda densa névoa.\r\n"
-				+ "Sheylla: Chegamos. Sabe o porquê de eu trazê-lo aqui, Antônio?\r\n"
+				+ "\n[MESTRE] Após uma breve jornada, Sheylla e Toninho chegam ao destino pretendido. Observa-se uma cratera intransponível à frente, e o conteúdo que guarda o outro lado é obstruído pela ainda densa névoa.\r\n"
+				+ "\nSheylla: Chegamos. Sabe o porquê de eu trazê-lo aqui, Antônio?\r\n"
 				+ "Toninho: Nem sei se quero saber...\r\n" + "Sheylla: Preciso que você construa uma ponte. \r\n"
 				+ "Toninho: O que há do outro lado? \r\n" + "Sheylla: Nada que você precise saber por enquanto. \r\n"
 				+ "Toninho: Ouch, grossa. Eu sou pedreiro, não engenheiro. Meu negócio é bater laje. \r\n"
 				+ "Sheylla: Você tem o necessário. \r\n"
 				+ "Toninho: Se você está dizendo... Mas como espera que eu construa uma ponte sem recursos ou mão de obra?\r\n"
 				+ "Sheylla: Você terá toda a mão de obra necessária a seu dispor. Quanto aos materiais, eu o instruirei de onde achá-los por Diademmor.\r\n"
-				+ "[MESTRE] Sheylla entrega um mapa nas mãos de Toninho e ele analisa o mesmo atentamente.\r\n"
-				+ "Sheylla: Neste primeiro momento, o conduzirei ao nosso primeiro local de busca para que tenha a mínima noção do que irá enfrentar. O resto ficará a seu encargo.\r\n"
+				+ "\n[MESTRE] Sheylla entrega um mapa nas mãos de Toninho e ele analisa o mesmo atentamente.\r\n"
+				+ "\nSheylla: Neste primeiro momento, o conduzirei ao nosso primeiro local de busca para que tenha a mínima noção do que irá enfrentar. O resto ficará a seu encargo.\r\n"
 				+ "Toninho: Que Deus me ajude... \r\n"
-				+ "[MESTRE] Toninho, agora ciente e quase conformado de seu destino, segue uma curta viagem com Sheylla.\r\n"
-				+ "[10 minutos depois...]\r\n"
-				+ "[MESTRE] Toninho e Sheylla chegam em uma rua sem saída, com um prédio aparentemente abandonado no fim desta. \r\n"
-				+ "Toninho: O que encontraremos aqui?\r\n"
+				+ "\n[MESTRE] Toninho, agora ciente e quase conformado de seu destino, segue uma curta viagem com Sheylla.\r\n"
+				+ "\n[10 minutos depois...]\r\n"
+				+ "\n[MESTRE] Toninho e Sheylla chegam em uma rua sem saída, com um prédio aparentemente abandonado no fim desta. \r\n"
+				+ "\nToninho: O que encontraremos aqui?\r\n"
 				+ "Sheylla: Os boatos são de que aqui está guardado o projeto original da ponte, este é o primeiro passo. \r\n"
 				+ "Toninho: E como espera que eu interprete esse projeto? Minha senhora, minhas habilidades matemáticas são restritas à divisão da conta do bar.\r\n"
 				+ "Sheylla: Não se preocupe, há alguém que irá auxiliá-lo. \r\n"
-				+ "[MESTRE] Em meio a névoa, surge uma ave que voa em direção ao herói. \r\n"
-				+ "Sheylla: Falando neste alguém, aí vem. \r\n" + "[MESTRE] A ave pousa nos ombros de Sheylla. \r\n"
+				+ "\n[MESTRE] Em meio a névoa, surge uma ave que voa em direção ao herói. \r\n"
+				+ "\nSheylla: Falando neste alguém, aí vem. \r\n" + "[MESTRE] A ave pousa nos ombros de Sheylla. \r\n"
 				+ "Ave[Perdix]: E chega-se o momento que todos esperávamos. \r\n" + "Sheylla: De fato.\r\n"
 				+ "Toninho: Isso é um papagaio? \r\n"
 				+ "Ave[Perdix]: ... era esse humano medíocre a quem estávamos à espera?  \r\n"
@@ -270,8 +273,8 @@ public class Intro {
 				+ "Toninho: Qual foi dona Sheylla, vai deixar esse papagaio me ofender desse jeito? \r\n"
 				+ "Ave[Perdix]: Eu sou um perdiz e não um papagaio, seu iletrado. Nunca ouvira da lenda de Perdix, sobrinho de Dédalo?  \r\n"
 				+ "Toninho: Não conheço e não ligo, só sei que vai você virar frango a passarinho se continuar com gracinha. \r\n"
-				+ "[MESTRE] A discussão é interrompida por um som de trotes oriundos do prédio abandonado. Emerge da escuridão dos corredores uma criatura com corpo de leão e cabeça de mulher, conhecida como Esfinge. Perdix, ao notar a criatura, alça voo e abandona Sheylla e Toninho a sua própria sorte. \r\n"
-				+ "Toninho: Estou bêbado ainda ou...\r\n" + "Sheylla: CALADO. Deixe-me cuidar disso.\r\n"
+				+ "\n[MESTRE] A discussão é interrompida por um som de trotes oriundos do prédio abandonado. Emerge da escuridão dos corredores uma criatura com corpo de leão e cabeça de mulher, conhecida como Esfinge. Perdix, ao notar a criatura, alça voo e abandona Sheylla e Toninho a sua própria sorte. \r\n"
+				+ "\nToninho: Estou bêbado ainda ou...\r\n" + "Sheylla: CALADO. Deixe-me cuidar disso.\r\n"
 				+ "Esfinge: O QUE PROCURAS AQUI?\r\n" + "Sheylla: Viemos em busca do projeto para...\r\n"
 				+ "Esfinge: CALADA, DIRIGI A PALAVRA AO MORTAL QUE VOS ACOMPANHA. \r\n", TimeUnit.MILLISECONDS,
 				temp_dialog);
@@ -314,7 +317,7 @@ public class Intro {
 
 		Digita("[MESTRE]: Após os acontecimentos, Sheylla e Toninho adentram o prédio.\r\n"
 				+ "[MESTRE]: É um ambiente mal iluminado, mas pode-se notar várias salas e lances de escada que levam aos andares superiores.\r\n"
-				+ "Sheylla: Acho mais prudente nos separarmos, seremos mais rápidos desta forma. \r\n"
+				+ "\nSheylla: Acho mais prudente nos separarmos, seremos mais rápidos desta forma. \r\n"
 				+ "Toninho: E se eu encontrar alguma outra criatura? \r\n"
 				+ "Sheylla: A Esfinge era a única guardiã destas ruínas, você ficará bem... eu acho.\r\n"
 				+ "Sheylla: Em todo caso, valha-se de alguma arma se achar, pode ser de grande valia. Em último caso, corra. Há uma miríade de opções. \r\n"
@@ -325,35 +328,35 @@ public class Intro {
 				+ " Cheque toda e qualquer sala e encontre-me na entrada do prédio quando terminar. Recomendo que comece pelo piso superior. \r\n"
 				+ "Toninho: Ok, mas se aparecer alguma outra criatura diga adeus ao seu Del Rey.\r\n"
 				+ "Sheylla: Justo. \r\n"
-				+ "[MESTRE]: E assim eles se separam. Toninho, ainda abalado com tudo que sucedera momentos antes, cantarola para se encorajar enquanto perambula pelos soturnos corredores. \r\n"
-				+ "Toninho: Entra na minha casaaa, entra na minha vidaaa, mexe com minha estrutura...\r\n"
-				+ "[MESTRE] Após a infrutífera checagem de várias salas e descendo em direção a outro andar, uma voz misteriosa ascende em meio a escuridão.\r\n"
-				+ "Voz: Cuida-te com aqueles a quem tu depositas tua confiança. \r\n"
+				+ "\n[MESTRE]: E assim eles se separam. Toninho, ainda abalado com tudo que sucedera momentos antes, cantarola para se encorajar enquanto perambula pelos soturnos corredores. \r\n"
+				+ "\nToninho: Entra na minha casaaa, entra na minha vidaaa, mexe com minha estrutura...\r\n"
+				+ "\n[MESTRE] Após a infrutífera checagem de várias salas e descendo em direção a outro andar, uma voz misteriosa ascende em meio a escuridão.\r\n"
+				+ "\nVoz: Cuida-te com aqueles a quem tu depositas tua confiança. \r\n"
 				+ "Toninho: TÁ REPREENDIDO EM NOME DO SENHOR, QUEM ESTÁ AÍ? \r\n"
 				+ "Voz: Logo saberás... não sou eu aquele a quem tu deves temer.\r\n"
 				+ "Toninho: EU TE COMANDO E ORDENO SATANÁS, MOSTRA TUA FACE\r\n" + "Voz: Logo...\r\n"
-				+ "[MESTRE]: Tão misteriosamente quanto surgiu, a voz se esvai pelos longos corredores, apenas contribuindo para a tensão do pedreiro. \r\n"
-				+ "Toninho: ALÔ...? ... UÉ.\r\n"
-				+ "[MESTRE] Algo neste corredor chama a atenção do herói. Uma porta distinta de qualquer outra que tenha visto neste edifício, com o batente e a maçaneta feitas em ouro puro, não por acaso atrativas à vista. \r\n"
-				+ "Toninho: Interessante... parece que há algo escrito. \r\n"
+				+ "\n[MESTRE]: Tão misteriosamente quanto surgiu, a voz se esvai pelos longos corredores, apenas contribuindo para a tensão do pedreiro. \r\n"
+				+ "\nToninho: ALÔ...? ... UÉ.\r\n"
+				+ "\n[MESTRE] Algo neste corredor chama a atenção do herói. Uma porta distinta de qualquer outra que tenha visto neste edifício, com o batente e a maçaneta feitas em ouro puro, não por acaso atrativas à vista. \r\n"
+				+ "\nToninho: Interessante... parece que há algo escrito. \r\n"
 				+ "“””Tens o que é necessário para abrir a minha porta? “””\r\n", TimeUnit.MILLISECONDS, temp_dialog);
 
 		// desafio 2
 
 		Digita("[MESTRE]: A porta se abre lentamente e revela apenas uma incessante escuridão. \r\n" + "Toninho: \r\n"
 				+ "[MESTRE] Toninho se apossa do pergaminho e encontra um bilhete entre este\r\n"
-				+ "“”” Este pergaminho contém apenas metade daquilo que projetei, e o local em que se encontra a outra metade cairá no esquecimento assim como eu, ao decorrer do tempo. Prefiro a morte a permitir que minhas obras sejam usadas para propósitos escusos. \r\n"
+				+ "\n“”” Este pergaminho contém apenas metade daquilo que projetei, e o local em que se encontra a outra metade cairá no esquecimento assim como eu, ao decorrer do tempo. Prefiro a morte a permitir que minhas obras sejam usadas para propósitos escusos. \r\n"
 				+ "Dirijo-me agora a ti, ó ser perspicaz que fora capaz de evadir-se da criatura que guarda este solo e ao mesmo tempo desvendar o enigma que, como último recurso, guardava estes segredos. \r\n"
 				+ "Saúdo-te. Fora suficientemente sagaz até aqui, mas duvido que esteja à altura do que o destino lhe reserva. \r\n"
 				+ "- Dédalo “””\r\n"
 				+ "Toninho: Será que é o mesmo homem, tio daquela pomba que conheci mais cedo? Ô mundinho estranho.\r\n"
-				+ "[MESTRE] Toninho, com a obra em mãos, dirige-se à saída onde encontra Sheylla com um ar de quem falhou em seu objetivo.\r\n"
-				+ "Toninho: Ô dona Shirlley, veja se é isso o que você queria. \r\n"
+				+ "\n[MESTRE] Toninho, com a obra em mãos, dirige-se à saída onde encontra Sheylla com um ar de quem falhou em seu objetivo.\r\n"
+				+ "\nToninho: Ô dona Shirlley, veja se é isso o que você queria. \r\n"
 				+ "Sheylla: Devo admitir Antônio, você excedeu minhas expectativas! Até pensei que estaria mor... er... digo, mortificado pela arquitetura do prédio. \r\n"
 				+ "Toninho: Que nada, já construí casa muito “mais melhor” que isso. – detalhe nas aspas\r\n"
 				+ "Sheylla: Tenho certeza que sim.\r\n" + "Toninho: Também achei esse bilhete no meio.\r\n"
-				+ "[MESTRE]: Sheylla silencia-se enquanto lê atentamente. \r\n"
-				+ "Sheylla: Aqui diz que isso é apenas uma parte do projeto. \r\n"
+				+ "\n[MESTRE]: Sheylla silencia-se enquanto lê atentamente. \r\n"
+				+ "\nSheylla: Aqui diz que isso é apenas uma parte do projeto. \r\n"
 				+ "Toninho: É o que diz. Sabe onde pode estar a outra parte? \r\n"
 				+ "Sheylla: Tenho uma ideia, mas caberá a ti obtê-lo. \r\n" + "Toninho: Só achei algo estranho...\r\n"
 				+ "Sheylla: O que seria?\r\n"
@@ -375,9 +378,9 @@ public class Intro {
 		do {
 			switch (escolha) {
 			case "1":
-				Digita("MESTRE]: Toninho e Sheylla entram no Del Rey, e Toninho aproveita a viagem para descansar seus olhos.\r\n"
+				Digita("[MESTRE]: Toninho e Sheylla entram no Del Rey, e Toninho aproveita a viagem para descansar seus olhos.\r\n"
 						+ "[MESTRE]:Nosso herói dorme tranquilo, apesar de tudo que vivenciou nestas últimas horas.\r\n"
-						+ "[ALGUMAS HORAS DEPOIS...]\r\n", TimeUnit.MILLISECONDS, temp_dialog);
+						+ "\n[ALGUMAS HORAS DEPOIS...]\r\n", TimeUnit.MILLISECONDS, temp_dialog);
 				HP = HP + 10;
 				break;
 			case "2":
