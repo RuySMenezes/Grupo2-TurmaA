@@ -1,8 +1,13 @@
 package RPG;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+import java.util.Random;
 
 public class Intro {
+	static double HP = 100;
+	static Scanner entrada = new Scanner(System.in);
+	static Random D20 = new Random();
+	static Random D6 = new Random();
 	
 	//static int u=0;
 	// 70, 150, 25
@@ -16,15 +21,7 @@ public class Intro {
 		menu();
 	}
 	
-	// metodo para utilizar os delay nas mensagens
-	
-	public static void Digita(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
-        for (char caractere : mensagem.toCharArray()) {
-        System.out.print(caractere);
-        unit.sleep(tempo_mensagem);
-    }
-}
-	
+
 	static void menu() throws Exception { // metodo para puxar as escolhas do menu
 		Scanner input = new Scanner(System.in);
 		String escolha_menu;
@@ -59,11 +56,10 @@ public class Intro {
 
 	}
 
-//USAR SUPER AND SUBCLASSES. Inserir tudo em um só, dependendo da escolha do jogador.
+
 	static void jogo() throws InterruptedException { //metodo de inicio do jogo
 		
-		int escolha;
-		Scanner entrada = new Scanner (System.in);
+		String escolha;
 		Digita("\n[MESTRE]: O ano é 2018."
 			+"\n[MESTRE]: Toninho finaliza seu dia de trabalho. Entra em seu carro (modelo) e dá partida no motor.\n"
 			+"\nVRUM...\n"
@@ -72,12 +68,12 @@ public class Intro {
 			+"\nSelecione a sua resposta de acordo com o numero correspondente: "
 				+"\n[1] AEHOOOO, bora!"
 				+ "\n[2] Tô afim não, Cleytinho\n",TimeUnit.MILLISECONDS, temp_dialog);
-		escolha = entrada.nextInt();
+		escolha = entrada.next();
 		
 		do {
 		switch(escolha) {
 			
-		case 1:
+		case "1":
 			Digita("\nCleytinho: AEHOOOO, hoje o couro vai cochar!\n"
 					+ "\n[MESTRE]: Cleytinho entra no carro e já vai aumentando o som.\n"
 					+ "[MESTRE]: É uma tarde de sexta-feria e o sol começa a se pôr.\n"
@@ -94,7 +90,7 @@ public class Intro {
 					+ "\n[MESTRE]: Cleytinho, vendo ser infrutíferas suas tentativas de ajudar o colega, o arrasta para o carro e leva Toninho à sua casa."
 					+ "\n[MESTRE]: Toninho continua desmaiado e dormindo como se não houvesse o amanhã.",TimeUnit.MILLISECONDS, temp_dialog);
 			break;
-		case 2:
+		case "2":
 			Digita("\nCleytinho: Sai dessa, homi! Eu sei que você vai voltar para casa e ficar ligando pra Lucilene.\r\n"
 					+ "Toninho: Vou nada, amanhã vou assar umas bistecas logo cedo.\r\n"
 					+ "Cleytinho:... \r\n"
@@ -114,9 +110,9 @@ public class Intro {
 			Digita("\nSelecione a sua resposta de acordo com o numero correspondente: "
 					+"\n[1] AEHOOOO, bora!"
 					+ "\n[2] Tô afim não, Cleytinho\n",TimeUnit.MILLISECONDS, temp_dialog);
-			escolha = entrada.nextInt();
+			escolha = entrada.next();
 		}
-		}while(escolha != 1 && escolha != 2);
+		}while(!escolha.equals("1") && !escolha.equals("2"));
 		
 		Digita("\n[horas depois...]\r\n"
 				+ "\n[MESTRE]:  Toninho acorda, ainda meio desorientado pelos eventos da noite anterior e não se lembra de nada exceto seu nome e sua profissão.\r\n"
@@ -140,16 +136,16 @@ public class Intro {
 		Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
 				+ "Toninho[1]: Pois bem, que seja. \r\n"
 				+ "Toninho[2]: Sem tempo, irmão.\r\n",TimeUnit.MILLISECONDS, temp_dialog);
-		escolha = entrada.nextInt();
+		escolha = entrada.next();
 		
 		do {
 			switch(escolha) {
-			case 1:
+			case "1":
 				Digita("\nSheylla: Ótimo. Venha, vou guia-lo por essa realidade.\r\n"
 						+ "Sheylla: Não é seguro que caminhe só.\r\n"
 						+ "Sheylla: Há armadilhas por todo o percurso.",TimeUnit.MILLISECONDS, temp_dialog);
 				break;
-			case 2:
+			case "2":
 				Digita("\nSheylla: Você não está na posição de decidir coisa alguma, Antônio.",TimeUnit.MILLISECONDS, temp_dialog);
 				break;
 			default:
@@ -157,10 +153,10 @@ public class Intro {
 				Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
 						+ "Toninho[1]: Pois bem, que seja. \r\n"
 						+ "Toninho[2]: Sem tempo, irmão.\r\n",TimeUnit.MILLISECONDS, temp_dialog);
-				escolha = entrada.nextInt();
+				escolha = entrada.next();
 			}
 			
-		}while(escolha != 1 && escolha != 2);
+		}while(!escolha.equals("1") && !escolha.equals("2"));
 		
 		Digita("[MESTRE]: Sheylla, com um estalar de dedos, invoca seu Del Rey 1988\r\n"
 				+ "Toninho: Eita, um carro que anda sozinho? É aquele carro do Elton Muska? \r\n"
@@ -177,21 +173,21 @@ public class Intro {
 				+ "Toninho[1]: Criador?\r\n"
 				+ "Toninho[2]: Criaturas? \r\n"
 				+ "Toninho[3]: Segredos? \r\n",TimeUnit.MILLISECONDS, temp_dialog);
-		escolha = entrada.nextInt();
+		escolha = entrada.next();
 		
 		do {
 		switch(escolha) {
-		case 1:
+		case "1":
 			Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada.  \r\n"
 					+ "Mostrar as opções novamente, mas as que não foram selecionadas. Será tipo uma inserção do jogador no nosso contexto. Caso já tenham sido esgotadas, segue o jogo...\r\n"
 					+ "",TimeUnit.MILLISECONDS, temp_dialog);
 			break;
-		case 2:
+		case "2":
 			Digita("Sheylla: Sim blalala\r\n"
 					+ "Mostrar as opções novamente, mas as que não foram selecionadas. Será tipo uma inserção do jogador no nosso contexto. Caso já tenham sido esgotadas, segue o jogo...\r\n"
 					+ "",TimeUnit.MILLISECONDS, temp_dialog);
 			break;
-		case 3:
+		case "3":
 			Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n"
 					+ "Mostrar as opções novamente, mas as que não foram selecionadas. Será tipo uma inserção do jogador no nosso contexto. Caso já tenham sido esgotadas, segue o jogo... \r\n"
 					+ "",TimeUnit.MILLISECONDS, temp_dialog);
@@ -202,9 +198,9 @@ public class Intro {
 						+ "Toninho[1]: Criador?\r\n"
 						+ "Toninho[2]: Criaturas? \r\n"
 						+ "Toninho[3]: Segredos? \r\n",TimeUnit.MILLISECONDS, temp_dialog);
-				escolha = entrada.nextInt();
+				escolha = entrada.next();
 		}
-		}while(escolha != 1 && escolha != 2 && escolha != 3);
+		}while(!escolha.equals("1") && !escolha.equals("2") && !escolha.equals("3"));
 		
 		Digita("[MESTRE]: Toninho digere apreensivamente as novas informações... \r\n"
 				+ "Sheylla: Você está bem, Antônio? Parece meio... pálido. \r\n"
@@ -264,14 +260,14 @@ public class Intro {
 				+ "[1] Diplomacia\r\n"
 				+ "[2] Combate - Aqui se insere o dado.\r\n"
 				+ "Toninho estará munido de um tijolo que achou entre os escombros.\r\n",TimeUnit.MILLISECONDS, temp_dialog);
-		escolha = entrada.nextInt();
+		escolha = entrada.next();
 		
 		do {
 			switch(escolha) {
-			case 1:
+			case "1":
 				System.out.println(" - Resolver uma questão proposta pela Esfinge.");
 				break;
-			case 2:
+			case "2":
 				System.out.println("Combate");
 				/*If (dado >= 1 && dado <= 10) {
 					Ele errará e provocará a irá de Esfinge, caso em que o jogador perderá 2 pontos de vida e Sheylla terá de intervir para salvar Toninho. Culminará com uma luta intensa e a eventual morte da Esfinge.
@@ -284,7 +280,7 @@ public class Intro {
 					}*/
 			}
 			
-		}while(escolha != 1 && escolha != 2);
+		}while(!escolha.equals("1") && !escolha.equals("2"));
 		
 		Digita("[MESTRE]: Após os acontecimentos, Sheylla e Toninho adentram o prédio.\r\n"
 				+ "[MESTRE]: É um ambiente mal iluminado, mas pode-se notar várias salas e lances de escada que levam aos andares superiores.\r\n"
@@ -347,16 +343,16 @@ public class Intro {
 				+ "O jogador ganha mais um ponto de vida.\r\n"
 				+ "[2 – PROSSEGUIR] Confia que o pai tá monstro.\r\n"
 				+ "O jogador receberá um “buff” no seu ataque ou na defesa, vou analisar melhor depois.\r\n",TimeUnit.MILLISECONDS, temp_dialog);
-		escolha = entrada.nextInt();
+		escolha = entrada.next();
 		
 		do {
 			switch(escolha) {
-			case 1:
+			case "1":
 				Digita("MESTRE]: Toninho e Sheylla entram no Del Rey, e Toninho aproveita a viagem para descansar seus olhos.\r\n"
 						+ "[MESTRE]:Nosso herói dorme tranquilo, apesar de tudo que vivenciou nestas últimas horas.\r\n"
 						+ "[ALGUMAS HORAS DEPOIS...]\r\n",TimeUnit.MILLISECONDS, temp_dialog);
 				break;
-			case 2:
+			case "2":
 				Digita("Else if (escolha == 2) {\r\n"
 						+ "[MESTRE]: Toninho e Sheylla entram no Del Rey em rumo à sua próxima aventura\r\n",TimeUnit.MILLISECONDS, temp_dialog);
 				break;
@@ -367,10 +363,10 @@ public class Intro {
 							+ "O jogador ganha mais um ponto de vida.\r\n"
 							+ "[2 – PROSSEGUIR] Confia que o pai tá monstro.\r\n"
 							+ "O jogador receberá um “buff” no seu ataque ou na defesa, vou analisar melhor depois.\r\n",TimeUnit.MILLISECONDS, temp_dialog);
-					escolha = entrada.nextInt();
+					escolha = entrada.next();
 			}
 			
-		}while(escolha != 1 && escolha != 2);
+		}while(!escolha.equals("1") && !escolha.equals("2"));
 	}
 
 	static void instrucoes() {  // instrução do jogo
@@ -382,4 +378,11 @@ public class Intro {
 		Digita(".::: CRÉDITOS :::.\n> Alex Gama\n> Bruno Souza\n> Rafael Pereira Elias\n> Ruy Menezes \n",TimeUnit.MILLISECONDS, temp_dialog);
 		menu();
 	}
+	// metodo para utilizar o delay nas mensagens
+	public static void Digita(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
+		for (char caractere : mensagem.toCharArray()) {
+			System.out.print(caractere);
+			unit.sleep(tempo_mensagem);
+		}
+}
 }
