@@ -7,6 +7,7 @@ public class teste {
 		//Teste para fazer pull
 		
 		//Teste 13_05
+		//UTF-8
 	}
 
 }
