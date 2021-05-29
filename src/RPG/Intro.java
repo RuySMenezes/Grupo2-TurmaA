@@ -478,7 +478,11 @@ public class Intro {
 				break;
 			case "2":
 				Digita("Else if (escolha == 2) {\r\n"
-						+ "[MESTRE]: Toninho e Sheylla entram no Del Rey em rumo à sua próxima aventura\r\n",
+						+ "[MESTRE]: Toninho e Sheylla entram no Del Rey em rumo à sua próxima aventura\r\n"
+						+ "Sheylla: Creio que você mereça uma recompensa. Olhe no banco de trás, tenho uma surpresa para ti.\r\n"
+						+"Toninho: UMA ITAIPAVA? MAS RAPAZ, ERA TUDO O QUE EU ESTAVA PRECISANDO!\r\n"
+						+"[MESTRE]: Toninho degusta aquela cerveja como se fosse a melhor que bebera em toda sua vida enquanto da vidraça do Del Rey"
+						+" observa a caótica paisagem que se condensa para ser vista depressa.\r\n",
 						TimeUnit.MILLISECONDS, temp_dialog);
 				break;
 			default:
@@ -492,6 +496,53 @@ public class Intro {
 			}
 
 		} while (!escolha.equals("1") && !escolha.equals("2"));
+		
+		Digita("Horas se passam, e ao momento que ambos chegam em seu próximo destino, a escuridão da noite já começa a pairar.\r\n"
+				+"Sheylla: Antônio, creio que esteja mais ou menos inteirado dos perigos que aqui habitam. De agora em diante você deverá"
+				+"prosseguir sozinho.\r\n"
+				+"Toninho: A senhora não virá por quê?\r\n"
+				+"Sheylla: É que... é... hm... eu tenho coisas a fazer. Estou contando com sua bravura.\r\n"
+				+"[MESTRE]: Sheylla sai do carro e vai em direção ao porta-malas. Toninho ouve os passos e percebe que ela retorna com algo em mãos."
+				+"Sheylla: Leve isso contigo, creio que lhe será útil.\r\n"
+				+"Toninho: Um machado, dona Sheylla? Para que eu precisaria disso?\r\n"
+				+"Sheylla: Eu pensei que você já estivesse ciente do porquê... E não é um machado qualquer, dizem que pertenceu a Hefesto, filho de Zeus e ferreiro dos deuses.\r\n"
+				+"Toninho: Você tem o zapzap dele? Estava precisando de uma grelha nova para minha churrasqueira.\r\n"
+				+"Sheylla: Zapzap? O que?\r\n"
+				+"Toninho: Ué dona Sheylla, aquele negócio do celular que...\r\n"
+				+"Sheylla: SILÊNCIO! FOCO! Você me distraiu tanto que até perdi o fio da meada\r\n"
+				+"Toninho: Mas...\r\n"
+				+"Sheylla: SEM MAIS!\r\n"
+				+"Toninho: Perdão pelo vacilo, dona Sheylla.\r\n"
+				+"Sheylla: Enfim, o que eu estava dizendo mesmo... Isso, sobre o machado. Será útil. Já enfatizei que há criaturas por todos os cantos e dessa vez"
+				+ "não estarei aqui para te defender. Não abaixe sua guarda em nenhum momento.\r\n"
+				+"Toninho: Sim, senhora. Só mais uma coisa...\r\n"
+				+"Sheylla: O que?\r\n"
+				+"[MESTRE]: Um breve momento de tensão e silêncio se passa e os olhares de ambos se cruzam, antes que nosso herói quebre-o com sua pergunta.\r\n"
+				,TimeUnit.MILLISECONDS, temp_dialog);
+		Thread.sleep(700);
+		Digita("Toninho: Não tem uma Itaipavinha pra 'nois' aí não?\r\n"
+				+"Sheylla: MAS QUE DIABOS! E EU ESPERANDO QUE FOSSE ALGO SÉRIO! Já nem sei por que eu ainda me impressiono com sua futilidade.\r\n"
+				+"Toninho: Mas e aí, tem?\r\n"
+				+"Sheylla: NÃO! VÁ LOGO!\r\n"
+				+"Toninho: Ouch, mas não precisava gritar também!\r\n"
+				+"Sheylla: Faça tua parte e eu providenciarei, está bom assim?\r\nnnnn"
+				+"Toninho: Justo.\r\n"
+				+"Sheylla: Boa sorte.\r\n"
+				+"[MESTRE]: Sheylla entra em seu Del Rey e volta pelo mesmo caminho que percorrera anteriormente, enquanto Toninho observa os faróis "
+				+"se estreitarem na escuridão.\r\n"
+				+"[MESTRE]: Agora sozinho, o herói contempla o bosque dentre as ruínas a sua frente e se indaga sobre as provações vindouras, lembrando-se de uma "
+				+"canção que o conforta nos momentos de soledade.\r\n"
+				+"Toninho: Acrediteeeei no seu amor, e olha só como estooooou...\r\n"
+				+"Toninho: SOZINHOOOO, SOZINHOOOO... CHEGA DE TANTAS MENTIRAS, CHEGA DE BRINCAR COM MEU AMOR\r\n"
+				+"* CRACK *\r\n"
+				+"[MESTRE]: A cantoria é subitamente interrompida por um som de galhos quebrando em meio ao aparentemente inóspito bosque, assustando o pobre pedreiro.\r\n"
+				+"Toninho: AAAAAAAAAAAAAAAAAA!\r\n"
+				+"Toninho: QUEM ESTÁ AÍ? 'TEJE' CIENTE DE QUE TENHO UM MACHADO E NÃO TENHO MEDO DE USÁ-LO!\r\n"
+				+"* CRACK CRACK CRACK *\r\n"
+				+"Toninho: REVELA TUA FACE, TINHOSO!\r\n"
+				+"[MESTRE]: O som misterioso se dissipa, mas a tensão se mantém. Agora alerta, Tonihno adentra as ruínas com o machado em mãos, "
+				+"preparado para enfrentar o que quer que seja que o destino lhe reserva.\r\n",TimeUnit.MILLISECONDS, temp_dialog);
+		
 
 	}
 
