@@ -3,9 +3,12 @@ package RPG;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.Random;
+import java.util.Collections;
+import java.util.ArrayList;
 
 public class Intro {
 	static double HP = 100;
+	static int Itaipava = 0;
 	static Scanner entrada = new Scanner(System.in); // SCANNER DE ESCOPO GLOBAL, NÃO É NECESSÁRIO INSTANCIAR NENHUM
 														// OUTRO.
 	static Random rand = new Random(21);
@@ -335,7 +338,88 @@ public class Intro {
 				+ "Toninho: E eu que tenho de ficar atento, né? Deus me ajude... \r\n", TimeUnit.MILLISECONDS,
 				temp_dialog);
 
-		// criação do metodo/função Desafio 1
+		// INSERIR AS ALTERNATIVAS NESTE ARRAYLIST. MUDAR O NOME PARA QUEST E O NÚMERO DA QUESTÃO
+		ArrayList<String> quest1 = new ArrayList<String>();
+		quest1.add("57");
+		quest1.add("-71");
+		quest1.add("-7");
+		quest1.add("137");
+		quest1.add("185");
+		
+		//COLOCAR O NOVO NOME AQUI TAMBÉM 
+		Collections.shuffle(quest1);
+		Collections.shuffle(quest1);
+		Collections.shuffle(quest1);
+
+		// ESSAS VARIÁVEIS SÃO NECESSÁRIAS. SUBSTITUA O NÚMERO 1 PELO NÚMERO DA QUESTÃO
+		// CORRESPONDENTE
+		int i = 1;
+		String resp1;
+		String continue1;
+		String respSistema1 = null;
+		boolean exit1 = false;
+		do {
+			System.out.println("Sabendo que a largura em milímetros do Del Rey de Sheylla é 185, determine o valor de x na seguinte expressão:\n"
+					+ "(2^4 : 4^2) . (16^1 * 2^3) + x = 185"); //ENUNCIADO DA QUESTÃO
+			i++;
+			System.out.println("a) " + quest1.get(0) + "\n" + "b) " + quest1.get(1) + "\n" + "c) " + quest1.get(2)
+					+ "\n" + "d) " + quest1.get(3) + "\n" + "e) " + quest1.get(4) + "\n");
+			resp1 = entrada.next().toLowerCase();
+
+			// COLOQUE A ALTERNATIVA CORRETA DENTRO DO .CONTENTEQUALS PARA COMPARAÇÃO
+			switch (resp1) {
+			case "a":
+				respSistema1 = (quest1.get(0).contentEquals("57")) ? "Acertou, mizeravi!" : "ERROOOOOU";
+				System.out.println(respSistema1);
+				exit1 = (respSistema1.contentEquals("Acertou, mizeravi!")) ? true : false;
+				break;
+			case "b":
+				respSistema1 = (quest1.get(1).contentEquals("57")) ? "Acertou, mizeravi!" : "ERROOOOOU";
+				System.out.println(respSistema1);
+				exit1 = (respSistema1.contentEquals("Acertou, mizeravi!")) ? true : false;
+				break;
+			case "c":
+				respSistema1 = (quest1.get(2).contentEquals("57")) ? "Acertou, mizeravi!" : "ERROOOOOU";
+				System.out.println(respSistema1);
+				exit1 = (respSistema1.contentEquals("Acertou, mizeravi!")) ? true : false;
+				break;
+			case "d":
+				respSistema1 = (quest1.get(3).contentEquals("57")) ? "Acertou, mizeravi!" : "ERROOOOOU";
+				System.out.println(respSistema1);
+				exit1 = (respSistema1.contentEquals("Acertou, mizeravi!")) ? true : false;
+				break;
+			case "e":
+				respSistema1 = (quest1.get(4).contentEquals("57")) ? "Acertou, mizeravi!" : "ERROOOOOU";
+				System.out.println(respSistema1);
+				exit1 = (respSistema1.contentEquals("Acertou, mizeravi!")) ? true : false;
+				break;
+			default:
+				System.out.println("DIGITE UMA OPÇÃO VÁLIDA!");
+			}
+
+			if (i == 1 && exit1 == true) {
+				Digita("[MESTRE]: Seus esforços foram bem recompensados! Você recebeu uma Itaipava!", TimeUnit.MILLISECONDS, temp_dialog);
+				Itaipava = Itaipava + 1;
+			}
+			if (!(resp1.equals("a") || resp1.equals("b") || resp1.equals("c") || resp1.equals("d")
+					|| resp1.equals("e"))) {
+				i = i - 1;
+			}
+			//ESTRUTURA QUE PERMITE O JOGADOR ESCOLHER TENTAR RESPONDER NOVAMENTE OU NÃO.
+			if (resp1.equals("a") || resp1.equals("b") || resp1.equals("c") || resp1.equals("d")
+					|| resp1.equals("e") && i <= 3 && exit1 == false) {
+				HP = HP - 10;
+				if (respSistema1.equals("ERROOOOOU") && i <= 3) {
+					System.out.println("\nTentar novamente?\n1 - SIM\n2 - NÃO");
+					continue1 = entrada.next();
+					if (!continue1.contentEquals("1")) {
+						break;
+					}
+				}
+			}
+
+		} while (!exit1 && i <= 3);
+		
 
 		Digita("[MESTRE] Após o conserto, Toninho e Sheylla seguem viagem. \r\n"
 				+ "Sheylla: Não foi tão ruim assim, foi, Antônio? \r\n" + "[blablabla]\r\n"
