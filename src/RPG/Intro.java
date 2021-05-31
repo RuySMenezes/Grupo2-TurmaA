@@ -630,8 +630,49 @@ public class Intro {
 
 	}
 
-	static void capitulo_2() {
+	static void capitulo_2() throws InterruptedException {
 
+		String escolha;
+		
+		Digita("\n[MESTRE]: Toninho continua avançando em direção ao som misterioso com seu machado em mãos.\r\n"
+				+ "\nToninho: Sou Toninho pedreiro matador de demônio. Aqui tem coragem!\r\n"
+				+ "\n[MESTRE:] Toninho vê uma latinha de Brahma duplo malte próximo a uma arvore e já vai em sua direção.\r\n"
+				+ "\nToninho: Opa!! Já tava com sede!\r\n"
+				+ "\n[MESTRE]: Toninho tenta pegar a cerveja e acaba pisando em uma armadilha de laço e fica pendurado de ponta cabeça.\r\n"
+				+ "[MESTRE]: Pequenas silhuetas começam a aparecer e se mostram como pequenos indivíduos, pigmeus e um deles fala.\r\n"
+				+ "\nPigmeu: Estão deixando a gente sonha!\r\n"
+				+ "\n[MESTRE]: O pigmeu com um pedaço de madeira, acerta a cabeça de Toninho e ele desmaia.\r\n"
+				+ "[MESTRE]: Toninho acorda com um forte dor de cabeça e se vê amarrado em um tronco sendo levado até um labirinto em ruína.\r\n"
+				+ "\nToninho: Me solta diacho!\r\n"
+				+ "Pigmeu: Você nos salvara da Ira do Minotauro, então trate de ficar quieto e seja devorado.\r\n"
+				+ "Toninho: Devo-que.\r\n"
+				+ "Pigmeu: Com esse bucho de Ambrosia, vai saciar a fome dele por um século.\r\n"
+				+ "Toninho: HAHAHA! Isso aqui é muita Itaipaiva, ah que saudade de um breja agora.\r\n"
+				+ "Toninho: Mas ai seus cotocos, tem como soltar não, talvez eu posso ajuda-los.\r\n"
+				+ "Pigmeu: Mas você vai sendo devorado pelo Minotauro.\r\n"
+				+ "\n[MESTRE]: Toninho se vê em um pico de desespero amarrado, e sem o que fazer, então volta a tentar argumentar com os pigmeus.\r\n"
+				+ "\nToninho: Então eu conheço a Sheylla, a gente derrotou a esfinge, assim sabe, talvez assim, eu posso tentar falar com esse pro player de free fire.\r\n"
+				+ "\n[MESTRE]: Ao ouvir o Toninho os pigmeus de assustam e um deles começa a falar de forma assustada\r\n"
+				+ "\nPigmeu: Sheeeylla!!!!! Você a conhece? \r\n"
+				+ "Toninho: Foi ela que me puxou pra cá!\r\n"
+				+ "\n[MESTRE]: Os pigmeus largam o tronco onde o Toninho estava amarrado e ele bruscamente no chão.\r\n"
+				+ "\nToninho: Ai! Caceta.\r\n"
+				+ "\n[MESTRE]: OS pigmeus correm de volta ao bosque e deixam o Toninho, mas um volta e corta as cordas que o amarravam e corre novamente para o bosque.\r\n"
+				+ "[MESTRE]: Toninho se solta e se levanta e vai em direção ao portão do labirinto em ruinas e nele se encontra um aviso.\r\n", TimeUnit.MILLISECONDS, temp_dialog);
+		
+		// DESAFIO 1
+		
+		Digita("\n[MESTRE]: O portão se abre e Toninho adentra no labirinto em busca (pedaço do pergaminho?).\r\n"
+				+ "\n[MESTRE]: No primeiro cruzamento Toninho encontra ourto desafio\r\n", TimeUnit.MILLISECONDS, temp_dialog);
+		
+		//DESAFIO 2
+		
+		Digita("\n[MESTRE]: Toninho avança seguindo o rastro e encontra o final do labirinto\r\n", TimeUnit.MILLISECONDS, temp_dialog);
+		
+		//DESAFIO 3
+		
+		//BATALHA CONTRA O MINOTAURO
+		
 	}
 
 	static void capitulo_3() {
