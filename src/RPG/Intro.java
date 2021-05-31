@@ -197,11 +197,47 @@ public class Intro {
 				escolha = entrada.next();
 			}
 			
+			
+			
+			
 			/* Equação 1° grau 
 			 * Questão: x + 4 = 12
 			 * x = 12 – 4
 			 * R. x = 8
 			 */
+			
+/*    	String letra;		
+			
+			letra = entrada.nextLine();
+			
+		switch (letra){
+
+	     case "a":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "b":
+	         System.out.println("\nResposta Correta !!! \n x = 8");
+	         break;
+	         
+	          case "c":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "d":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	           break;
+	           
+	           case "e":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           default:
+                System.out.println("Resposta Devem ser inseridas entre Alternativas A Até E");
+                 break;
+                 
+                 
+	         */
 			
 			/* Equação 1° grau 
 			 * Para que toninho não entre em coma alcolico logo no inicio da historia resolva esta questão de Matemática, que toninho tem espertize para solucionar 
@@ -210,6 +246,38 @@ public class Intro {
 			x = 20 + 12
 			R. x = 32 */
 
+/*    	String letra;		
+			
+			letra = entrada.nextLine();
+			
+		switch (letra){
+
+	     case "a":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "b":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	         break;
+	         
+	          case "c":
+	         System.out.println("\nResposta Correta !!! \n x = 32");
+	          break;
+	          
+	           case "d":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	           break;
+	           
+	           case "e":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           default:
+                System.out.println("Resposta Devem ser inseridas entre Alternativas A Até E");
+                 break;
+                 
+	         */
+			
 			/* Equação 1° grau 
 			 * Para que o nosso Heroi Toninho possa entender o que a Mestre Sheylla tem para apresentar a ele em Diademmor, ajude ele a resolver esta questão de 
 			 * equação de 1° grau que nosso heroi gosta de resolver, para que ele consiga superar esta etapa
@@ -220,6 +288,39 @@ public class Intro {
                        x =  8
                             4
                           R.  x = 2 */
+			
+/*    	String letra;		
+			
+			letra = entrada.nextLine();
+			
+		switch (letra){
+
+	     case "a":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "b":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	         break;
+	         
+	          case "c":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "d":
+	         System.out.println("\nResposta Correta !!! \n x = 2");
+	           break;
+	           
+	           case "e":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           default:
+                System.out.println("Resposta Devem ser inseridas entre Alternativas A Até E");
+                 break;
+                 
+	         */
+			
 			
 			/* Equação 2° grau
 			 * Para ajudar o guerreiro Toninho a obter respostas mais claras junto a Deusa Sheylla ajude ele a solucionar esta questão de 
@@ -235,6 +336,39 @@ public class Intro {
 			 * D = 0
 			 * R. Como D = 0, a equação possui uma única solução real.  */	
 			
+/*    	String letra;		
+			
+			letra = entrada.nextLine();
+			
+		switch (letra){
+
+	     case "a":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "b":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	         break;
+	         
+	          case "c":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "d":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	           break;
+	           
+	           case "e":
+	         System.out.println("\nResposta Correta !!! \n D = 0 \nComo D = 0, a equação possui uma única solução real. ");
+	          break;
+	          
+	           default:
+                System.out.println("Resposta Devem ser inseridas entre Alternativas A Até E");
+                 break;
+                 
+	         */
+			
+			
 			/* Equação 2° grau
 			 * Questão: x² +6x + c =0
 			 R. a = 1
@@ -247,6 +381,38 @@ public class Intro {
 			 c = 36/4
 			 R. c= 9
 			 */
+			
+/*    	String letra;		
+			
+			letra = entrada.nextLine();
+			
+		switch (letra){
+
+	     case "a":
+	         System.out.println("\nResposta Correta !!! \n c= 9");
+	          break;
+	          
+	           case "b":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	         break;
+	         
+	          case "c":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "d":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	           break;
+	           
+	           case "e":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           default:
+                System.out.println("Resposta Devem ser inseridas entre Alternativas A Até E");
+                 break;
+                 
+	         */
 			 
 			/* Função do 1° grau
 			Questão: f(x) = -2x + 5
@@ -254,6 +420,38 @@ public class Intro {
 			-2x = -5
 			x = (-5) : (-2)
 			R. x = 2,5 */
+			
+/*    	String letra;		
+			
+			letra = entrada.nextLine();
+			
+		switch (letra){
+
+	     case "a":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "b":
+	         System.out.println("\nResposta Correta !!! \n x = 2,5");
+	         break;
+	         
+	          case "c":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "d":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	           break;
+	           
+	           case "e":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           default:
+                System.out.println("Resposta Devem ser inseridas entre Alternativas A Até E");
+                 break;
+                 
+	         */
 			
 			/* Função do 1° grau
 			Questão: f(x) = ax + b, sabendo-se que f(3) = 6 e f (-2) = -3
@@ -267,6 +465,39 @@ public class Intro {
 			R. a = 9/5
 			*/
 			
+/*    	String letra;		
+			
+			letra = entrada.nextLine();
+			
+		switch (letra){
+
+	     case "a":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "b":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	         break;
+	         
+	          case "c":
+	         System.out.println("\nResposta Correta !!! \n a = 9/5");
+	          break;
+	          
+	           case "d":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	           break;
+	           
+	           case "e":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           default:
+                System.out.println("Resposta Devem ser inseridas entre Alternativas A Até E");
+                 break;
+                 
+	         */
+			
+			
 			/* Função do 2° grau
 			Questão: Calcule o valor de k de modo que a função f(x) = 4x² – 4x – k não tenha raízes, isto é,
 			o gráfico da parábola não possui ponto em comum com o eixo x
@@ -278,6 +509,39 @@ public class Intro {
 			k < –1
 			R. O valor de k para que a função não tenha raízes reais deve ser menor que – 1.
 			*/
+			
+/*    	String letra;		
+			
+			letra = entrada.nextLine();
+			
+		switch (letra){
+
+	     case "a":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "b":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	         break;
+	         
+	          case "c":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "d":
+	         System.out.println("\nResposta Incorreta Correta !!! \n k < –1 \n  O valor de k para que a função não tenha raízes reais deve ser menor que – 1.");
+	           break;
+	           
+	           case "e":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           default:
+                System.out.println("Resposta Devem ser inseridas entre Alternativas A Até E");
+                 break;
+                 
+	         */
+			
 			
 			/* Função do 2° grau
 			 * Questão: Determine os valores de m, para que a função f(x) = (m – 2)x² – 2x + 6 admita raízes reais.
@@ -295,6 +559,38 @@ public class Intro {
 			 * R. O valor de m que satisfaça a condição exigida é m <= 13/6.
 			 */
 			
+/*    	String letra;		
+			
+			letra = entrada.nextLine();
+			
+		switch (letra){
+
+	     case "a":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "b":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	         break;
+	         
+	          case "c":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "d":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	           break;
+	           
+	           case "e":
+	         System.out.println("\nResposta Correta !!! \n m <= 13/6 \nO valor de m que satisfaça a condição exigida é m <= 13/6.");
+	          break;
+	          
+	           default:
+                System.out.println("Resposta Devem ser inseridas entre Alternativas A Até E");
+                 break;
+                 
+	         */
+			
 			/* Polinômios
 			   Questão: Sabendo-se que –3 é raiz de P(x) = x³ + 4x² - ax + 1, calcule o valor de a.
 			   Como foi dito que -3 é raiz do polinômio, devemos inserir -3 no lugar de x e igualar o polinômio a zero a fim de obter o valor de a.
@@ -302,9 +598,43 @@ public class Intro {
 			   -27 + 36 + 3a + 1 = 0
 			   -26 + 36 = -3a
 			   10 = -3a
-			   a = -10
-			        3
+			   R. a = -10
+			           3
 			*/
+			
+/*    	String letra;		
+			
+			letra = entrada.nextLine();
+			
+		switch (letra){
+
+	     case "a":
+	         System.out.println("\nResposta Correta !!! \n a = -10");
+	                                                             3
+	          break;
+	          
+	           case "b":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	         break;
+	         
+	          case "c":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	          break;
+	          
+	           case "d":
+	         System.out.println("\nResposta Incorreta Tente Novamente");
+	           break;
+	           
+	           case "e":
+	         System.out.println("\nResposta Incorreta Tente Novamente");                                 
+	          break;
+	          
+	           default:
+                System.out.println("Resposta Devem ser inseridas entre Alternativas A Até E");
+                 break;
+                 
+	         */
+			
 					
 		} while (!escolha.equals("1") && !escolha.equals("2"));
 
