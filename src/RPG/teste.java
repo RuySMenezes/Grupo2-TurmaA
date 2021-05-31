@@ -14,7 +14,7 @@ public class teste {
 		//Teste 13_05
 		//desafioC2I();
 		//desafioC2II();
-		
+		desafioC2III();
 	}
 	
 	
@@ -46,7 +46,7 @@ public class teste {
 		System.out.println("c) " +r.get(2));
 		System.out.println("d) " +r.get(3));
 		System.out.println("e) " +r.get(4));
-		System.out.print("Escolha uma alternativa: ");
+		System.out.print("\nEscolha uma alternativa: ");
 		alternativa = entrada.next();
 		
 		switch (alternativa) {
@@ -132,6 +132,7 @@ public class teste {
 		}
 	
 	public static void desafioC2II() {
+
 		Scanner entrada = new Scanner(System.in);
 		boolean acertou = false;
 		int contador = 0;
@@ -155,7 +156,7 @@ public class teste {
 		System.out.println("c) " +r.get(2));
 		System.out.println("d) " +r.get(3));
 		System.out.println("e) " +r.get(4));
-		System.out.print("Escolha uma alternativa: ");
+		System.out.print("\nEscolha uma alternativa: ");
 		alternativa = entrada.next();
 		
 		switch (alternativa) {
@@ -234,5 +235,108 @@ public class teste {
 		System.out.println("Resposta incorreta nas 3 tentativas!");
 		}
 		}
+	
+	public static void desafioC2III() {
+	
+		Scanner entrada = new Scanner(System.in);
+		boolean acertou = false;
+		int contador = 0;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add("3x^3+5x^2-5x+3"); // resposta correta
+		r.add("5x^3-3x^2-6x-1");
+		r.add("2x^3-2x^2+4x+18");
+		r.add("x^3-3x^2+5x-7");
+		r.add("10x^3+2x^2+3x+1");
+		
+		do {
+			
+		System.out.println("Some os polinômios:\n"
+				+ "a(x)=2x^3+2x^2-3x+1\n"
+				+ "b(x)=x^3+3x^2-2x+2\n");
+		System.out.println("a) " +r.get(0)); 
+		System.out.println("b) " +r.get(1));
+		System.out.println("c) " +r.get(2));
+		System.out.println("d) " +r.get(3));
+		System.out.println("e) " +r.get(4));
+		System.out.print("\nEscolha uma alternativa: ");
+		alternativa = entrada.next();
+		
+		switch (alternativa) {
+		
+		case "a":
+		case "A":	
+			if(r.get(0) == "3x^3+5x^2-5x+3") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!\n");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "b":
+		case "B":
+			if(r.get(1) == "3x^3+5x^2-5x+3") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!\n");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "c":
+		case "C":
+			if(r.get(2) == "3x^3+5x^2-5x+3") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!\n");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "d":
+		case "D":
+			if(r.get(3) == "3x^3+5x^2-5x+3") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!\n");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "e":
+		case "E":
+			if(r.get(4) == "3x^3+5x^2-5x+3") {
+			System.out.println("Resposta correta!\n");
+			acertou = true;
+			contador = contador + 1;
+			}else {
+			System.out.println("Resposta incorreta!\n");
+			contador = contador + 1;
+			Collections.shuffle(r);
+			}
+		break;
+		
+		default:
+		System.out.println("\nEscolha invalida!");
+		contador = contador + 1;
+		Collections.shuffle(r);
+		}
+		
+		} while (!acertou && contador < 3);
+		if (acertou) {
+		System.out.println("Você acertou na " + contador + " tentativa!");
+		} else {
+		System.out.println("Resposta incorreta nas 3 tentativas!");
+		}
 	}
 	
+	}
