@@ -339,4 +339,109 @@ public class teste {
 		}
 	}
 	
+	public static void desafio3CI() {
+		
+		Scanner entrada = new Scanner(System.in);
+		boolean acertou = false;
+		int contador = 0;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add("11000111 e FA"); // resposta correta
+		r.add("11100111 e F9");
+		r.add("11010111 e FA");
+		r.add("11000111 e F9	");
+		r.add("11100111 e FA.");
+		
+		do {
+			
+		System.out.println("Os números decimais 199 e 250 correspondem,\n"
+				+ "nos sistemas binário e hexadecimal, às seguintes representações:");
+		System.out.println("a) " +r.get(0)); 
+		System.out.println("b) " +r.get(1));
+		System.out.println("c) " +r.get(2));
+		System.out.println("d) " +r.get(3));
+		System.out.println("e) " +r.get(4));
+		System.out.print("\nEscolha uma alternativa: ");
+		alternativa = entrada.next();
+		
+		switch (alternativa) {
+		
+		case "a":
+		case "A":	
+			if(r.get(0) == "11000111 e FA") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!\n");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "b":
+		case "B":
+			if(r.get(1) == "11000111 e FA") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!\n");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "c":
+		case "C":
+			if(r.get(2) == "11000111 e FA") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!\n");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "d":
+		case "D":
+			if(r.get(3) == "11000111 e FA") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!\n");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "e":
+		case "E":
+			if(r.get(4) == "11000111 e FA") {
+			System.out.println("Resposta correta!\n");
+			acertou = true;
+			contador = contador + 1;
+			}else {
+			System.out.println("Resposta incorreta!\n");
+			contador = contador + 1;
+			Collections.shuffle(r);
+			}
+		break;
+		
+		default:
+		System.out.println("\nEscolha invalida!");
+		contador = contador + 1;
+		Collections.shuffle(r);
+		}
+		
+		} while (!acertou && contador < 3);
+		if (acertou) {
+		System.out.println("VocÃª acertou na " + contador + " tentativa!");
+		} else {
+		System.out.println("Resposta incorreta nas 3 tentativas!");
+		}
+		
+		
+	}
+	
+	
 	}
