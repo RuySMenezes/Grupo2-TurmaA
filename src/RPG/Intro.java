@@ -139,10 +139,6 @@ public class Intro {
 						+ "\n***Toninho desmaia após chorar copiosamente***", TimeUnit.MILLISECONDS, temp_dialog);
 				break;
 				
-				/* Para que toninho não entre em coma alcolico logo no inicio da historia resolva esta questão de Matemática, que toninho tem espertize para solucionar 
-				estas questões, e ajude nosso amigo Predreiro. 
-				Questão: x = 20 + 12
-				R. x = 32 */
 			default:
 				System.out.println("\nOpção inválida!");
 				Digita("\nSelecione a sua resposta de acordo com o numero correspondente: " + "\n[1] AEHOOOO, bora!"
@@ -190,6 +186,8 @@ public class Intro {
 				Digita("\nSheylla: Você não está na posição de decidir coisa alguma, Antônio.\r\n", TimeUnit.MILLISECONDS,
 						temp_dialog);
 				break;
+				
+				
 			default:
 				System.out.println("\nOpção inválida!");
 				Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
@@ -198,7 +196,116 @@ public class Intro {
 						TimeUnit.MILLISECONDS, temp_dialog);
 				escolha = entrada.next();
 			}
+			
+			/* Equação 1° grau 
+			 * Questão: x + 4 = 12
+			 * x = 12 – 4
+			 * R. x = 8
+			 */
+			
+			/* Equação 1° grau 
+			 * Para que toninho não entre em coma alcolico logo no inicio da historia resolva esta questão de Matemática, que toninho tem espertize para solucionar 
+			estas questões, e ajude nosso amigo Predreiro. 
+			Questão: x – 12 = 20
+			x = 20 + 12
+			R. x = 32 */
 
+			/* Equação 1° grau 
+			 * Para que o nosso Heroi Toninho possa entender o que a Mestre Sheylla tem para apresentar a ele em Diademmor, ajude ele a resolver esta questão de 
+			 * equação de 1° grau que nosso heroi gosta de resolver, para que ele consiga superar esta etapa
+			 * Questão: 4x + 2 = 10
+			 * R. 4x = 10 – 2
+			 *     x = 10 – 2
+                          4
+                       x =  8
+                            4
+                          R.  x = 2 */
+			
+			/* Equação 2° grau
+			 * Para ajudar o guerreiro Toninho a obter respostas mais claras junto a Deusa Sheylla ajude ele a solucionar esta questão de 
+			 * equação de 2° Grau
+			 * Questão: x² – 2x +1 = 0
+			 * R.
+			 * a = 1
+			 * b = -2
+			 * c = 1
+			 * D = b² – 4ac
+			 * D = (-2)² – 4 ·1·1
+			 * D = 4 – 4
+			 * D = 0
+			 * R. Como D = 0, a equação possui uma única solução real.  */	
+			
+			/* Equação 2° grau
+			 * Questão: x² +6x + c =0
+			 R. a = 1
+			 b = 6
+			 D = b² – 4 ac
+			 D = 6² – 4· 1 c
+			 D = 36 – 4c
+			 36 – 4c = 0
+			 36 = 4c
+			 c = 36/4
+			 R. c= 9
+			 */
+			 
+			/* Função do 1° grau
+			Questão: f(x) = -2x + 5
+			R. -2x + 5 = 0
+			-2x = -5
+			x = (-5) : (-2)
+			R. x = 2,5 */
+			
+			/* Função do 1° grau
+			Questão: f(x) = ax + b, sabendo-se que f(3) = 6 e f (-2) = -3
+			f(3) = 6
+			f(3) = 3a + b -- 3a + b = 6
+			f(-2) = -3
+			f(-2) = -2a + b -- -2a + b = -3
+			3a + b = 6
+			-2a + b = -3
+			5a = 9
+			R. a = 9/5
+			*/
+			
+			/* Função do 2° grau
+			Questão: Calcule o valor de k de modo que a função f(x) = 4x² – 4x – k não tenha raízes, isto é,
+			o gráfico da parábola não possui ponto em comum com o eixo x
+			D < 0
+			b² – 4ac < 0
+			(–4)² – 4 * 4 * (–k) < 0
+			16 + 16k < 0
+			16k < – 16
+			k < –1
+			R. O valor de k para que a função não tenha raízes reais deve ser menor que – 1.
+			*/
+			
+			/* Função do 2° grau
+			 * Questão: Determine os valores de m, para que a função f(x) = (m – 2)x² – 2x + 6 admita raízes reais.
+			 * Para essa situação temos que D >= 0.
+			 * D >= 0
+			 * b² – 4ac >= 0
+			 * (–2)² – 4 * (m – 2) * 6 >= 0
+			 * 4 – 4 * (6m – 12) >= 0
+			 * 4 – 24m + 48 >= 0
+			 * –24m >= – 48 – 4
+			 * –24m >= – 52
+			 * 24m <= 52
+			 * m <= 52/24
+			 * m <= 13/6
+			 * R. O valor de m que satisfaça a condição exigida é m <= 13/6.
+			 */
+			
+			/* Polinômios
+			   Questão: Sabendo-se que –3 é raiz de P(x) = x³ + 4x² - ax + 1, calcule o valor de a.
+			   Como foi dito que -3 é raiz do polinômio, devemos inserir -3 no lugar de x e igualar o polinômio a zero a fim de obter o valor de a.
+			   (-3)3 + 4(-3)2 + -a(-3) + 1 = 0
+			   -27 + 36 + 3a + 1 = 0
+			   -26 + 36 = -3a
+			   10 = -3a
+			   a = -10
+			        3
+			*/
+					
 		} while (!escolha.equals("1") && !escolha.equals("2"));
 
 		Digita("[MESTRE]: Sheylla, com um estalar de dedos, invoca seu Del Rey 1988\r\n"
@@ -218,6 +325,7 @@ public class Intro {
 				+ "Toninho[3]: Segredos? \r\n", TimeUnit.MILLISECONDS, temp_dialog);
 		escolha = entrada.next();
 
+		
 		do {
 			switch (escolha) {
 			case "1":
@@ -242,7 +350,7 @@ public class Intro {
 					break;
 				case "2":
 					Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					
+				
 					Digita("\n[MESTRE]: Criaturas", TimeUnit.MILLISECONDS, temp_dialog);
 					
 					Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
