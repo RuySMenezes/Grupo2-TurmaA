@@ -12,8 +12,6 @@ public class teste {
 		//Teste para fazer pull
 		
 		//Teste 13_05
-		
-		// teste bruno
 		desafio2CI();
 		
 	}
