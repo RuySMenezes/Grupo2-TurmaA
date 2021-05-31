@@ -15,7 +15,8 @@ public class Intro {
 	static int D20 = rand.nextInt(21); // DADO DE 20 FACES - GLOBAL
 	static int D6 = rand.nextInt(7); // DADO DE 6 FACES - GLOBAL
 
-	// TEMPO DE DELAY DAS MENSAGENS: MODIFIQUE PARA ZERO PARA JOGAR SEM DELAY. PADRÃO 70,150,25
+	// TEMPO DE DELAY DAS MENSAGENS: MODIFIQUE PARA ZERO PARA JOGAR SEM DELAY.
+	// PADRÃO 70,150,25
 	static int temp_dialog = 0, temp_narrativa = 00, temp_transicao = 0;
 
 	public static void main(String[] args) throws Exception {
@@ -45,7 +46,7 @@ public class Intro {
 			case "4":
 				System.exit(0);
 			default:
-				System.out.println("ERROOOOOOU! Tente novamente, meu caro.");
+				System.out.println("ERROOOOOOU! Tente novamente, meu consagrado.\n");
 				System.out.println("1 - Jogar\n2 - Instruções\n3 - Créditos\n4 - Sair");
 				escolha_menu = entrada.next();
 			}
@@ -56,10 +57,10 @@ public class Intro {
 
 	static void jogo() throws Exception { // metodo de inicio do jogo
 		escolha_capitulo();
-		//intro();
-		//capitulo_1();
-		//capitulo_2();
-		//capitulo_3();
+		// intro();
+		// capitulo_1();
+		// capitulo_2();
+		// capitulo_3();
 
 	}
 
@@ -91,10 +92,6 @@ public class Intro {
 
 		} while (!escolha_cap.contentEquals("0") && !escolha_cap.contentEquals("1") && !escolha_cap.contentEquals("2")
 				&& !escolha_cap.contentEquals("3"));
-	}
-
-	static void instrucoes() { // instrução do jogo
-
 	}
 
 	static void intro() throws Exception {
@@ -146,7 +143,6 @@ public class Intro {
 			}
 		} while (!escolha.equals("1") && !escolha.equals("2"));
 
-		
 	}
 
 	static void capitulo_1() throws Exception {
@@ -166,10 +162,9 @@ public class Intro {
 				+ "[MESTRE]: Sheylla, visivelmente irada, assume a sua real forma de Erínia e avança em direção ao pedreiro\r\n"
 				+ "\nSheylla: NÃO OUSE ME IGNORAR, HUMANO!\r\n" + "Toninho: Eita, que viajem é essa vei\r\n"
 				+ "Sheylla: ACEITE O SEU DESTINO, MORTAL. \r\n", TimeUnit.MILLISECONDS, temp_dialog);
-		
+
 		Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-				+ "Toninho[1]: Pois bem, que seja. \r\n" 
-				+ "Toninho[2]: Sem tempo, irmão.\r\n", TimeUnit.MILLISECONDS,
+				+ "Toninho[1]: Pois bem, que seja. \r\n" + "Toninho[2]: Sem tempo, irmão.\r\n", TimeUnit.MILLISECONDS,
 				temp_dialog);
 		escolha = entrada.next();
 
@@ -177,19 +172,17 @@ public class Intro {
 			switch (escolha) {
 			case "1":
 				Digita("\nSheylla: Ótimo. Venha, vou guia-lo por essa realidade.\r\n"
-						+ "Sheylla: Não é seguro que caminhe só.\r\n" 
-						+ "Sheylla: Há armadilhas por todo o percurso.\r\n",
-						TimeUnit.MILLISECONDS, temp_dialog);
+						+ "Sheylla: Não é seguro que caminhe só.\r\n"
+						+ "Sheylla: Há armadilhas por todo o percurso.\r\n", TimeUnit.MILLISECONDS, temp_dialog);
 				break;
 			case "2":
-				Digita("\nSheylla: Você não está na posição de decidir coisa alguma, Antônio.\r\n", TimeUnit.MILLISECONDS,
-						temp_dialog);
+				Digita("\nSheylla: Você não está na posição de decidir coisa alguma, Antônio.\r\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
 				break;
 			default:
 				System.out.println("\nOpção inválida!");
 				Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-						+ "Toninho[1]: Pois bem, que seja. \r\n"
-						+ "Toninho[2]: Sem tempo, irmão.\r\n",
+						+ "Toninho[1]: Pois bem, que seja. \r\n" + "Toninho[2]: Sem tempo, irmão.\r\n",
 						TimeUnit.MILLISECONDS, temp_dialog);
 				escolha = entrada.next();
 			}
@@ -207,117 +200,130 @@ public class Intro {
 				+ "Sheylla: Esta realidade há muito abandonada por seu criador virou morada das mais horrendas criaturas e guarda os mais lúgubres segredos.\r\n"
 				+ "Sheylla: Prepare-se, meu caro. \r\n", TimeUnit.MILLISECONDS, temp_dialog);
 
-		Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-				+ "Toninho[1]: Criador?\r\n"
-				+ "Toninho[2]: Criaturas? \r\n"
-				+ "Toninho[3]: Segredos? \r\n", TimeUnit.MILLISECONDS, temp_dialog);
+		Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n" + "Toninho[1]: Criador?\r\n"
+				+ "Toninho[2]: Criaturas? \r\n" + "Toninho[3]: Segredos? \r\n", TimeUnit.MILLISECONDS, temp_dialog);
 		escolha = entrada.next();
 
 		do {
 			switch (escolha) {
 			case "1":
-				Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n", TimeUnit.MILLISECONDS, temp_dialog);
-				
+				Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
+
 				Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-						+ "Toninho[1]: Criaturas?\r\n"
-						+ "Toninho[2]: Segredos? \r\n", TimeUnit.MILLISECONDS, temp_dialog);
+						+ "Toninho[1]: Criaturas?\r\n" + "Toninho[2]: Segredos? \r\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				escolha = entrada.next();
-				
+
 				do {
-				switch(escolha) {
-				case "1":
-					Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
-							+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
-							+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
-							+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					
-					Digita("\n[MESTRE]: Segredos", TimeUnit.MILLISECONDS, temp_dialog);
-					
-					Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					break;
-				case "2":
-					Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					
-					Digita("\n[MESTRE]: Criaturas", TimeUnit.MILLISECONDS, temp_dialog);
-					
-					Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
-							+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
-							+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
-							+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					break;
+					switch (escolha) {
+					case "1":
+						Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
+								+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
+								+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
+								+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
+
+						Digita("\n[MESTRE]: Segredos", TimeUnit.MILLISECONDS, temp_dialog);
+
+						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
+						break;
+					case "2":
+						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
+
+						Digita("\n[MESTRE]: Criaturas", TimeUnit.MILLISECONDS, temp_dialog);
+
+						Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
+								+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
+								+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
+								+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
+						break;
 					default:
 						System.out.println("Opção Invalida");
 						Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-								+ "Toninho[1]: Criaturas?\r\n"
-								+ "Toninho[2]: Segredos? \r\n", TimeUnit.MILLISECONDS, temp_dialog);
+								+ "Toninho[1]: Criaturas?\r\n" + "Toninho[2]: Segredos? \r\n", TimeUnit.MILLISECONDS,
+								temp_dialog);
 						escolha = entrada.next();
-				}
-				}while(!escolha.equals("1") && !escolha.equals("2"));
+					}
+				} while (!escolha.equals("1") && !escolha.equals("2"));
 				break;
 			case "2":
 				Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
 						+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
 						+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
-						+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-				
+						+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
+
 				Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-						+ "Toninho[1]: Criador?\r\n"
-						+ "Toninho[2]: Segredos? \r\n", TimeUnit.MILLISECONDS, temp_dialog);
+						+ "Toninho[1]: Criador?\r\n" + "Toninho[2]: Segredos? \r\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				escolha = entrada.next();
 				do {
-				switch(escolha) {
-				case "1":
-					Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					Digita("\n[MESTRE]: Segredos", TimeUnit.MILLISECONDS, temp_dialog);
-					Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					break;
-				case "2":
-					Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					Digita("\n[MESTRE]: Criador", TimeUnit.MILLISECONDS, temp_dialog);
-					Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					break;
+					switch (escolha) {
+					case "1":
+						Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
+						Digita("\n[MESTRE]: Segredos", TimeUnit.MILLISECONDS, temp_dialog);
+						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
+						break;
+					case "2":
+						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
+						Digita("\n[MESTRE]: Criador", TimeUnit.MILLISECONDS, temp_dialog);
+						Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
+						break;
 					default:
 						System.out.println("Opção Invalida");
 						Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-								+ "Toninho[1]: Criador?\r\n"
-								+ "Toninho[2]: Segredos? \r\n", TimeUnit.MILLISECONDS, temp_dialog);
+								+ "Toninho[1]: Criador?\r\n" + "Toninho[2]: Segredos? \r\n", TimeUnit.MILLISECONDS,
+								temp_dialog);
 						escolha = entrada.next();
-				}
-				}while(!escolha.equals("1") && !escolha.equals("2"));
+					}
+				} while (!escolha.equals("1") && !escolha.equals("2"));
 				break;
 			case "3":
-				Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n",TimeUnit.MILLISECONDS, temp_dialog);
-				
+				Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
+
 				Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-						+ "Toninho[1]: Criador?\r\n"
-						+ "Toninho[2]: Criaturas? \r\n", TimeUnit.MILLISECONDS, temp_dialog);
+						+ "Toninho[1]: Criador?\r\n" + "Toninho[2]: Criaturas? \r\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				escolha = entrada.next();
 				do {
-				switch(escolha) {
-				case "1":
-					Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					Digita("\n[MESTRE]: Criatura", TimeUnit.MILLISECONDS, temp_dialog);
-					Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
-							+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
-							+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
-							+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n", TimeUnit.MILLISECONDS, temp_dialog);
+					switch (escolha) {
+					case "1":
+						Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
+						Digita("\n[MESTRE]: Criatura", TimeUnit.MILLISECONDS, temp_dialog);
+						Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
+								+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
+								+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
+								+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
 						break;
-				case "2":
-					Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
-							+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
-							+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
-							+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					Digita("\n[MESTRE]: Criador", TimeUnit.MILLISECONDS, temp_dialog);
-					Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n", TimeUnit.MILLISECONDS, temp_dialog);
-					break;
-						default:
-							System.out.println("Opção Invalida");
-							Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-									+ "Toninho[1]: Criador?\r\n"
-									+ "Toninho[2]: Criaturas? \r\n", TimeUnit.MILLISECONDS, temp_dialog);
-							escolha = entrada.next();
-				}
-				}while(!escolha.equals("1") && !escolha.equals("2"));
+					case "2":
+						Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
+								+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
+								+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
+								+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
+						Digita("\n[MESTRE]: Criador", TimeUnit.MILLISECONDS, temp_dialog);
+						Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n",
+								TimeUnit.MILLISECONDS, temp_dialog);
+						break;
+					default:
+						System.out.println("Opção Invalida");
+						Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
+								+ "Toninho[1]: Criador?\r\n" + "Toninho[2]: Criaturas? \r\n", TimeUnit.MILLISECONDS,
+								temp_dialog);
+						escolha = entrada.next();
+					}
+				} while (!escolha.equals("1") && !escolha.equals("2"));
 				break;
 			default:
 				System.out.println("\nOpção inválida!");
@@ -338,15 +344,16 @@ public class Intro {
 				+ "Toninho: E eu que tenho de ficar atento, né? Deus me ajude... \r\n", TimeUnit.MILLISECONDS,
 				temp_dialog);
 
-		// INSERIR AS ALTERNATIVAS NESTE ARRAYLIST. MUDAR O NOME PARA QUEST E O NÚMERO DA QUESTÃO
+		// INSERIR AS ALTERNATIVAS NESTE ARRAYLIST. MUDAR O NOME PARA QUEST E O NÚMERO
+		// DA QUESTÃO
 		ArrayList<String> quest1 = new ArrayList<String>();
 		quest1.add("57");
 		quest1.add("-71");
 		quest1.add("-7");
 		quest1.add("137");
 		quest1.add("185");
-		
-		//COLOCAR O NOVO NOME AQUI TAMBÉM 
+
+		// COLOCAR O NOVO NOME AQUI TAMBÉM
 		Collections.shuffle(quest1);
 		Collections.shuffle(quest1);
 		Collections.shuffle(quest1);
@@ -359,8 +366,9 @@ public class Intro {
 		String respSistema1 = null;
 		boolean exit1 = false;
 		do {
-			System.out.println("Sabendo que a largura em milímetros do Del Rey de Sheylla é 185, determine o valor de x na seguinte expressão:\n"
-					+ "(2^4 : 4^2) . (16^1 * 2^3) + x = 185"); //ENUNCIADO DA QUESTÃO
+			System.out.println(
+					"Sabendo que a largura em milímetros do Del Rey de Sheylla é 185, determine o valor de x na seguinte expressão:\n"
+							+ "(2^4 : 4^2) . (16^1 * 2^3) + x = 185"); // ENUNCIADO DA QUESTÃO
 			i++;
 			System.out.println("a) " + quest1.get(0) + "\n" + "b) " + quest1.get(1) + "\n" + "c) " + quest1.get(2)
 					+ "\n" + "d) " + quest1.get(3) + "\n" + "e) " + quest1.get(4) + "\n");
@@ -398,14 +406,15 @@ public class Intro {
 			}
 
 			if (i == 1 && exit1 == true) {
-				Digita("[MESTRE]: Seus esforços foram bem recompensados! Você recebeu uma Itaipava!", TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("[MESTRE]: Seus esforços foram bem recompensados! Você recebeu uma Itaipava!",
+						TimeUnit.MILLISECONDS, temp_dialog);
 				Itaipava = Itaipava + 1;
 			}
 			if (!(resp1.equals("a") || resp1.equals("b") || resp1.equals("c") || resp1.equals("d")
 					|| resp1.equals("e"))) {
 				i = i - 1;
 			}
-			//ESTRUTURA QUE PERMITE O JOGADOR ESCOLHER TENTAR RESPONDER NOVAMENTE OU NÃO.
+			// ESTRUTURA QUE PERMITE O JOGADOR ESCOLHER TENTAR RESPONDER NOVAMENTE OU NÃO.
 			if (resp1.equals("a") || resp1.equals("b") || resp1.equals("c") || resp1.equals("d")
 					|| resp1.equals("e") && i <= 3 && exit1 == false) {
 				HP = HP - 10;
@@ -419,7 +428,6 @@ public class Intro {
 			}
 
 		} while (!exit1 && i <= 3);
-		
 
 		Digita("[MESTRE] Após o conserto, Toninho e Sheylla seguem viagem. \r\n"
 				+ "Sheylla: Não foi tão ruim assim, foi, Antônio? \r\n" + "[blablabla]\r\n"
@@ -564,9 +572,9 @@ public class Intro {
 				Digita("Else if (escolha == 2) {\r\n"
 						+ "[MESTRE]: Toninho e Sheylla entram no Del Rey em rumo à sua próxima aventura\r\n"
 						+ "Sheylla: Creio que você mereça uma recompensa. Olhe no banco de trás, tenho uma surpresa para ti.\r\n"
-						+"Toninho: UMA ITAIPAVA? MAS RAPAZ, ERA TUDO O QUE EU ESTAVA PRECISANDO!\r\n"
-						+"[MESTRE]: Toninho degusta aquela cerveja como se fosse a melhor que bebera em toda sua vida enquanto da vidraça do Del Rey"
-						+" observa a caótica paisagem que se condensa para ser vista depressa.\r\n",
+						+ "Toninho: UMA ITAIPAVA? MAS RAPAZ, ERA TUDO O QUE EU ESTAVA PRECISANDO!\r\n"
+						+ "[MESTRE]: Toninho degusta aquela cerveja como se fosse a melhor que bebera em toda sua vida enquanto da vidraça do Del Rey"
+						+ " observa a caótica paisagem que se condensa para ser vista depressa.\r\n",
 						TimeUnit.MILLISECONDS, temp_dialog);
 				break;
 			default:
@@ -580,53 +588,45 @@ public class Intro {
 			}
 
 		} while (!escolha.equals("1") && !escolha.equals("2"));
-		
+
 		Digita("Horas se passam, e ao momento que ambos chegam em seu próximo destino, a escuridão da noite já começa a pairar.\r\n"
-				+"Sheylla: Antônio, creio que esteja mais ou menos inteirado dos perigos que aqui habitam. De agora em diante você deverá"
-				+"prosseguir sozinho.\r\n"
-				+"Toninho: A senhora não virá por quê?\r\n"
-				+"Sheylla: É que... é... hm... eu tenho coisas a fazer. Estou contando com sua bravura.\r\n"
-				+"[MESTRE]: Sheylla sai do carro e vai em direção ao porta-malas. Toninho ouve os passos e percebe que ela retorna com algo em mãos."
-				+"Sheylla: Leve isso contigo, creio que lhe será útil.\r\n"
-				+"Toninho: Um machado, dona Sheylla? Para que eu precisaria disso?\r\n"
-				+"Sheylla: Eu pensei que você já estivesse ciente do porquê... E não é um machado qualquer, dizem que pertenceu a Hefesto, filho de Zeus e ferreiro dos deuses.\r\n"
-				+"Toninho: Você tem o zapzap dele? Estava precisando de uma grelha nova para minha churrasqueira.\r\n"
-				+"Sheylla: Zapzap? O que?\r\n"
-				+"Toninho: Ué dona Sheylla, aquele negócio do celular que...\r\n"
-				+"Sheylla: SILÊNCIO! FOCO! Você me distraiu tanto que até perdi o fio da meada\r\n"
-				+"Toninho: Mas...\r\n"
-				+"Sheylla: SEM MAIS!\r\n"
-				+"Toninho: Perdão pelo vacilo, dona Sheylla.\r\n"
-				+"Sheylla: Enfim, o que eu estava dizendo mesmo... Isso, sobre o machado. Será útil. Já enfatizei que há criaturas por todos os cantos e dessa vez"
+				+ "Sheylla: Antônio, creio que esteja mais ou menos inteirado dos perigos que aqui habitam. De agora em diante você deverá"
+				+ "prosseguir sozinho.\r\n" + "Toninho: A senhora não virá por quê?\r\n"
+				+ "Sheylla: É que... é... hm... eu tenho coisas a fazer. Estou contando com sua bravura.\r\n"
+				+ "[MESTRE]: Sheylla sai do carro e vai em direção ao porta-malas. Toninho ouve os passos e percebe que ela retorna com algo em mãos."
+				+ "Sheylla: Leve isso contigo, creio que lhe será útil.\r\n"
+				+ "Toninho: Um machado, dona Sheylla? Para que eu precisaria disso?\r\n"
+				+ "Sheylla: Eu pensei que você já estivesse ciente do porquê... E não é um machado qualquer, dizem que pertenceu a Hefesto, filho de Zeus e ferreiro dos deuses.\r\n"
+				+ "Toninho: Você tem o zapzap dele? Estava precisando de uma grelha nova para minha churrasqueira.\r\n"
+				+ "Sheylla: Zapzap? O que?\r\n" + "Toninho: Ué dona Sheylla, aquele negócio do celular que...\r\n"
+				+ "Sheylla: SILÊNCIO! FOCO! Você me distraiu tanto que até perdi o fio da meada\r\n"
+				+ "Toninho: Mas...\r\n" + "Sheylla: SEM MAIS!\r\n" + "Toninho: Perdão pelo vacilo, dona Sheylla.\r\n"
+				+ "Sheylla: Enfim, o que eu estava dizendo mesmo... Isso, sobre o machado. Será útil. Já enfatizei que há criaturas por todos os cantos e dessa vez"
 				+ "não estarei aqui para te defender. Não abaixe sua guarda em nenhum momento.\r\n"
-				+"Toninho: Sim, senhora. Só mais uma coisa...\r\n"
-				+"Sheylla: O que?\r\n"
-				+"[MESTRE]: Um breve momento de tensão e silêncio se passa e os olhares de ambos se cruzam, antes que nosso herói quebre-o com sua pergunta.\r\n"
-				,TimeUnit.MILLISECONDS, temp_dialog);
+				+ "Toninho: Sim, senhora. Só mais uma coisa...\r\n" + "Sheylla: O que?\r\n"
+				+ "[MESTRE]: Um breve momento de tensão e silêncio se passa e os olhares de ambos se cruzam, antes que nosso herói quebre-o com sua pergunta.\r\n",
+				TimeUnit.MILLISECONDS, temp_dialog);
 		Thread.sleep(700);
 		Digita("Toninho: Não tem uma Itaipavinha pra 'nois' aí não?\r\n"
-				+"Sheylla: MAS QUE DIABOS! E EU ESPERANDO QUE FOSSE ALGO SÉRIO! Já nem sei por que eu ainda me impressiono com sua futilidade.\r\n"
-				+"Toninho: Mas e aí, tem?\r\n"
-				+"Sheylla: NÃO! VÁ LOGO!\r\n"
-				+"Toninho: Ouch, mas não precisava gritar também!\r\n"
-				+"Sheylla: Faça tua parte e eu providenciarei, está bom assim?\r\nnnnn"
-				+"Toninho: Justo.\r\n"
-				+"Sheylla: Boa sorte.\r\n"
-				+"[MESTRE]: Sheylla entra em seu Del Rey e volta pelo mesmo caminho que percorrera anteriormente, enquanto Toninho observa os faróis "
-				+"se estreitarem na escuridão.\r\n"
-				+"[MESTRE]: Agora sozinho, o herói contempla o bosque dentre as ruínas a sua frente e se indaga sobre as provações vindouras, lembrando-se de uma "
-				+"canção que o conforta nos momentos de soledade.\r\n"
-				+"Toninho: Acrediteeeei no seu amor, e olha só como estooooou...\r\n"
-				+"Toninho: SOZINHOOOO, SOZINHOOOO... CHEGA DE TANTAS MENTIRAS, CHEGA DE BRINCAR COM MEU AMOR\r\n"
-				+"* CRACK *\r\n"
-				+"[MESTRE]: A cantoria é subitamente interrompida por um som de galhos quebrando em meio ao aparentemente inóspito bosque, assustando o pobre pedreiro.\r\n"
-				+"Toninho: AAAAAAAAAAAAAAAAAA!\r\n"
-				+"Toninho: QUEM ESTÁ AÍ? 'TEJE' CIENTE DE QUE TENHO UM MACHADO E NÃO TENHO MEDO DE USÁ-LO!\r\n"
-				+"* CRACK CRACK CRACK *\r\n"
-				+"Toninho: REVELA TUA FACE, TINHOSO!\r\n"
-				+"[MESTRE]: O som misterioso se dissipa, mas a tensão se mantém. Agora alerta, Tonihno adentra as ruínas com o machado em mãos, "
-				+"preparado para enfrentar o que quer que seja que o destino lhe reserva.\r\n",TimeUnit.MILLISECONDS, temp_dialog);
-		
+				+ "Sheylla: MAS QUE DIABOS! E EU ESPERANDO QUE FOSSE ALGO SÉRIO! Já nem sei por que eu ainda me impressiono com sua futilidade.\r\n"
+				+ "Toninho: Mas e aí, tem?\r\n" + "Sheylla: NÃO! VÁ LOGO!\r\n"
+				+ "Toninho: Ouch, mas não precisava gritar também!\r\n"
+				+ "Sheylla: Faça tua parte e eu providenciarei, está bom assim?\r\nnnnn" + "Toninho: Justo.\r\n"
+				+ "Sheylla: Boa sorte.\r\n"
+				+ "[MESTRE]: Sheylla entra em seu Del Rey e volta pelo mesmo caminho que percorrera anteriormente, enquanto Toninho observa os faróis "
+				+ "se estreitarem na escuridão.\r\n"
+				+ "[MESTRE]: Agora sozinho, o herói contempla o bosque dentre as ruínas a sua frente e se indaga sobre as provações vindouras, lembrando-se de uma "
+				+ "canção que o conforta nos momentos de soledade.\r\n"
+				+ "Toninho: Acrediteeeei no seu amor, e olha só como estooooou...\r\n"
+				+ "Toninho: SOZINHOOOO, SOZINHOOOO... CHEGA DE TANTAS MENTIRAS, CHEGA DE BRINCAR COM MEU AMOR\r\n"
+				+ "* CRACK *\r\n"
+				+ "[MESTRE]: A cantoria é subitamente interrompida por um som de galhos quebrando em meio ao aparentemente inóspito bosque, assustando o pobre pedreiro.\r\n"
+				+ "Toninho: AAAAAAAAAAAAAAAAAA!\r\n"
+				+ "Toninho: QUEM ESTÁ AÍ? 'TEJE' CIENTE DE QUE TENHO UM MACHADO E NÃO TENHO MEDO DE USÁ-LO!\r\n"
+				+ "* CRACK CRACK CRACK *\r\n" + "Toninho: REVELA TUA FACE, TINHOSO!\r\n"
+				+ "[MESTRE]: O som misterioso se dissipa, mas a tensão se mantém. Agora alerta, Tonihno adentra as ruínas com o machado em mãos, "
+				+ "preparado para enfrentar o que quer que seja que o destino lhe reserva.\r\n", TimeUnit.MILLISECONDS,
+				temp_dialog);
 
 	}
 
@@ -636,6 +636,10 @@ public class Intro {
 
 	static void capitulo_3() {
 
+	}
+
+	static void instrucoes() throws Exception {
+		Digita("", TimeUnit.MILLISECONDS, temp_dialog);
 	}
 
 	// CRÉDITOS FINAIS
