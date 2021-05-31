@@ -12,6 +12,7 @@ public class teste {
 		//Teste para fazer pull
 		
 		//Teste 13_05
+		
 		desafio2CI();
 		
 	}
@@ -129,6 +130,109 @@ public class teste {
 		System.out.println("Resposta incorreta nas 3 tentativas!");
 		}
 		}
+	
+	public static void desafio2CII() {
+		Scanner entrada = new Scanner(System.in);
+		boolean acertou = false;
+		int contador = 0;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add("Binômio / Trinômio / Monômio"); // resposta correta
+		r.add("Binômio / Binômio / Monômio");
+		r.add("Trinômio / Monômio / Binômio");
+		r.add("Monômio / Trinômio / Binômio");
+		r.add("Monômio / Monômio / Monômio");
 		
+		do {
+			
+		System.out.println("Os polinômios são formados por termos.\n"
+				+ "A única operação entre os elementos de um termo é a multiplicação"
+				+ "chegando em até 3 termos sendo  monomio(1 termo), binomio(2 termos) e trinomo(3 termos).\n"
+				+ "Sabendo disso termine qual é o polinomio das expressões:\n"
+				+ "3x+y / 3ab-4xy-10y / 5abc");
+		System.out.println("a) " +r.get(0)); 
+		System.out.println("b) " +r.get(1));
+		System.out.println("c) " +r.get(2));
+		System.out.println("d) " +r.get(3));
+		System.out.println("e) " +r.get(4));
+		System.out.print("Escolha uma alternativa: ");
+		alternativa = entrada.next();
+		
+		switch (alternativa) {
+		
+		case "a":
+		case "A":	
+			if(r.get(0) == 101010) {
+				System.out.println("Resposta correta!");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "b":
+		case "B":
+			if(r.get(1) == 101010) {
+				System.out.println("Resposta correta!");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "c":
+		case "C":
+			if(r.get(2) == 101010) {
+				System.out.println("Resposta correta!");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "d":
+		case "D":
+			if(r.get(3) == 101010) {
+				System.out.println("Resposta correta!");
+				acertou = true;
+				contador = contador + 1;
+				}else {
+				System.out.println("Resposta incorreta!");
+				contador = contador + 1;
+				Collections.shuffle(r);
+				}
+			break;
+		case "e":
+		case "E":
+			if(r.get(4) == 101010) {
+			System.out.println("Resposta correta!");
+			acertou = true;
+			contador = contador + 1;
+			}else {
+			System.out.println("Resposta incorreta!");
+			contador = contador + 1;
+			Collections.shuffle(r);
+			}
+		break;
+		
+		default:
+		System.out.println("Escolha inv�lida!");
+		contador = contador + 1;
+		Collections.shuffle(r);
+		}
+		
+		} while (!acertou && contador < 3);
+		if (acertou) {
+		System.out.println("Voc� acertou na " + contador + " tentativa!");
+		} else {
+		System.out.println("Resposta incorreta nas 3 tentativas!");
+		}
+		}
 	}
-
+	
