@@ -11,13 +11,13 @@ public class Intro {
 	static int Itaipava = 0;
 	static Scanner entrada = new Scanner(System.in); // SCANNER DE ESCOPO GLOBAL, NÃO É NECESSÁRIO INSTANCIAR NENHUM
 														// OUTRO.
-	static Random rand = new Random(21);
-	static int D20 = rand.nextInt(21); // DADO DE 20 FACES - GLOBAL
-	static int D6 = rand.nextInt(7); // DADO DE 6 FACES - GLOBAL
+	
+	static int d20 = new Random().nextInt(20) + 1; //Dado de 20 lados
+	static int d6 = new Random().nextInt(6) + 1; //Dado de 6 lados
 
 	// TEMPO DE DELAY DAS MENSAGENS: MODIFIQUE PARA ZERO PARA JOGAR SEM DELAY.
 	// PADRÃO 70,150,25
-	static int temp_dialog = 0, temp_narrativa = 00, temp_transicao = 0;
+	static int temp_dialog = 70, temp_narrativa = 150, temp_transicao = 25;
 
 	public static void main(String[] args) throws Exception {
 
@@ -28,7 +28,7 @@ public class Intro {
 
 	static void menu() throws Exception { // metodo para puxar as escolhas do menu
 		String escolha_menu;
-		System.out.println("\n1 - Jogar\n2 - Instruções\n3 - Créditos\n4 - Sair");
+		System.out.println("\n1 - Jogar\n2 - Capitulos\n3 - Instruções\n4 - Créditos\n5 - Sair");
 		escolha_menu = entrada.next();
 		// EM FORMA DE STRING PARA CASO SEJA DIGITADO UM TIPO DIFERENTE DE INT.
 
@@ -38,12 +38,14 @@ public class Intro {
 				jogo();
 				break;
 			case "2":
-				instrucoes();
+				escolhaCapitulo();
 				break;
 			case "3":
-				creditos();
+				instrucoes();
 				break;
 			case "4":
+				creditos();
+			case "5":
 				System.exit(0);
 			default:
 				System.out.println("ERROOOOOOU! Tente novamente, meu consagrado.\n");
@@ -56,15 +58,15 @@ public class Intro {
 	}
 
 	static void jogo() throws Exception { // metodo de inicio do jogo
-		escolha_capitulo();
-		// intro();
-		// capitulo_1();
-		// capitulo_2();
-		// capitulo_3();
+		
+		intro();
+		capitulo_1();
+		capitulo_2();
+		capitulo_3();
 
 	}
 
-	static void escolha_capitulo() throws Exception {
+	static void escolhaCapitulo() throws Exception {
 		String escolha_cap;
 
 		Digita("\n0 - Introdução\n1 - Capítulo I - A ACEITAÇÃO\n2 - Capítulo II - A DESCOBERTA\n3 - Capítulo III - O CONFRONTO FINAL\n4 - Menu Principal",
@@ -87,7 +89,7 @@ public class Intro {
 				menu();
 			default:
 				System.out.println("\nERROOOOU! Tente novamente, meu consagrado.");
-				escolha_capitulo();
+				escolhaCapitulo();
 			}
 
 		} while (!escolha_cap.contentEquals("0") && !escolha_cap.contentEquals("1") && !escolha_cap.contentEquals("2")
@@ -480,17 +482,17 @@ public class Intro {
 						TimeUnit.MILLISECONDS, temp_dialog);
 				System.out.println("Lançando o dado de 20 lados(D20)...");
 				Thread.sleep(1000);
-				System.out.println("Resultado: " + D20);
+				System.out.println("Resultado: " + d20);
 
-				if (D20 >= 1 && D20 <= 10) {
+				if (d20 >= 1 && d20 <= 10) {
 					Digita("", TimeUnit.MILLISECONDS, temp_dialog);
 					// Toninho erra a tijolada, é atacado por Esfinge e perde 20 pontos de vida.
 					// Sheylla intervém.
 					HP = HP - 20;
-				} else if (D20 > 10 && D20 <= 15) {
+				} else if (d20 > 10 && d20 <= 15) {
 					Digita("", TimeUnit.MILLISECONDS, temp_dialog);
 					// A tijolada é suficiente para nocautear a Esfinge temporariamente.
-				} else if (D20 > 15) {
+				} else if (d20 > 15) {
 					Digita("", TimeUnit.MILLISECONDS, temp_dialog);
 					// A tijolada mata a Esfinge.
 
@@ -661,17 +663,26 @@ public class Intro {
 				+ "[MESTRE]: Toninho se solta e se levanta e vai em direção ao portão do labirinto em ruinas e nele se encontra um aviso.\r\n", TimeUnit.MILLISECONDS, temp_dialog);
 		
 		// DESAFIO 1
+		desafioC2I();
 		
 		Digita("\n[MESTRE]: O portão se abre e Toninho adentra no labirinto em busca (pedaço do pergaminho?).\r\n"
 				+ "\n[MESTRE]: No primeiro cruzamento Toninho encontra ourto desafio\r\n", TimeUnit.MILLISECONDS, temp_dialog);
 		
 		//DESAFIO 2
+		desafioC2II();
 		
 		Digita("\n[MESTRE]: Toninho avança seguindo o rastro e encontra o final do labirinto\r\n", TimeUnit.MILLISECONDS, temp_dialog);
 		
 		//DESAFIO 3
+		desafioC2III();
 		
+
+		Digita("[MESTRE]:Toninho entra na porta final e ve aquela criatura se alimentando de um pigmeu\n"
+				+ "\nToninho: kkk eae man! \n" + "\n[MESTRE]: O minotauro volta seu olhar para o Toninho e berra\n"
+				+ "Minotauro: hahahaha! Opa parece que chegou a sobremesa\n" + "Toninho: Mas o que é isso!\n"
+				+ "\n[MESTRE]: Minotauro anvaça em direção ao toninho com seu machado! ",TimeUnit.MILLISECONDS, temp_dialog);
 		//BATALHA CONTRA O MINOTAURO
+		batalhaMino();
 		
 	}
 
@@ -693,118 +704,468 @@ public class Intro {
 
 	// MÉTODO PARA DELAY NAS MENSAGENS
 	public static void Digita(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
+
 		for (char caractere : mensagem.toCharArray()) {
 			System.out.print(caractere);
 			unit.sleep(tempo_mensagem);
 		}
 	}
+	public static void desafioC2I() throws InterruptedException {
+
+
+		boolean acertou = false;
+		int contador = 0;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add("Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n"); // resposta correta
+		r.add("Literal -  3 / y^2 a^2 / 2^6 t \n" + "Coficiente - x / 2 0 / a b c\n");
+		r.add("Literal -  3 / 1 1 / 1 3 7 \n" + "Coficiente - x / a^2 b^2 / x^2 x\n");
+		r.add("Literal -  3x / 2a^2 1^2 / 0^2 1 \n" + "Coficiente - 3 / 0 0 / x c 7\n");
+		r.add("Literal -  0 / a b / x x \n" + "Coficiente - 2 / 1 1 / 1 3\n");
+
+		do {
+
+			Digita(
+					"\nOs polinômios são expressões algébricas formadas por números (coeficientes) e letras (partes literais).\r\n "
+							+ "Sabendo disso determine quais são as parte literais e os coefiencias das expressôes:\r\n"
+							+ "3x / a^2 - b^2 / x^2 + 3x + 7 \n",TimeUnit.MILLISECONDS, temp_dialog);
+			System.out.println("a) " + r.get(0));
+			System.out.println("b) " + r.get(1));
+			System.out.println("c) " + r.get(2));
+			System.out.println("d) " + r.get(3));
+			System.out.println("e) " + r.get(4));
+			System.out.print("\nEscolha uma alternativa: ");
+			alternativa = entrada.next();
+
+			switch (alternativa) {
+
+			case "a":
+			case "A":
+				if (r.get(0) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "b":
+			case "B":
+				if (r.get(1) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "c":
+			case "C":
+				if (r.get(2) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "d":
+			case "D":
+				if (r.get(3) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "e":
+			case "E":
+				if (r.get(4) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+
+			default:
+				System.out.println("Escolha invalida!\n");
+				Collections.shuffle(r);
+			}
+
+		} while (!acertou);
+			Itaipava++;
+		
+	}
+	
+	public static void desafioC2II() throws InterruptedException {
+
+		Scanner entrada = new Scanner(System.in);
+		boolean acertou = false;
+		int contador = 0;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add("Binômio / Trinômio / Monômio"); // resposta correta
+		r.add("Binômio / Binômio / Monômio");
+		r.add("Trinômio / Monômio / Binômio");
+		r.add("Monômio / Trinômio / Binômio");
+		r.add("Monômio / Monômio / Monômio");
+
+		do {
+
+			Digita("Os polinômios são formados por termos.\n"
+					+ "A única operação entre os elementos de um termo é a multiplicação"
+					+ "chegando em até 3 termos sendo  monomio(1 termo), binomio(2 termos) e trinomo(3 termos).\n"
+					+ "Sabendo disso termine qual é o polinomio das expressões:\n" + "3x+y / 3ab-4xy-10y / 5abc\n",TimeUnit.MILLISECONDS, temp_dialog);
+			System.out.println("a) " + r.get(0));
+			System.out.println("b) " + r.get(1));
+			System.out.println("c) " + r.get(2));
+			System.out.println("d) " + r.get(3));
+			System.out.println("e) " + r.get(4));
+			System.out.print("\nEscolha uma alternativa: ");
+			alternativa = entrada.next();
+
+			switch (alternativa) {
+
+			case "a":
+			case "A":
+				if (r.get(0) == "Binômio / Trinômio / Monômio") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "b":
+			case "B":
+				if (r.get(1) == "Binômio / Trinômio / Monômio") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "c":
+			case "C":
+				if (r.get(2) == "Binômio / Trinômio / Monômio") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "d":
+			case "D":
+				if (r.get(3) == "Binômio / Trinômio / Monômio") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "e":
+			case "E":
+				if (r.get(4) == "Binômio / Trinômio / Monômio") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+
+			default:
+				System.out.println("Escolha invalida!");
+				Collections.shuffle(r);
+			}
+
+		} while (!acertou);
+		Itaipava++;
+	}
+
+	public static void desafioC2III() throws InterruptedException {
+
+
+		boolean acertou = false;
+		int contador = 0;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add("3x^3+5x^2-5x+3"); // resposta correta
+		r.add("5x^3-3x^2-6x-1");
+		r.add("2x^3-2x^2+4x+18");
+		r.add("x^3-3x^2+5x-7");
+		r.add("10x^3+2x^2+3x+1");
+
+		do {
+
+			Digita("Some os polinômios:\n" + "a(x)=2x^3+2x^2-3x+1\n" + "b(x)=x^3+3x^2-2x+2\n",TimeUnit.MILLISECONDS, temp_dialog);
+			System.out.println("a) " + r.get(0));
+			System.out.println("b) " + r.get(1));
+			System.out.println("c) " + r.get(2));
+			System.out.println("d) " + r.get(3));
+			System.out.println("e) " + r.get(4));
+			System.out.print("\nEscolha uma alternativa: ");
+			alternativa = entrada.next();
+
+			switch (alternativa) {
+
+			case "a":
+			case "A":
+				if (r.get(0) == "3x^3+5x^2-5x+3") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "b":
+			case "B":
+				if (r.get(1) == "3x^3+5x^2-5x+3") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "c":
+			case "C":
+				if (r.get(2) == "3x^3+5x^2-5x+3") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "d":
+			case "D":
+				if (r.get(3) == "3x^3+5x^2-5x+3") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+			case "e":
+			case "E":
+				if (r.get(4) == "3x^3+5x^2-5x+3") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+				}
+				break;
+
+			default:
+				System.out.println("\nEscolha invalida!");
+				Collections.shuffle(r);
+			}
+
+		} while (!acertou && contador < 3);
+		Itaipava++;
+	}
+	
+	public static void batalhaMino() throws InterruptedException {
+		int hpMino = 100;
+		String escolha="", decisao ="", decisao1="";
+		
+		// int d20 = rand.nextInt(21); // DADO DE 20 FACES - GLOBAL
+		// int d6 = rand.nextInt(7); // DADO DE 6 FACES - GLOBAL
+
+
+		do {
+
+			System.out.println("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n");
+		escolha = entrada.next();
+			int n;
+			switch (escolha) {
+			case "1":
+				n = d20;
+				System.out.println("\nO numero do dado: "+n);
+				if (n >= 15 && n <= 20) {
+					Digita(
+							"[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
+									+ "[MESTRE]: Toninho aproveita a oportunidade e decepa a cabeça da criatura\n ",TimeUnit.MILLISECONDS, temp_dialog);
+					break;
+				} else if (n >= 10 && n < 15) {
+					hpMino = hpMino - 50;
+					Digita(
+							"[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
+									+ "\n HP Minotauro - 50 = " + hpMino
+									+ "\n[MESTRE]: Toninho vai finalizar a criatura, mas escorrega e da tempo do minotauro se levantar\n",TimeUnit.MILLISECONDS, temp_dialog);
+
+					
+
+					do {
+						Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n",TimeUnit.MILLISECONDS, temp_dialog);
+						decisao = entrada.next();
+						switch (decisao) {
+						case "1":
+							n = d20;
+							Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+							if (n >= 10 && n <= 20) {
+								Digita(
+										"[MESTRE]: Minotauro enfurecido pega seu machado em tenta acertar o Toninho, mas o mesmo consegue esquivar e decepa a cabeça da criatura",TimeUnit.MILLISECONDS, temp_dialog);
+								break;
+							} else if (n >= 0 && n < 10) {
+								Digita("[MESTRE]: colocar algo do toninho tomando dano 1",TimeUnit.MILLISECONDS, temp_dialog);
+								HP = HP - 20;
+
+								Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n",TimeUnit.MILLISECONDS, temp_dialog);
+								decisao1 = entrada.next();
+
+								do {
+									switch (decisao1) {
+									case "1":
+										n = d20;
+										Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+										if (n >= 5 && n <= 20) {
+											Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+											break;
+										} else if (n < 5) {
+											Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
+											System.exit(0);
+											break;
+										}
+									case "2":
+										if (Itaipava > 0) {
+											Itaipava --;
+											n = d20 + 10;
+											Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+											if (n >= 5 && n <= 20) {
+												Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+												break;
+											} else if (n < 5) {
+												Digita("Toninho morre ou perde e a sheylla o ajuda!\n"
+														+ "GAME OVER!!!!",TimeUnit.MILLISECONDS, temp_dialog);
+												System.exit(0);
+												break;
+											}
+										} else {
+											Digita("Toninho não possui itaipaiva",TimeUnit.MILLISECONDS, temp_dialog);
+											decisao1 = "a";
+											break;
+										}
+									default:
+										System.out.println("\nOpção invalida!");
+										
+									}
+
+								} while (!decisao1.equals("1") && !decisao1.equals("2"));
+
+								break;
+							}
+							break;
+						case "2":
+							if (Itaipava > 0) {
+								Itaipava --;
+								n = d20 + 10;
+								Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+								if (n >= 5 && n <= 20) {
+									Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+									break;
+								} else if (n < 5) {
+									Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
+									System.exit(0);
+									break;
+								}
+							} else {
+								Digita("Toninho não possui itaipaiva",TimeUnit.MILLISECONDS, temp_dialog);
+								decisao = "a";
+								break;
+							}
+
+						default:
+							System.out.println("\nOpção invalida!");
+							
+						}
+
+					} while (!decisao.equals("1") && !decisao.equals("2"));
+					break;
+				}else if (n >= 0 && n < 10) {
+					Digita("[MESTRE]: colocar algo do toninho tomando dano",TimeUnit.MILLISECONDS, temp_dialog);
+					HP = HP - 20;
+
+					
+
+					do {
+						Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n",TimeUnit.MILLISECONDS, temp_dialog);
+						decisao1 = entrada.next();
+						switch (decisao1) {
+						case "1":
+							n = d20;
+							Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+							if (n >= 5 && n <= 20) {
+								Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+								break;
+							} else if (n < 5) {
+								Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
+								System.exit(0);
+								break;
+							}
+						case "2":
+							if (Itaipava > 0) {
+								Itaipava --;
+								n = d20 + 10;
+								Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+								if (n >= 5 && n <= 20) {
+									Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+									break;
+								} else if (n < 5) {
+									Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
+									System.exit(0);
+									break;
+								}
+							} else {
+								Digita("Toninho não possui itaipaiva",TimeUnit.MILLISECONDS, temp_dialog);
+								decisao1 = "a";
+								break;
+							}
+						default:
+							System.out.println("\nOpção invalida!");
+							
+						}
+
+					} while (!decisao1.equals("1") && !decisao1.equals("2"));
+				}
+				break;
+			case "2":
+				if (Itaipava > 0) {
+					Itaipava --;
+					n = d20 + 10;
+					Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+					if (n >= 5 && n <= 30) {
+						Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+						break;
+					} else if (n < 5) {
+						Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
+						System.exit(0);
+						break;
+					}
+				} else {
+					Digita("Toninho não possui itaipaiva sdadsaddads",TimeUnit.MILLISECONDS, temp_dialog);
+					
+					escolha = "a";
+					break;
+				}
+			default:
+				System.out.println("\nOpção invalida!");
+				
+			}
+			
+		} while (!escolha.equals("1") && !escolha.equals("2"));
+		System.out.println("\nToninho foi para o proximo desafio");
+	}
+	
 }
 
-/* Equação 1° grau 
- * Questão: x + 4 = 12
- * x = 12 – 4
- * R. x = 8
- */
-
-/* Equação 1° grau 
- * Para que toninho não entre em coma alcolico logo no inicio da historia resolva esta questão de Matemática, que toninho tem espertize para solucionar 
-estas questões, e ajude nosso amigo Predreiro. 
-Questão: x – 12 = 20
-x = 20 + 12
-R. x = 32 */
-
-/* Equação 1° grau 
- * Para que o nosso Heroi Toninho possa entender o que a Mestre Sheylla tem para apresentar a ele em Diademmor, ajude ele a resolver esta questão de 
- * equação de 1° grau que nosso heroi gosta de resolver, para que ele consiga superar esta etapa
- * Questão: 4x + 2 = 10
- * R. 4x = 10 – 2
- *     x = 10 – 2
-              4
-           x =  8
-                4
-              R.  x = 2 */
-
-/* Equação 2° grau
- * Para ajudar o guerreiro Toninho a obter respostas mais claras junto a Deusa Sheylla ajude ele a solucionar esta questão de 
- * equação de 2° Grau
- * Questão: x² – 2x +1 = 0
- * R.
- * a = 1
- * b = -2
- * c = 1
- * D = b² – 4ac
- * D = (-2)² – 4 ·1·1
- * D = 4 – 4
- * D = 0
- * R. Como D = 0, a equação possui uma única solução real.  */	
-
-/* Equação 2° grau
- * Questão: x² +6x + c =0
- R. a = 1
- b = 6
- D = b² – 4 ac
- D = 6² – 4· 1 c
- D = 36 – 4c
- 36 – 4c = 0
- 36 = 4c
- c = 36/4
- R. c= 9
- */
- 
-/* Função do 1° grau
-Questão: f(x) = -2x + 5
-R. -2x + 5 = 0
--2x = -5
-x = (-5) : (-2)
-R. x = 2,5 */
-
-/* Função do 1° grau
-Questão: f(x) = ax + b, sabendo-se que f(3) = 6 e f (-2) = -3
-f(3) = 6
-f(3) = 3a + b -- 3a + b = 6
-f(-2) = -3
-f(-2) = -2a + b -- -2a + b = -3
-3a + b = 6
--2a + b = -3
-5a = 9
-R. a = 9/5
-*/
-
-/* Função do 2° grau
-Questão: Calcule o valor de k de modo que a função f(x) = 4x² – 4x – k não tenha raízes, isto é,
-o gráfico da parábola não possui ponto em comum com o eixo x
-D < 0
-b² – 4ac < 0
-(–4)² – 4 * 4 * (–k) < 0
-16 + 16k < 0
-16k < – 16
-k < –1
-R. O valor de k para que a função não tenha raízes reais deve ser menor que – 1.
-*/
-
-/* Função do 2° grau
- * Questão: Determine os valores de m, para que a função f(x) = (m – 2)x² – 2x + 6 admita raízes reais.
- * Para essa situação temos que D >= 0.
- * D >= 0
- * b² – 4ac >= 0
- * (–2)² – 4 * (m – 2) * 6 >= 0
- * 4 – 4 * (6m – 12) >= 0
- * 4 – 24m + 48 >= 0
- * –24m >= – 48 – 4
- * –24m >= – 52
- * 24m <= 52
- * m <= 52/24
- * m <= 13/6
- * R. O valor de m que satisfaça a condição exigida é m <= 13/6.
- */
-
-/* Polinômios
-   Questão: Sabendo-se que –3 é raiz de P(x) = x³ + 4x² - ax + 1, calcule o valor de a.
-   Como foi dito que -3 é raiz do polinômio, devemos inserir -3 no lugar de x e igualar o polinômio a zero a fim de obter o valor de a.
-   (-3)3 + 4(-3)2 + -a(-3) + 1 = 0
-   -27 + 36 + 3a + 1 = 0
-   -26 + 36 = -3a
-   10 = -3a
-   a = -10
-        3
-*/
