@@ -17,7 +17,7 @@ public class Intro {
 
 	// TEMPO DE DELAY DAS MENSAGENS: MODIFIQUE PARA ZERO PARA JOGAR SEM DELAY.
 	// PADRÃO 70,150,25
-	static int temp_dialog = 70, temp_narrativa = 150, temp_transicao = 25;
+	static int temp_dialog = 0, temp_narrativa = 0, temp_transicao = 0;
 
 	public static void main(String[] args) throws Exception {
 
@@ -676,11 +676,11 @@ public class Intro {
 		//DESAFIO 3
 		desafioC2III();
 		
-
 		Digita("[MESTRE]:Toninho entra na porta final e ve aquela criatura se alimentando de um pigmeu\n"
 				+ "\nToninho: kkk eae man! \n" + "\n[MESTRE]: O minotauro volta seu olhar para o Toninho e berra\n"
 				+ "Minotauro: hahahaha! Opa parece que chegou a sobremesa\n" + "Toninho: Mas o que é isso!\n"
-				+ "\n[MESTRE]: Minotauro anvaça em direção ao toninho com seu machado! ",TimeUnit.MILLISECONDS, temp_dialog);
+				+ "\n[MESTRE]: Minotauro avança em direção ao toninho com seu machado! ",TimeUnit.MILLISECONDS, temp_dialog);
+		
 		//BATALHA CONTRA O MINOTAURO
 		batalhaMino();
 		
@@ -1018,8 +1018,10 @@ public class Intro {
 										"[MESTRE]: Minotauro enfurecido pega seu machado em tenta acertar o Toninho, mas o mesmo consegue esquivar e decepa a cabeça da criatura",TimeUnit.MILLISECONDS, temp_dialog);
 								break;
 							} else if (n >= 0 && n < 10) {
-								Digita("[MESTRE]: colocar algo do toninho tomando dano 1",TimeUnit.MILLISECONDS, temp_dialog);
 								HP = HP - 20;
+								Digita("[MESTRE]: O minotauro erra machadada, mas o impacto joga toninho a parede\n"
+										+ "\n HP Toninho - 20 = \" + hpMino" + HP,TimeUnit.MILLISECONDS, temp_dialog);
+								
 
 								Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n",TimeUnit.MILLISECONDS, temp_dialog);
 								decisao1 = entrada.next();
@@ -1030,7 +1032,8 @@ public class Intro {
 										n = d20;
 										Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
 										if (n >= 5 && n <= 20) {
-											Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+											Digita("[MESTRE]: O minotauro avança novamente em direção a Toninho, mas se levanta rapidamente e se esquiva no tempo exato, fazendo o minotauro acertar a parede, ficando atordoado\n"
+													+ "[MESTRE]: Aproveitando a situação Toninho e acerta a cabeça do minotauro, dacapitando-a\n",TimeUnit.MILLISECONDS, temp_dialog);
 											break;
 										} else if (n < 5) {
 											Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
@@ -1043,7 +1046,8 @@ public class Intro {
 											n = d20 + 10;
 											Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
 											if (n >= 5 && n <= 20) {
-												Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+												Digita("[MESTRE]: O minotauro avança novamente em direção a Toninho, mas se levanta rapidamente e se esquiva no tempo exato, fazendo o minotauro acertar a parede, ficando atordoado\n"
+														+ "[MESTRE]: Aproveitando a situação Toninho e acerta a cabeça do minotauro, dacapitando-a\n",TimeUnit.MILLISECONDS, temp_dialog);
 												break;
 											} else if (n < 5) {
 												Digita("Toninho morre ou perde e a sheylla o ajuda!\n"
@@ -1072,7 +1076,9 @@ public class Intro {
 								n = d20 + 10;
 								Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
 								if (n >= 5 && n <= 20) {
-									Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+									Digita(
+											"[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
+													+ "[MESTRE]: Toninho aproveita a oportunidade e decepa a cabeça da criatura\n ",TimeUnit.MILLISECONDS, temp_dialog);
 									break;
 								} else if (n < 5) {
 									Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
