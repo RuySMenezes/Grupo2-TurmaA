@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.ArrayList;
 
 public class Intro {
-	static double HP = 100;
+	static int HP = 100;
 	static int Itaipava = 0;
 	static Scanner entrada = new Scanner(System.in); // SCANNER DE ESCOPO GLOBAL, NÃO É NECESSÁRIO INSTANCIAR NENHUM
 														// OUTRO.
@@ -17,7 +17,7 @@ public class Intro {
 
 	// TEMPO DE DELAY DAS MENSAGENS: MODIFIQUE PARA ZERO PARA JOGAR SEM DELAY.
 	// PADRÃO 70,150,25
-	static int temp_dialog = 0, temp_narrativa = 0, temp_transicao = 0;
+	static int temp_dialog = 0, temp_narrativa = 0, temp_transicao = 00;
 
 	public static void main(String[] args) throws Exception {
 
@@ -69,7 +69,7 @@ public class Intro {
 	static void escolhaCapitulo() throws Exception {
 		String escolha_cap;
 
-		Digita("\n0 - Introdução\n1 - Capítulo I - A ACEITAÇÃO\n2 - Capítulo II - A DESCOBERTA\n3 - Capítulo III - O CONFRONTO FINAL\n4 - Menu Principal",
+		Digita("\n0 - Introdução\n1 - Capítulo I - A ACEITAÇÃO\n2 - Capítulo II - A DESCOBERTA\n3 - Capítulo III - O CONFRONTO FINAL\n4 - Menu Principal\n",
 				TimeUnit.MILLISECONDS, temp_dialog);
 		escolha_cap = entrada.next();
 
@@ -680,7 +680,7 @@ public class Intro {
 				+ "\nToninho: kkk eae man! \n" + "\n[MESTRE]: O minotauro volta seu olhar para o Toninho e berra\n"
 				+ "Minotauro: hahahaha! Opa parece que chegou a sobremesa\n" + "Toninho: Mas o que é isso!\n"
 				+ "\n[MESTRE]: Minotauro avança em direção ao toninho com seu machado! "
-				+ "\n .::::::::::::: A BATALHA COMEÇA ::::::::::::.\\n",TimeUnit.MILLISECONDS, temp_dialog);
+				+ "\n .::::::::::::: A BATALHA COMEÇA ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
 		
 		//BATALHA CONTRA O MINOTAURO
 		batalha();
@@ -725,9 +725,17 @@ public class Intro {
 		r.add("Literal -  0 / a b / x x \n" + "Coficiente - 2 / 1 1 / 1 3\n");
 
 		do {
+			if(contador ==3) {
+				HP = HP -10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
+						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+				contador = 0;
+				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+			}
 
 			Digita(
-					"\nOs polinômios são expressões algébricas formadas por números (coeficientes) e letras (partes literais).\r\n "
+					"\nVocê tem 3 chances de acertar a questão a seguir, senão levara dano\n"
+					+ "\nOs polinômios são expressões algébricas formadas por números (coeficientes) e letras (partes literais).\r\n "
 							+ "Sabendo disso determine quais são as parte literais e os coefiencias das expressôes:\r\n"
 							+ "3x / a^2 - b^2 / x^2 + 3x + 7 \n",TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
@@ -744,10 +752,12 @@ public class Intro {
 			case "A":
 				if (r.get(0) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
 					System.out.println("Resposta correta!\n");
+					contador++;
 					acertou = true;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "b":
@@ -755,9 +765,11 @@ public class Intro {
 				if (r.get(1) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "c":
@@ -765,9 +777,11 @@ public class Intro {
 				if (r.get(2) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "d":
@@ -775,9 +789,11 @@ public class Intro {
 				if (r.get(3) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "e":
@@ -785,9 +801,11 @@ public class Intro {
 				if (r.get(4) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 
@@ -816,7 +834,15 @@ public class Intro {
 
 		do {
 
-			Digita("Os polinômios são formados por termos.\n"
+			if(contador == 3) {
+				HP = HP -10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
+						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+				contador = 0;
+				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+			}
+			Digita("\nVocê tem 3 chances de acertar a questão a seguir, senão levara dano\n"
+					+ "\nOs polinômios são formados por termos.\n"
 					+ "A única operação entre os elementos de um termo é a multiplicação"
 					+ "chegando em até 3 termos sendo  monomio(1 termo), binomio(2 termos) e trinomo(3 termos).\n"
 					+ "Sabendo disso termine qual é o polinomio das expressões:\n" + "3x+y / 3ab-4xy-10y / 5abc\n",TimeUnit.MILLISECONDS, temp_dialog);
@@ -835,9 +861,11 @@ public class Intro {
 				if (r.get(0) == "Binômio / Trinômio / Monômio") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "b":
@@ -845,9 +873,11 @@ public class Intro {
 				if (r.get(1) == "Binômio / Trinômio / Monômio") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "c":
@@ -855,9 +885,11 @@ public class Intro {
 				if (r.get(2) == "Binômio / Trinômio / Monômio") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "d":
@@ -865,9 +897,11 @@ public class Intro {
 				if (r.get(3) == "Binômio / Trinômio / Monômio") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "e":
@@ -875,9 +909,11 @@ public class Intro {
 				if (r.get(4) == "Binômio / Trinômio / Monômio") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 
@@ -904,8 +940,15 @@ public class Intro {
 		r.add("10x^3+2x^2+3x+1");
 
 		do {
-
-			Digita("Some os polinômios:\n" + "a(x)=2x^3+2x^2-3x+1\n" + "b(x)=x^3+3x^2-2x+2\n",TimeUnit.MILLISECONDS, temp_dialog);
+			if(contador == 3) {
+				HP = HP -10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
+						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+				contador = 0;
+				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+			}
+			Digita("\nVocê tem 3 chances de acertar a questão a seguir, senão levara dano\n"
+					+ "\nSome os polinômios:\n" + "a(x)=2x^3+2x^2-3x+1\n" + "b(x)=x^3+3x^2-2x+2\n",TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -921,9 +964,11 @@ public class Intro {
 				if (r.get(0) == "3x^3+5x^2-5x+3") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "b":
@@ -931,9 +976,11 @@ public class Intro {
 				if (r.get(1) == "3x^3+5x^2-5x+3") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "c":
@@ -941,9 +988,11 @@ public class Intro {
 				if (r.get(2) == "3x^3+5x^2-5x+3") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "d":
@@ -951,9 +1000,11 @@ public class Intro {
 				if (r.get(3) == "3x^3+5x^2-5x+3") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 			case "e":
@@ -961,9 +1012,11 @@ public class Intro {
 				if (r.get(4) == "3x^3+5x^2-5x+3") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
+					contador++;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
+					contador++;
 				}
 				break;
 
@@ -1000,7 +1053,7 @@ public class Intro {
 			switch(escolha) {
 			case "1":
 				Digita("\nJogando os dados...\n"
-						+ "O numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+						+ "O numero do dado: "+n+"\n",TimeUnit.MILLISECONDS, temp_dialog);
 				if(n > 15 && n <= 25) {
 					hpI = hpI - 20;
 					Digita("\nToninho causou 20 de dano no inimigo\n"
@@ -1031,9 +1084,12 @@ public class Intro {
 			case "2":
 				if (Itaipava > 0) {
 					Itaipava --;
+					HP = HP + 10;
+					Digita("Toninho usa a itaipava e ganha +10 de HP e +5 na contagem de dados\n"
+							+ "\nHP do Toninho = " +HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
 					n = n +5;
 					Digita("\nJogando os dados...\n"
-							+ "O numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+							+ "O numero do dado: "+n+"\n",TimeUnit.MILLISECONDS, temp_dialog);
 					if(n > 15 && n <= 25) {
 						hpI = hpI - 20;
 						Digita("\nToninho causou 20 de dano no inimigo\n"
