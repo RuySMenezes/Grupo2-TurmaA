@@ -13,7 +13,6 @@ public class Intro {
 														// OUTRO.
 	
 	static int d20 = new Random().nextInt(20) + 1; //Dado de 20 lados
-	static int d6 = new Random().nextInt(6) + 1; //Dado de 6 lados
 
 	// TEMPO DE DELAY DAS MENSAGENS: MODIFIQUE PARA ZERO PARA JOGAR SEM DELAY.
 	// PADRÃO 70,150,25
@@ -635,7 +634,7 @@ public class Intro {
 	// CRÉDITOS FINAIS
 	static void creditos() throws Exception {
 
-		Digita(".::: CRÉDITOS :::.\n> Alex Gama\n> Bruno Souza\n> Rafael Pereira Elias\n> Ruy Menezes \n",
+		Digita(".::: CRÉDITOS :::.\n> Alex Gama\n> Bruno Sousa\n> Rafael Pereira Elias\n> Ruy Menezes \n",
 				TimeUnit.MILLISECONDS, temp_dialog);
 		menu();
 	}
