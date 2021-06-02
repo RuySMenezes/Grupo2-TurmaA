@@ -697,18 +697,18 @@ public class Intro {
 		//Historia
 		
 		//Desafio 2
-		
+		desafioC3II();
 		
 		//Historia
 		
 		//Desafio 3
-		
+		desafioC3III();
 		
 		//Historia
 		
 		
 		//Desafio final
-		
+		desafioC3IV();
 		
 		//Historia
 		
@@ -743,6 +743,331 @@ public class Intro {
 			unit.sleep(tempo_mensagem);
 		}
 	}
+	
+	public static void desafioC1I() throws InterruptedException {
+		
+		boolean acertou = false;
+		int contador = 3;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add(""); // resposta correta
+		r.add("");
+		r.add("");
+		r.add("");
+		r.add("");
+
+		do {
+
+			if(contador == 0) {
+				HP = HP -10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
+						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+				contador = 3;
+				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+			}
+			if (HP <= 0) {
+				Digita("Você morreu!\n"
+						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				System.exit(0);
+			}
+			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+					+ "",TimeUnit.MILLISECONDS, temp_dialog);
+			System.out.println("a) " + r.get(0));
+			System.out.println("b) " + r.get(1));
+			System.out.println("c) " + r.get(2));
+			System.out.println("d) " + r.get(3));
+			System.out.println("e) " + r.get(4));
+			System.out.print("\nEscolha uma alternativa: ");
+			alternativa = entrada.next();
+
+			switch (alternativa) {
+
+			case "a":
+			case "A":
+				if (r.get(0) == "") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "b":
+			case "B":
+				if (r.get(1) == "") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "c":
+			case "C":
+				if (r.get(2) == "") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "d":
+			case "D":
+				if (r.get(3) == "") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "e":
+			case "E":
+				if (r.get(4) == "") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+
+			default:
+				System.out.println("Escolha invalida!");
+				Collections.shuffle(r);
+			}
+
+		} while (!acertou);
+		Itaipava++;
+	}
+
+	public static void desafioC1II() throws InterruptedException {
+		
+		boolean acertou = false;
+		int contador = 3;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add(""); // resposta correta
+		r.add("");
+		r.add("");
+		r.add("");
+		r.add("");
+
+		do {
+
+			if(contador == 0) {
+				HP = HP -10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
+						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+				contador = 3;
+				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+			}
+			if (HP <= 0) {
+				Digita("Você morreu!\n"
+						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				System.exit(0);
+			}
+			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+					+ "",TimeUnit.MILLISECONDS, temp_dialog);
+			System.out.println("a) " + r.get(0));
+			System.out.println("b) " + r.get(1));
+			System.out.println("c) " + r.get(2));
+			System.out.println("d) " + r.get(3));
+			System.out.println("e) " + r.get(4));
+			System.out.print("\nEscolha uma alternativa: ");
+			alternativa = entrada.next();
+
+			switch (alternativa) {
+
+			case "a":
+			case "A":
+				if (r.get(0) == "") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "b":
+			case "B":
+				if (r.get(1) == "") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "c":
+			case "C":
+				if (r.get(2) == "") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "d":
+			case "D":
+				if (r.get(3) == "") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "e":
+			case "E":
+				if (r.get(4) == "") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+
+			default:
+				System.out.println("Escolha invalida!");
+				Collections.shuffle(r);
+			}
+
+		} while (!acertou);
+		Itaipava++;
+	}
+	
+	public static void desafioC1III() throws InterruptedException {
+	
+	boolean acertou = false;
+	int contador = 3;
+	String alternativa;
+	ArrayList<String> r = new ArrayList<String>();
+	r.add(""); // resposta correta
+	r.add("");
+	r.add("");
+	r.add("");
+	r.add("");
+
+	do {
+
+		if(contador == 0) {
+			HP = HP -10;
+			Digita("Você errou 3 vezes, por isso tonino levou dano\n"
+					+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+			contador = 3;
+			Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+		}
+		if (HP <= 0) {
+			Digita("Você morreu!\n"
+					+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+			System.exit(0);
+		}
+		Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+				+ "",TimeUnit.MILLISECONDS, temp_dialog);
+		System.out.println("a) " + r.get(0));
+		System.out.println("b) " + r.get(1));
+		System.out.println("c) " + r.get(2));
+		System.out.println("d) " + r.get(3));
+		System.out.println("e) " + r.get(4));
+		System.out.print("\nEscolha uma alternativa: ");
+		alternativa = entrada.next();
+
+		switch (alternativa) {
+
+		case "a":
+		case "A":
+			if (r.get(0) == "") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador--;
+			} else {
+				System.out.println("Resposta incorreta!\n");
+				Collections.shuffle(r);
+				contador--;
+			}
+			break;
+		case "b":
+		case "B":
+			if (r.get(1) == "") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador--;
+			} else {
+				System.out.println("Resposta incorreta!\n");
+				Collections.shuffle(r);
+				contador--;
+			}
+			break;
+		case "c":
+		case "C":
+			if (r.get(2) == "") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador--;
+			} else {
+				System.out.println("Resposta incorreta!\n");
+				Collections.shuffle(r);
+				contador--;
+			}
+			break;
+		case "d":
+		case "D":
+			if (r.get(3) == "") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador--;
+			} else {
+				System.out.println("Resposta incorreta!\n");
+				Collections.shuffle(r);
+				contador--;
+			}
+			break;
+		case "e":
+		case "E":
+			if (r.get(4) == "") {
+				System.out.println("Resposta correta!\n");
+				acertou = true;
+				contador--;
+			} else {
+				System.out.println("Resposta incorreta!\n");
+				Collections.shuffle(r);
+				contador--;
+			}
+			break;
+
+		default:
+			System.out.println("Escolha invalida!");
+			Collections.shuffle(r);
+		}
+
+	} while (!acertou);
+	Itaipava++;
+}
+
 	public static void desafioC2I() throws InterruptedException {
 
 
@@ -764,7 +1089,11 @@ public class Intro {
 				contador = 3;
 				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
 			}
-
+			if (HP <= 0) {
+				Digita("Você morreu!\n"
+						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				System.exit(0);
+			}
 			Digita(
 					"\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nOs polinômios são expressões algébricas formadas por números (coeficientes) e letras (partes literais).\r\n "
@@ -853,7 +1182,7 @@ public class Intro {
 	
 	public static void desafioC2II() throws InterruptedException {
 
-		Scanner entrada = new Scanner(System.in);
+		
 		boolean acertou = false;
 		int contador = 3;
 		String alternativa;
@@ -872,6 +1201,11 @@ public class Intro {
 						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
 				contador = 3;
 				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+			}
+			if (HP <= 0) {
+				Digita("Você morreu!\n"
+						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				System.exit(0);
 			}
 			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nOs polinômios são formados por termos.\n"
@@ -979,6 +1313,11 @@ public class Intro {
 				contador = 3;
 				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
 			}
+			if (HP <= 0) {
+				Digita("Você morreu!\n"
+						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				System.exit(0);
+			}
 			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nSome os polinômios:\n" + "a(x)=2x^3+2x^2-3x+1\n" + "b(x)=x^3+3x^2-2x+2\n",TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
@@ -1082,6 +1421,11 @@ public class Intro {
 				contador = 3;
 				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
 			}
+			if (HP <= 0) {
+				Digita("Você morreu!\n"
+						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				System.exit(0);
+			}
 			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nOs numeros decimais 199 e 250 correspondem,\n"
 					+ "nos sistemas binario e hexadecimal, as seguintes representações:",TimeUnit.MILLISECONDS, temp_dialog);
@@ -1165,6 +1509,374 @@ public class Intro {
 		} while (!acertou);
 		
 		Itaipava++;
+	}
+	
+	public static void desafioC3II() throws InterruptedException {
+		/*opção para tenta encaixar no enrredo...
+		 * 
+		 * Toninho começa a ter alguns flashs de memeria e se lembra de quando estava no bar com seus amigos
+		 * lembra o valor que foi a conta mais não lembra quantas cervejas ele pagou e nem quantas cervejas o cleytinho
+		 * (ou outra pessoa) pagou.
+		 * 
+		 * 
+		 * se essse enrredo não ajudar a equação seria 2x +4x = 36 e o valor de 2.x � 12
+		 * 
+		 */
+		
+		boolean acertou = false;
+		int contador = 3;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add("18"); 
+		r.add("14");
+		r.add("12"); // resposta correta
+		r.add("19");
+		r.add("10");
+
+		do {
+
+			if(contador == 0) {
+				HP = HP -10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
+						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+				contador = 3;
+				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+			}
+			if (HP <= 0) {
+				Digita("Você morreu!\n"
+						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				System.exit(0);
+			}
+			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+					+ "\nSabendo que a conta deu R$ 36.00 e Toninho pediu 2 garrafas,\n"
+					+ "e seu amigo pediu 4 garrafas, qual foi o valor que Toninho pagou? ",TimeUnit.MILLISECONDS, temp_dialog);
+			System.out.println("a) " + r.get(0));
+			System.out.println("b) " + r.get(1));
+			System.out.println("c) " + r.get(2));
+			System.out.println("d) " + r.get(3));
+			System.out.println("e) " + r.get(4));
+			System.out.print("\nEscolha uma alternativa: ");
+			alternativa = entrada.next();
+
+			switch (alternativa) {
+
+			case "a":
+			case "A":
+				if (r.get(0) == "12") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "b":
+			case "B":
+				if (r.get(1) == "12") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "c":
+			case "C":
+				if (r.get(2) == "12") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "d":
+			case "D":
+				if (r.get(3) == "12") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "e":
+			case "E":
+				if (r.get(4) == "12") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+
+			default:
+				System.out.println("\nEscolha invalida!");
+				contador = contador - 1;
+				Collections.shuffle(r);
+			}
+
+		} while (!acertou && contador < 3);
+		Itaipava++;
+		
+	}
+	
+	public static void desafioC3III() throws InterruptedException {
+		
+		/*opção para tenta encaixar no enrredo...
+		 * 
+		 * Mais uma lembran�a vem a tona quando Toninho poe a mão no bolso e retira um papel
+		 * que parece ser um monte de codigo escrito,
+		 *  matutando um pouco ele se lembra do momento em que pensou em jogar
+		 * na mega sena com toda certeza que iria ganhar.  
+		 
+		 * 
+		 */
+		
+		boolean acertou = false;
+		int contador = 3;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add("18, 22, 53, 20, 11, 4"); 
+		r.add("14, 17, 23, 31, 48, 52");
+		r.add("12, 6, 54, 55, 39, 13"); 
+		r.add("19, 51, 7, 49, 35, 21");
+		r.add("7, 60, 55, 27, 18, 10");// resposta correta
+
+		do {
+
+			if(contador == 0) {
+				HP = HP -10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
+						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+				contador = 3;
+				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+			}
+			if (HP <= 0) {
+				Digita("Você morreu!\n"
+						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				System.exit(0);
+			}
+			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+					+ "\npara nenhum amigo saber os numeros que ele iria jogar,\n"
+					+ "colocou em um papel em hexadecimal os seguintes n�meros,\n "
+					+ "7, 3C, 37, 1B, 12, A"
+					+ "quais numeros representam essa sequencia em decimal?",TimeUnit.MILLISECONDS, temp_dialog);
+			System.out.println("a) " + r.get(0));
+			System.out.println("b) " + r.get(1));
+			System.out.println("c) " + r.get(2));
+			System.out.println("d) " + r.get(3));
+			System.out.println("e) " + r.get(4));
+			System.out.print("\nEscolha uma alternativa: ");
+			alternativa = entrada.next();
+
+			switch (alternativa) {
+
+			case "a":
+			case "A":
+				if (r.get(0) == "7, 60, 55, 27, 18, 10") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "b":
+			case "B":
+				if (r.get(1) == "7, 60, 55, 27, 18, 10") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "c":
+			case "C":
+				if (r.get(2) == "7, 60, 55, 27, 18, 10") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "d":
+			case "D":
+				if (r.get(3) == "7, 60, 55, 27, 18, 10") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "e":
+			case "E":
+				if (r.get(4) == "7, 60, 55, 27, 18, 10") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+
+			default:
+				System.out.println("\nEscolha invalida!");
+				contador = contador - 1;
+				Collections.shuffle(r);
+			}
+
+		} while (!acertou && contador < 3);
+		Itaipava++;
+		
+	}
+	
+	public static void desafioC3IV() throws InterruptedException {
+		
+		/*op��o para tenta encaixar no enrredo...
+		 * 
+		 *essa ultima pode ser bem no fim do jogo antes do Toninho tomar o Raio na cabe�a e acordar no
+		 *hospital saindo do coma alcoolico.
+		 *
+		 * Toninho pensa em fugir a todo instante quando fixa seu olhar em um muro proximo
+		 * pelas contas de toninho ele est� a 2 metros do muro e o muro tem 1,5 metros de altura
+		 * para se safar dessa toninho tem que calcula friamente seu pulo
+		 * 
+		 *
+		 * 
+		 */
+		
+		boolean acertou = false;
+		int contador = 3;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add("x = 2 y = 2"); 
+		r.add("x = 0, y = 1,5");// resposta correta
+		r.add("x = 1,6 y = 0"); 
+		r.add("x = 3 y = 1,45");
+		r.add("x = 1, y = 1,5");
+
+		do {
+
+			if(contador == 0) {
+				HP = HP -10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
+						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+				contador = 3;
+				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+			}
+			if (HP <= 0) {
+				Digita("Você morreu!\n"
+						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				System.exit(0);
+			}
+			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+					+ "\nPensando em formato de gráfico,\n"
+					+ "qual seria a posição de 'x' e 'y' quando Toninho estiver em cima do muro? \n",TimeUnit.MILLISECONDS, temp_dialog);
+			System.out.println("a) " + r.get(0));
+			System.out.println("b) " + r.get(1));
+			System.out.println("c) " + r.get(2));
+			System.out.println("d) " + r.get(3));
+			System.out.println("e) " + r.get(4));
+			System.out.print("\nEscolha uma alternativa: ");
+			alternativa = entrada.next();
+
+			switch (alternativa) {
+
+			case "a":
+			case "A":
+				if (r.get(0) == "x = 0, y = 1,5") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "b":
+			case "B":
+				if (r.get(1) == "x = 0, y = 1,5") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "c":
+			case "C":
+				if (r.get(2) == "x = 0, y = 1,5") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "d":
+			case "D":
+				if (r.get(3) == "x = 0, y = 1,5") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "e":
+			case "E":
+				if (r.get(4) == "x = 0, y = 1,5") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+
+			default:
+				System.out.println("\nEscolha invalida!");
+				contador = contador - 1;
+				Collections.shuffle(r);
+			}
+
+		} while (!acertou && contador < 3);
+		Itaipava++;
+
 	}
 	
 	public static void batalha() throws InterruptedException {
@@ -1272,7 +1984,7 @@ public class Intro {
 			Digita("\nVoce matou o boss",TimeUnit.MILLISECONDS, temp_dialog);
 		}else if (HP <= 0) {
 			Digita("Você morreu!\n"
-					+ "GAME OVER!!!",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
 			System.exit(0);;
 		}
 	}
