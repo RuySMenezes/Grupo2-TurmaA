@@ -687,8 +687,40 @@ public class Intro {
 		
 	}
 
-	static void capitulo_3() {
+	static void capitulo_3() throws Exception {
 
+		//Historia
+		
+		//Desafio 1 
+		desafioC3I();
+		
+		//Historia
+		
+		//Desafio 2
+		
+		
+		//Historia
+		
+		//Desafio 3
+		
+		
+		//Historia
+		
+		
+		//Desafio final
+		
+		
+		//Historia
+		
+		//Batalha ?
+		
+		Digita("\n .::::::::::::: A BATALHA COMEÇA ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+		batalha();
+		
+		//Historia
+		
+		//creditos finais
+		creditos();
 	}
 
 	static void instrucoes() throws Exception {
@@ -715,7 +747,7 @@ public class Intro {
 
 
 		boolean acertou = false;
-		int contador = 0;
+		int contador = 3;
 		String alternativa;
 		ArrayList<String> r = new ArrayList<String>();
 		r.add("Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n"); // resposta correta
@@ -725,16 +757,16 @@ public class Intro {
 		r.add("Literal -  0 / a b / x x \n" + "Coficiente - 2 / 1 1 / 1 3\n");
 
 		do {
-			if(contador ==3) {
+			if(contador == 0) {
 				HP = HP -10;
 				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
 						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
-				contador = 0;
+				contador = 3;
 				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
 			}
 
 			Digita(
-					"\nVocê tem 3 chances de acertar a questão a seguir, senão levara dano\n"
+					"\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nOs polinômios são expressões algébricas formadas por números (coeficientes) e letras (partes literais).\r\n "
 							+ "Sabendo disso determine quais são as parte literais e os coefiencias das expressôes:\r\n"
 							+ "3x / a^2 - b^2 / x^2 + 3x + 7 \n",TimeUnit.MILLISECONDS, temp_dialog);
@@ -752,12 +784,12 @@ public class Intro {
 			case "A":
 				if (r.get(0) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
 					System.out.println("Resposta correta!\n");
-					contador++;
+					contador--;
 					acertou = true;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "b":
@@ -765,11 +797,11 @@ public class Intro {
 				if (r.get(1) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "c":
@@ -777,11 +809,11 @@ public class Intro {
 				if (r.get(2) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "d":
@@ -789,11 +821,11 @@ public class Intro {
 				if (r.get(3) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "e":
@@ -801,11 +833,11 @@ public class Intro {
 				if (r.get(4) == "Literal -  x / a^2 b^2 / x^2 x \n" + "Coficiente - 3 / 1 1 / 1 3 7\n") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 
@@ -823,7 +855,7 @@ public class Intro {
 
 		Scanner entrada = new Scanner(System.in);
 		boolean acertou = false;
-		int contador = 0;
+		int contador = 3;
 		String alternativa;
 		ArrayList<String> r = new ArrayList<String>();
 		r.add("Binômio / Trinômio / Monômio"); // resposta correta
@@ -834,14 +866,14 @@ public class Intro {
 
 		do {
 
-			if(contador == 3) {
+			if(contador == 0) {
 				HP = HP -10;
 				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
 						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
-				contador = 0;
+				contador = 3;
 				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
 			}
-			Digita("\nVocê tem 3 chances de acertar a questão a seguir, senão levara dano\n"
+			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nOs polinômios são formados por termos.\n"
 					+ "A única operação entre os elementos de um termo é a multiplicação"
 					+ "chegando em até 3 termos sendo  monomio(1 termo), binomio(2 termos) e trinomo(3 termos).\n"
@@ -861,11 +893,11 @@ public class Intro {
 				if (r.get(0) == "Binômio / Trinômio / Monômio") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "b":
@@ -873,11 +905,11 @@ public class Intro {
 				if (r.get(1) == "Binômio / Trinômio / Monômio") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "c":
@@ -885,11 +917,11 @@ public class Intro {
 				if (r.get(2) == "Binômio / Trinômio / Monômio") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "d":
@@ -897,11 +929,11 @@ public class Intro {
 				if (r.get(3) == "Binômio / Trinômio / Monômio") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "e":
@@ -909,11 +941,11 @@ public class Intro {
 				if (r.get(4) == "Binômio / Trinômio / Monômio") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 
@@ -930,7 +962,7 @@ public class Intro {
 
 
 		boolean acertou = false;
-		int contador = 0;
+		int contador = 3;
 		String alternativa;
 		ArrayList<String> r = new ArrayList<String>();
 		r.add("3x^3+5x^2-5x+3"); // resposta correta
@@ -940,14 +972,14 @@ public class Intro {
 		r.add("10x^3+2x^2+3x+1");
 
 		do {
-			if(contador == 3) {
+			if(contador == 0) {
 				HP = HP -10;
 				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
 						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
-				contador = 0;
+				contador = 3;
 				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
 			}
-			Digita("\nVocê tem 3 chances de acertar a questão a seguir, senão levara dano\n"
+			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nSome os polinômios:\n" + "a(x)=2x^3+2x^2-3x+1\n" + "b(x)=x^3+3x^2-2x+2\n",TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
@@ -964,11 +996,11 @@ public class Intro {
 				if (r.get(0) == "3x^3+5x^2-5x+3") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "b":
@@ -976,11 +1008,11 @@ public class Intro {
 				if (r.get(1) == "3x^3+5x^2-5x+3") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "c":
@@ -988,11 +1020,11 @@ public class Intro {
 				if (r.get(2) == "3x^3+5x^2-5x+3") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "d":
@@ -1000,11 +1032,11 @@ public class Intro {
 				if (r.get(3) == "3x^3+5x^2-5x+3") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 			case "e":
@@ -1012,11 +1044,11 @@ public class Intro {
 				if (r.get(4) == "3x^3+5x^2-5x+3") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
-					contador++;
+					contador--;
 				} else {
 					System.out.println("Resposta incorreta!\n");
 					Collections.shuffle(r);
-					contador++;
+					contador--;
 				}
 				break;
 
@@ -1025,7 +1057,113 @@ public class Intro {
 				Collections.shuffle(r);
 			}
 
-		} while (!acertou && contador < 3);
+		} while (!acertou);
+		Itaipava++;
+	}
+	
+	public static void desafioC3I() throws InterruptedException {
+
+		boolean acertou = false;
+		int contador = 3;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add("11000111 e FA"); // resposta correta
+		r.add("11100111 e F9");
+		r.add("11010111 e FA");
+		r.add("11000111 e F9	");
+		r.add("11100111 e FA.");
+
+		do {
+
+			if(contador == 0) {
+				HP = HP -10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
+						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+				contador = 3;
+				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+			}
+			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+					+ "\nOs numeros decimais 199 e 250 correspondem,\n"
+					+ "nos sistemas binario e hexadecimal, as seguintes representações:",TimeUnit.MILLISECONDS, temp_dialog);
+			System.out.println("\na) " + r.get(0));
+			System.out.println("b) " + r.get(1));
+			System.out.println("c) " + r.get(2));
+			System.out.println("d) " + r.get(3));
+			System.out.println("e) " + r.get(4));
+			System.out.print("\nEscolha uma alternativa: ");
+			alternativa = entrada.next();
+
+			switch (alternativa) {
+
+			case "a":
+			case "A":
+				if (r.get(0) == "11000111 e FA") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "b":
+			case "B":
+				if (r.get(1) == "11000111 e FA") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "c":
+			case "C":
+				if (r.get(2) == "11000111 e FA") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "d":
+			case "D":
+				if (r.get(3) == "11000111 e FA") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+			case "e":
+			case "E":
+				if (r.get(4) == "11000111 e FA") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador = contador - 1;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					contador = contador - 1;
+					Collections.shuffle(r);
+				}
+				break;
+
+			default:
+				System.out.println("\nEscolha invalida!");
+				contador = contador - 1;
+				Collections.shuffle(r);
+			}
+
+		} while (!acertou);
+		
 		Itaipava++;
 	}
 	
