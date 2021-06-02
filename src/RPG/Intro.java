@@ -346,90 +346,8 @@ public class Intro {
 				+ "Toninho: E eu que tenho de ficar atento, né? Deus me ajude... \r\n", TimeUnit.MILLISECONDS,
 				temp_dialog);
 
-		// INSERIR AS ALTERNATIVAS NESTE ARRAYLIST. MUDAR O NOME PARA QUEST E O NÚMERO
-		// DA QUESTÃO
-		ArrayList<String> quest1 = new ArrayList<String>();
-		quest1.add("57");
-		quest1.add("-71");
-		quest1.add("-7");
-		quest1.add("137");
-		quest1.add("185");
-
-		// COLOCAR O NOVO NOME AQUI TAMBÉM
-		Collections.shuffle(quest1);
-		Collections.shuffle(quest1);
-		Collections.shuffle(quest1);
-
-		// ESSAS VARIÁVEIS SÃO NECESSÁRIAS. SUBSTITUA O NÚMERO 1 PELO NÚMERO DA QUESTÃO
-		// CORRESPONDENTE
-		int i = 1;
-		String resp1;
-		String continue1;
-		String respSistema1 = null;
-		boolean exit1 = false;
-		do {
-			System.out.println(
-					"Sabendo que a largura em milímetros do Del Rey de Sheylla é 185, determine o valor de x na seguinte expressão:\n"
-							+ "(2^4 : 4^2) . (16^1 * 2^3) + x = 185"); // ENUNCIADO DA QUESTÃO
-			i++;
-			System.out.println("a) " + quest1.get(0) + "\n" + "b) " + quest1.get(1) + "\n" + "c) " + quest1.get(2)
-					+ "\n" + "d) " + quest1.get(3) + "\n" + "e) " + quest1.get(4) + "\n");
-			resp1 = entrada.next().toLowerCase();
-
-			// COLOQUE A ALTERNATIVA CORRETA DENTRO DO .CONTENTEQUALS PARA COMPARAÇÃO
-			switch (resp1) {
-			case "a":
-				respSistema1 = (quest1.get(0).contentEquals("57")) ? "Acertou, mizeravi!" : "ERROOOOOU";
-				System.out.println(respSistema1);
-				exit1 = (respSistema1.contentEquals("Acertou, mizeravi!")) ? true : false;
-				break;
-			case "b":
-				respSistema1 = (quest1.get(1).contentEquals("57")) ? "Acertou, mizeravi!" : "ERROOOOOU";
-				System.out.println(respSistema1);
-				exit1 = (respSistema1.contentEquals("Acertou, mizeravi!")) ? true : false;
-				break;
-			case "c":
-				respSistema1 = (quest1.get(2).contentEquals("57")) ? "Acertou, mizeravi!" : "ERROOOOOU";
-				System.out.println(respSistema1);
-				exit1 = (respSistema1.contentEquals("Acertou, mizeravi!")) ? true : false;
-				break;
-			case "d":
-				respSistema1 = (quest1.get(3).contentEquals("57")) ? "Acertou, mizeravi!" : "ERROOOOOU";
-				System.out.println(respSistema1);
-				exit1 = (respSistema1.contentEquals("Acertou, mizeravi!")) ? true : false;
-				break;
-			case "e":
-				respSistema1 = (quest1.get(4).contentEquals("57")) ? "Acertou, mizeravi!" : "ERROOOOOU";
-				System.out.println(respSistema1);
-				exit1 = (respSistema1.contentEquals("Acertou, mizeravi!")) ? true : false;
-				break;
-			default:
-				System.out.println("DIGITE UMA OPÇÃO VÁLIDA!");
-			}
-
-			if (i == 1 && exit1 == true) {
-				Digita("[MESTRE]: Seus esforços foram bem recompensados! Você recebeu uma Itaipava!",
-						TimeUnit.MILLISECONDS, temp_dialog);
-				Itaipava = Itaipava + 1;
-			}
-			if (!(resp1.equals("a") || resp1.equals("b") || resp1.equals("c") || resp1.equals("d")
-					|| resp1.equals("e"))) {
-				i = i - 1;
-			}
-			// ESTRUTURA QUE PERMITE O JOGADOR ESCOLHER TENTAR RESPONDER NOVAMENTE OU NÃO.
-			if (resp1.equals("a") || resp1.equals("b") || resp1.equals("c") || resp1.equals("d")
-					|| resp1.equals("e") && i <= 3 && exit1 == false) {
-				HP = HP - 10;
-				if (respSistema1.equals("ERROOOOOU") && i <= 3) {
-					System.out.println("\nTentar novamente?\n1 - SIM\n2 - NÃO");
-					continue1 = entrada.next();
-					if (!continue1.contentEquals("1")) {
-						break;
-					}
-				}
-			}
-
-		} while (!exit1 && i <= 3);
+		//desafio 1
+		desafioC1I();
 
 		Digita("[MESTRE] Após o conserto, Toninho e Sheylla seguem viagem. \r\n"
 				+ "Sheylla: Não foi tão ruim assim, foi, Antônio? \r\n" + "[blablabla]\r\n"
@@ -476,28 +394,14 @@ public class Intro {
 			switch (escolha) {
 			case "1":
 				System.out.println(" - Resolver uma questão proposta pela Esfinge.");
+				//desafio 2
+				desafioC1II();
 				break;
 			case "2":
-				Digita("[MESTRE]: Toninho, num instinto de sobrevivência tipicamente brasileiro resolveu enfrentar a Esfinge. Valeu-se de um tijolo que estava perto e num átimo de desespero, atirou-o contra a criatura.",
-						TimeUnit.MILLISECONDS, temp_dialog);
-				System.out.println("Lançando o dado de 20 lados(D20)...");
-				Thread.sleep(1000);
-				System.out.println("Resultado: " + d20);
-
-				if (d20 >= 1 && d20 <= 10) {
-					Digita("", TimeUnit.MILLISECONDS, temp_dialog);
-					// Toninho erra a tijolada, é atacado por Esfinge e perde 20 pontos de vida.
-					// Sheylla intervém.
-					HP = HP - 20;
-				} else if (d20 > 10 && d20 <= 15) {
-					Digita("", TimeUnit.MILLISECONDS, temp_dialog);
-					// A tijolada é suficiente para nocautear a Esfinge temporariamente.
-				} else if (d20 > 15) {
-					Digita("", TimeUnit.MILLISECONDS, temp_dialog);
-					// A tijolada mata a Esfinge.
-
-				}
-
+				Digita("[MESTRE]: Toninho, num instinto de sobrevivência tipicamente brasileiro resolveu enfrentar a Esfinge. Valeu-se de um tijolo que estava perto e num átimo de desespero, atirou-o contra a criatura.",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("\n .::::::::::::: A BATALHA COMEÇA ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				batalha();	
+				break;
 			}
 
 		} while (!escolha.equals("1") && !escolha.equals("2"));
@@ -529,6 +433,7 @@ public class Intro {
 				+ "“””Tens o que é necessário para abrir a minha porta? “””\r\n", TimeUnit.MILLISECONDS, temp_dialog);
 
 		// desafio 2
+		desafioC1III();
 
 		Digita("[MESTRE]: A porta se abre lentamente e revela apenas uma incessante escuridão. \r\n" + "Toninho: \r\n"
 				+ "[MESTRE] Toninho se apossa do pergaminho e encontra um bilhete entre este\r\n"
@@ -750,11 +655,11 @@ public class Intro {
 		int contador = 3;
 		String alternativa;
 		ArrayList<String> r = new ArrayList<String>();
-		r.add(""); // resposta correta
-		r.add("");
-		r.add("");
-		r.add("");
-		r.add("");
+		r.add("57"); // resposta correta
+		r.add("-71");
+		r.add("-7");
+		r.add("137");
+		r.add("185");
 
 		do {
 
@@ -771,7 +676,8 @@ public class Intro {
 				System.exit(0);
 			}
 			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
-					+ "",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "\nSabendo que a largura em milímetros do Del Rey de Sheylla é 185, determine o valor de x na seguinte expressão:\n"
+					+ "\n(2^4 : 4^2) . (16^1 * 2^3) + x = 185\n",TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -784,7 +690,7 @@ public class Intro {
 
 			case "a":
 			case "A":
-				if (r.get(0) == "") {
+				if (r.get(0) == "57") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador--;
@@ -796,7 +702,7 @@ public class Intro {
 				break;
 			case "b":
 			case "B":
-				if (r.get(1) == "") {
+				if (r.get(1) == "57") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador--;
@@ -808,7 +714,7 @@ public class Intro {
 				break;
 			case "c":
 			case "C":
-				if (r.get(2) == "") {
+				if (r.get(2) == "57") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador--;
@@ -820,7 +726,7 @@ public class Intro {
 				break;
 			case "d":
 			case "D":
-				if (r.get(3) == "") {
+				if (r.get(3) == "57") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador--;
@@ -832,7 +738,7 @@ public class Intro {
 				break;
 			case "e":
 			case "E":
-				if (r.get(4) == "") {
+				if (r.get(4) == "57") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador--;
@@ -852,19 +758,29 @@ public class Intro {
 		Itaipava++;
 	}
 
-	public static void desafioC1II() throws InterruptedException {
+	public static void desafioC1III() throws InterruptedException {
 		
 		boolean acertou = false;
 		int contador = 3;
 		String alternativa;
 		ArrayList<String> r = new ArrayList<String>();
-		r.add(""); // resposta correta
-		r.add("");
-		r.add("");
-		r.add("");
-		r.add("");
+		r.add("2"); // resposta correta
+		r.add("4");
+		r.add("8");
+		r.add("9");
+		r.add("5");
 
 		do {
+			/* Equação 1° grau 
+			 * Para que o nosso Heroi Toninho possa entender o que a Mestre Sheylla tem para apresentar a ele em Diademmor, ajude ele a resolver esta questão de 
+			 * equação de 1° grau que nosso heroi gosta de resolver, para que ele consiga superar esta etapa
+			 * Questão: 4x + 2 = 10
+			 * R. 4x = 10 – 2
+			 *     x = 10 – 2
+			              4
+			           x =  8
+			                4
+			              R.  x = 2 */
 
 			if(contador == 0) {
 				HP = HP -10;
@@ -879,7 +795,8 @@ public class Intro {
 				System.exit(0);
 			}
 			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
-					+ "",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "\n 4x + 2 = 10 \r\n"
+					+ "O aviso é uma equação de 1° grau que Toninho precisa resolver, para que ele possa abrir a porta\n",TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -892,7 +809,7 @@ public class Intro {
 
 			case "a":
 			case "A":
-				if (r.get(0) == "") {
+				if (r.get(0) == "2") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador--;
@@ -904,7 +821,7 @@ public class Intro {
 				break;
 			case "b":
 			case "B":
-				if (r.get(1) == "") {
+				if (r.get(1) == "2") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador--;
@@ -916,7 +833,7 @@ public class Intro {
 				break;
 			case "c":
 			case "C":
-				if (r.get(2) == "") {
+				if (r.get(2) == "2") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador--;
@@ -928,7 +845,7 @@ public class Intro {
 				break;
 			case "d":
 			case "D":
-				if (r.get(3) == "") {
+				if (r.get(3) == "2") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador--;
@@ -940,7 +857,7 @@ public class Intro {
 				break;
 			case "e":
 			case "E":
-				if (r.get(4) == "") {
+				if (r.get(4) == "2") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador--;
@@ -960,18 +877,29 @@ public class Intro {
 		Itaipava++;
 	}
 	
-	public static void desafioC1III() throws InterruptedException {
+	public static void desafioC1II() throws InterruptedException {
 	
 	boolean acertou = false;
 	int contador = 3;
 	String alternativa;
 	ArrayList<String> r = new ArrayList<String>();
-	r.add(""); // resposta correta
-	r.add("");
-	r.add("");
-	r.add("");
-	r.add("");
+	r.add("1,8"); // resposta correta
+	r.add("3");
+	r.add("5,7");
+	r.add("2");
+	r.add("0");
 
+	/* Função do 1° grau
+	Questão: f(x) = ax + b, sabendo-se que f(3) = 6 e f (-2) = -3
+	f(3) = 6
+	f(3) = 3a + b -- 3a + b = 6
+	f(-2) = -3
+	f(-2) = -2a + b -- -2a + b = -3
+	3a + b = 6
+	-2a + b = -3
+	5a = 9
+	R. a = 9/5
+	*/
 	do {
 
 		if(contador == 0) {
@@ -987,7 +915,8 @@ public class Intro {
 			System.exit(0);
 		}
 		Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
-				+ "",TimeUnit.MILLISECONDS, temp_dialog);
+				+ "\n A esfinge apresenta a questão:"
+				+ "\nQual é a função: f(x) = ax + b, sabendo-se que f(3) = 6 e f (-2) = -3",TimeUnit.MILLISECONDS, temp_dialog);
 		System.out.println("a) " + r.get(0));
 		System.out.println("b) " + r.get(1));
 		System.out.println("c) " + r.get(2));
@@ -1000,7 +929,7 @@ public class Intro {
 
 		case "a":
 		case "A":
-			if (r.get(0) == "") {
+			if (r.get(0) == "1,8") {
 				System.out.println("Resposta correta!\n");
 				acertou = true;
 				contador--;
@@ -1012,7 +941,7 @@ public class Intro {
 			break;
 		case "b":
 		case "B":
-			if (r.get(1) == "") {
+			if (r.get(1) == "1,8") {
 				System.out.println("Resposta correta!\n");
 				acertou = true;
 				contador--;
@@ -1024,7 +953,7 @@ public class Intro {
 			break;
 		case "c":
 		case "C":
-			if (r.get(2) == "") {
+			if (r.get(2) == "1,8") {
 				System.out.println("Resposta correta!\n");
 				acertou = true;
 				contador--;
@@ -1036,7 +965,7 @@ public class Intro {
 			break;
 		case "d":
 		case "D":
-			if (r.get(3) == "") {
+			if (r.get(3) == "1,8") {
 				System.out.println("Resposta correta!\n");
 				acertou = true;
 				contador--;
@@ -1048,7 +977,7 @@ public class Intro {
 			break;
 		case "e":
 		case "E":
-			if (r.get(4) == "") {
+			if (r.get(4) == "1,8") {
 				System.out.println("Resposta correta!\n");
 				acertou = true;
 				contador--;
@@ -1428,7 +1357,7 @@ public class Intro {
 			}
 			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nOs numeros decimais 199 e 250 correspondem,\n"
-					+ "nos sistemas binario e hexadecimal, as seguintes representações:",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "nos sistemas binario e hexadecimal, as seguintes representações:\n",TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("\na) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1549,7 +1478,7 @@ public class Intro {
 			}
 			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nSabendo que a conta deu R$ 36.00 e Toninho pediu 2 garrafas,\n"
-					+ "e seu amigo pediu 4 garrafas, qual foi o valor que Toninho pagou? ",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "e seu amigo pediu 4 garrafas, qual foi o valor que Toninho pagou? \n",TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1672,7 +1601,7 @@ public class Intro {
 					+ "\npara nenhum amigo saber os numeros que ele iria jogar,\n"
 					+ "colocou em um papel em hexadecimal os seguintes n�meros,\n "
 					+ "7, 3C, 37, 1B, 12, A"
-					+ "quais numeros representam essa sequencia em decimal?",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "quais numeros representam essa sequencia em decimal?\n",TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1775,7 +1704,7 @@ public class Intro {
 		String alternativa;
 		ArrayList<String> r = new ArrayList<String>();
 		r.add("x = 2 y = 2"); 
-		r.add("x = 0, y = 1,5");// resposta correta
+		r.add("x = 0 y = 1,5");// resposta correta
 		r.add("x = 1,6 y = 0"); 
 		r.add("x = 3 y = 1,45");
 		r.add("x = 1, y = 1,5");
@@ -1809,7 +1738,7 @@ public class Intro {
 
 			case "a":
 			case "A":
-				if (r.get(0) == "x = 0, y = 1,5") {
+				if (r.get(0) == "x = 0 y = 1,5") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador = contador - 1;
@@ -1821,7 +1750,7 @@ public class Intro {
 				break;
 			case "b":
 			case "B":
-				if (r.get(1) == "x = 0, y = 1,5") {
+				if (r.get(1) == "x = 0 y = 1,5") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador = contador - 1;
@@ -1833,7 +1762,7 @@ public class Intro {
 				break;
 			case "c":
 			case "C":
-				if (r.get(2) == "x = 0, y = 1,5") {
+				if (r.get(2) == "x = 0 y = 1,5") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador = contador - 1;
@@ -1845,7 +1774,7 @@ public class Intro {
 				break;
 			case "d":
 			case "D":
-				if (r.get(3) == "x = 0, y = 1,5") {
+				if (r.get(3) == "x = 0 y = 1,5") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador = contador - 1;
@@ -1857,7 +1786,7 @@ public class Intro {
 				break;
 			case "e":
 			case "E":
-				if (r.get(4) == "x = 0, y = 1,5") {
+				if (r.get(4) == "x = 0 y = 1,5") {
 					System.out.println("Resposta correta!\n");
 					acertou = true;
 					contador = contador - 1;
