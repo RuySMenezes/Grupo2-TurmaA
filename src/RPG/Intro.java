@@ -679,10 +679,11 @@ public class Intro {
 		Digita("[MESTRE]:Toninho entra na porta final e ve aquela criatura se alimentando de um pigmeu\n"
 				+ "\nToninho: kkk eae man! \n" + "\n[MESTRE]: O minotauro volta seu olhar para o Toninho e berra\n"
 				+ "Minotauro: hahahaha! Opa parece que chegou a sobremesa\n" + "Toninho: Mas o que é isso!\n"
-				+ "\n[MESTRE]: Minotauro avança em direção ao toninho com seu machado! ",TimeUnit.MILLISECONDS, temp_dialog);
+				+ "\n[MESTRE]: Minotauro avança em direção ao toninho com seu machado! "
+				+ "\n .::::::::::::: A BATALHA COMEÇA ::::::::::::.\\n",TimeUnit.MILLISECONDS, temp_dialog);
 		
 		//BATALHA CONTRA O MINOTAURO
-		batalhaMino();
+		batalha();
 		
 	}
 
@@ -975,6 +976,113 @@ public class Intro {
 		Itaipava++;
 	}
 	
+	public static void batalha() throws InterruptedException {
+		boolean morreu = false;
+		int hpI = 100;
+		String escolha;
+		
+		int d6 = new Random().nextInt(6) + 1;
+		do {
+			if(hpI <= 0) {
+				morreu = true;
+				break;
+			}else if (HP <= 0) {
+				morreu = true;
+				break;
+			}
+			int d20 = new Random().nextInt(20) + 1;
+			int n=d20;
+			System.out.println("\nO que deseja fazer:\n"
+					+ "[1] - Atacar.\n"
+					+ "[2] - Beber Itaipiva\n");
+			escolha = entrada.next();
+
+			switch(escolha) {
+			case "1":
+				Digita("\nJogando os dados...\n"
+						+ "O numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+				if(n > 15 && n <= 25) {
+					hpI = hpI - 20;
+					Digita("\nToninho causou 20 de dano no inimigo\n"
+							+ "\nHP do Toninho = " +HP
+							+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
+									
+				}else if(n > 10 && n <= 15) {
+					hpI = hpI - 10;
+					Digita("\nToninho causou 10 de dano no inimigo\n"
+							+ "\nHP do Toninho = " +HP
+							+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
+						
+				}else if(n > 5 && n <= 10) {
+					HP = HP - 5;
+					Digita("\nToninho errou o ataque causou 0 de dano no inimigo e tomou 5 de dano\n"
+							+ "\nHP do Toninho = " +HP
+							+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
+					
+				}else if(n >= 0 && n <= 5) {
+					HP = HP - 10;
+					Digita("\nToninho errou o ataque causou 0 de dano no inimigo e tomou 10 de dano\n"
+							+ "\nHP do Toninho = " +HP
+							+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
+						
+				}
+				
+				break;
+			case "2":
+				if (Itaipava > 0) {
+					Itaipava --;
+					n = n +5;
+					Digita("\nJogando os dados...\n"
+							+ "O numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+					if(n > 15 && n <= 25) {
+						hpI = hpI - 20;
+						Digita("\nToninho causou 20 de dano no inimigo\n"
+								+ "\nHP do Toninho = " +HP
+								+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
+						break;	
+					}else if(n > 10 && n <= 15) {
+						hpI = hpI - 10;
+						Digita("\nToninho causou 10 de dano no inimigo\n"
+								+ "\nHP do Toninho = " +HP
+								+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
+						break;	
+					}else if(n > 5 && n <= 10) {
+						HP = HP - 5;
+						Digita("\nToninho errou o ataque causou 0 de dano no inimigo e tomou 5 de dano\n"
+								+ "\nHP do Toninho = " +HP
+								+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
+						break;	
+					}else if(n >= 0 && n <= 5) {
+						HP = HP - 10;
+						Digita("\nToninho errou o ataque causou 0 de dano no inimigo e tomou 10 de dano\n"
+								+ "\nHP do Toninho = " +HP
+								+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
+						break;	
+					}
+				} else {
+					System.out.println("Toninho não possui itaipaiva");
+					break;
+				}
+				
+				break;
+
+			default:
+				System.out.println("\nOpção invalida!");
+			}
+			
+			
+		}while(morreu == false);
+		
+		System.out.println("\nProximo estagio");
+		if(hpI <= 0) {
+			Digita("\nVoce matou o boss",TimeUnit.MILLISECONDS, temp_dialog);
+		}else if (HP <= 0) {
+			Digita("Você morreu!\n"
+					+ "GAME OVER!!!",TimeUnit.MILLISECONDS, temp_dialog);
+			System.exit(0);;
+		}
+	}
+	
 	public static void batalhaMino() throws InterruptedException {
 		int hpMino = 100;
 		String escolha="", decisao ="", decisao1="";
@@ -1043,7 +1151,7 @@ public class Intro {
 									case "2":
 										if (Itaipava > 0) {
 											Itaipava --;
-											n = d20 + 10;
+											n = d20 + 3;
 											Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
 											if (n >= 5 && n <= 20) {
 												Digita("[MESTRE]: O minotauro avança novamente em direção a Toninho, mas se levanta rapidamente e se esquiva no tempo exato, fazendo o minotauro acertar a parede, ficando atordoado\n"
@@ -1073,7 +1181,7 @@ public class Intro {
 						case "2":
 							if (Itaipava > 0) {
 								Itaipava --;
-								n = d20 + 10;
+								n = d20 + 3;
 								Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
 								if (n >= 5 && n <= 20) {
 									Digita(
@@ -1122,7 +1230,7 @@ public class Intro {
 						case "2":
 							if (Itaipava > 0) {
 								Itaipava --;
-								n = d20 + 10;
+								n = d20 + 3;
 								Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
 								if (n >= 5 && n <= 20) {
 									Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
@@ -1148,7 +1256,7 @@ public class Intro {
 			case "2":
 				if (Itaipava > 0) {
 					Itaipava --;
-					n = d20 + 10;
+					n = d20 + 3;
 					Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
 					if (n >= 5 && n <= 30) {
 						Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
@@ -1172,6 +1280,7 @@ public class Intro {
 		} while (!escolha.equals("1") && !escolha.equals("2"));
 		System.out.println("\nToninho foi para o proximo desafio");
 	}
+	
 	
 }
 

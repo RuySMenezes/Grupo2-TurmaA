@@ -17,7 +17,9 @@ public class teste {
 		// desafioC2II();
 		// desafioC2III();
 		// desafioC3I();
-		batalhaMino();
+		//batalhaMino();
+		batalha();
+		
 	}
 
 	public static void desafioC2I() {
@@ -433,14 +435,14 @@ public class teste {
 	}
 
 	public static void desafioC3II() {
-		/*opção para tenta encaixar no enrredo...
+		/*opï¿½ï¿½o para tenta encaixar no enrredo...
 		 * 
-		 * Toninho começa a ter alguns flashs de memória e se lembra de quando estava no bar com seus amigos
-		 * lembra o valor que foi a conta mais não lembra quantas cervejas ele pagou e nem quantas cervejas o cleytinho
+		 * Toninho comeï¿½a a ter alguns flashs de memï¿½ria e se lembra de quando estava no bar com seus amigos
+		 * lembra o valor que foi a conta mais nï¿½o lembra quantas cervejas ele pagou e nem quantas cervejas o cleytinho
 		 * (ou outra pessoa) pagou.
 		 * 
 		 * 
-		 * se essse enrredo não ajudar a equação seria 2x +4x = 36 e o valor de 2.x é 12
+		 * se essse enrredo nï¿½o ajudar a equaï¿½ï¿½o seria 2x +4x = 36 e o valor de 2.x ï¿½ 12
 		 * 
 		 */
 		
@@ -547,10 +549,10 @@ public class teste {
 	
 	public static void desafioC3III() {
 		
-		/*opção para tenta encaixar no enrredo...
+		/*opï¿½ï¿½o para tenta encaixar no enrredo...
 		 * 
-		 * Mais uma lembrança vem a tona quando Toninho põe a mão no bolso e retira um papel
-		 * que parece ser um monte de código escrito,
+		 * Mais uma lembranï¿½a vem a tona quando Toninho pï¿½e a mï¿½o no bolso e retira um papel
+		 * que parece ser um monte de cï¿½digo escrito,
 		 *  matutando um pouco ele se lembra do momento em que pensou em jogar
 		 * na mega sena com toda certeza que iria ganhar.  
 		 
@@ -570,8 +572,8 @@ public class teste {
 
 		do {
 
-			System.out.println("para nenhum amigo saber os números que ele iria jogar,\n"
-					+ "colocou em um papel em hexadecimal os seguintes números,\n "
+			System.out.println("para nenhum amigo saber os nï¿½meros que ele iria jogar,\n"
+					+ "colocou em um papel em hexadecimal os seguintes nï¿½meros,\n "
 					+ "7, 3C, 37, 1B, 12, A"
 					+ "quais numeros representam essa sequencia em decimal?");
 			System.out.println("a) " + r.get(0));
@@ -662,13 +664,13 @@ public class teste {
 
 	public static void desafioC3IV() {
 		
-		/*opção para tenta encaixar no enrredo...
+		/*opï¿½ï¿½o para tenta encaixar no enrredo...
 		 * 
-		 *essa ultima pode ser bem no fim do jogo antes do Toninho tomar o Raio na cabeça e acordar no
+		 *essa ultima pode ser bem no fim do jogo antes do Toninho tomar o Raio na cabeï¿½a e acordar no
 		 *hospital saindo do coma alcoolico.
 		 *
 		 * Toninho pensa em fugir a todo instante quando fixa seu olhar em um muro proximo
-		 * pelas contas de toninho ele está a 2 metros do muro e o muro tem 1,5 metros de altura
+		 * pelas contas de toninho ele estï¿½ a 2 metros do muro e o muro tem 1,5 metros de altura
 		 * para se safar dessa toninho tem que calcula friamente seu pulo
 		 * 
 		 *
@@ -688,8 +690,8 @@ public class teste {
 
 		do {
 
-			System.out.println("Pensando em formato de gráfico,\n"
-					+ "qual seria a posição de 'x' e 'y' quando Toninho estiver em cima do muro? ");
+			System.out.println("Pensando em formato de grï¿½fico,\n"
+					+ "qual seria a posiï¿½ï¿½o de 'x' e 'y' quando Toninho estiver em cima do muro? ");
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -977,6 +979,117 @@ public class teste {
 		} while (!escolha.equals("1") && !escolha.equals("2"));
 		System.out.println("\nToninho foi para o proximo desafio");
 	}
+
+	public static void batalha() {
+		boolean morreu = false;
+		int hpI = 100, hp = 100, itaipava = 5;
+		String escolha;
+		Scanner entrada = new Scanner(System.in);
+		
+		int d6 = new Random().nextInt(6) + 1;
+		do {
+			if(hpI == 0) {
+				morreu = true;
+				break;
+			}else if (hp == 0) {
+				morreu = true;
+				break;
+			}
+			int d20 = new Random().nextInt(20) + 1;
+			int n=d20;
+			System.out.println("\nO que deseja fazer:\n"
+					+ "[1] - Atacar.\n"
+					+ "[2] - Beber Itaipiva\n");
+			escolha = entrada.next();
+
+			switch(escolha) {
+			case "1":
+				System.out.println("\nJogando os dados...\n"
+						+ "O numero do dado: "+n);
+				if(n > 15 && n <= 25) {
+					hpI = hpI - 20;
+					System.out.println("Toninho causou 20 de dano no inimigo\n"
+							+ "\nHP do Toninho = " +hp
+							+ "\nHP do Inimigo = "+hpI);
+									
+				}else if(n > 10 && n <= 15) {
+					hpI = hpI - 10;
+					System.out.println("Toninho causou 10 de dano no inimigo\n"
+							+ "\nHP do Toninho = " +hp
+							+ "\nHP do Inimigo = "+hpI);
+						
+				}else if(n > 5 && n <= 10) {
+					hp = hp - 5;
+					System.out.println("Toninho errou o ataque causou 0 de dano no inimigo e tomou 5 de dano\n"
+							+ "\nHP do Toninho = " +hp
+							+ "\nHP do Inimigo = "+hpI);
+					
+				}else if(n >= 0 && n <= 5) {
+					hp = hp - 10;
+					System.out.println("Toninho errou o ataque causou 0 de dano no inimigo e tomou 10 de dano\n"
+							+ "\nHP do Toninho = " +hp
+							+ "\nHP do Inimigo = "+hpI);
+						
+				}
+				
+				break;
+			case "2":
+				if (itaipava > 0) {
+					itaipava --;
+					n = n +5;
+					System.out.println("\nJogando os dados...\n"
+							+ "O numero do dado: "+n);
+					if(n > 15 && n <= 25) {
+						hpI = hpI - 20;
+						System.out.println("Toninho causou 20 de dano no inimigo\n"
+								+ "\nHP do Toninho = " +hp
+								+ "\nHP do Inimigo = "+hpI);
+						break;	
+					}else if(n > 10 && n <= 15) {
+						hpI = hpI - 10;
+						System.out.println("Toninho causou 10 de dano no inimigo\n"
+								+ "\nHP do Toninho = " +hp
+								+ "\nHP do Inimigo = "+hpI);
+						break;	
+					}else if(n > 5 && n <= 10) {
+						hp = hp - 5;
+						System.out.println("Toninho errou o ataque causou 0 de dano no inimigo e tomou 5 de dano\n"
+								+ "\nHP do Toninho = " +hp
+								+ "\nHP do Inimigo = "+hpI);
+						break;	
+					}else if(n >= 0 && n <= 5) {
+						hp = hp - 10;
+						System.out.println("Toninho errou o ataque causou 0 de dano no inimigo e tomou 10 de dano\n"
+								+ "\nHP do Toninho = " +hp
+								+ "\nHP do Inimigo = "+hpI);
+						break;	
+					}
+				} else {
+					System.out.println("Toninho nÃ£o possui itaipaiva");
+					break;
+				}
+				
+				break;
+
+			default:
+				System.out.println("\nOpÃ§Ã£o invalida!");
+			}
+			
+			
+		}while(morreu == false);
+		
+		System.out.println("\nProximo estagio");
+		if(hpI == 0) {
+			System.out.println("\nVoce matou o boss");
+		}else if (hp == 0) {
+			System.out.println("VocÃª morreu!\n"
+					+ "GAME OVER!!!");
+			System.exit(0);;
+		}
+	}
+
+
+
 }
 /* EquaÃ§Ã£o 1Â° grau 
  * QuestÃ£o: x + 4 = 12
