@@ -9,10 +9,8 @@ import java.util.ArrayList;
 public class Intro {
 	static int HP = 100;
 	static int Itaipava = 0;
-	static Scanner entrada = new Scanner(System.in); // SCANNER DE ESCOPO GLOBAL, NÃO É NECESSÁRIO INSTANCIAR NENHUM
-														// OUTRO.
-	
-	static int d20 = new Random().nextInt(20) + 1; //Dado de 20 lados
+	static Scanner entrada = new Scanner(System.in); // SCANNER DE ESCOPO GLOBAL
+	static int d20 = new Random().nextInt(20) + 1; // Dado de 20 lados
 
 	// TEMPO DE DELAY DAS MENSAGENS: MODIFIQUE PARA ZERO PARA JOGAR SEM DELAY.
 	// PADRÃO 70,150,25
@@ -57,7 +55,7 @@ public class Intro {
 	}
 
 	static void jogo() throws Exception { // metodo de inicio do jogo
-		
+
 		intro();
 		capitulo_1();
 		capitulo_2();
@@ -345,7 +343,7 @@ public class Intro {
 				+ "Toninho: E eu que tenho de ficar atento, né? Deus me ajude... \r\n", TimeUnit.MILLISECONDS,
 				temp_dialog);
 
-		//desafio 1
+		// desafio 1
 		desafioC1I();
 
 		Digita("[MESTRE] Após o conserto, Toninho e Sheylla seguem viagem. \r\n"
@@ -393,13 +391,14 @@ public class Intro {
 			switch (escolha) {
 			case "1":
 				System.out.println(" - Resolver uma questão proposta pela Esfinge.");
-				//desafio 2
+				// desafio 2
 				desafioC1II();
 				break;
 			case "2":
-				Digita("[MESTRE]: Toninho, num instinto de sobrevivência tipicamente brasileiro resolveu enfrentar a Esfinge. Valeu-se de um tijolo que estava perto e num átimo de desespero, atirou-o contra a criatura.",TimeUnit.MILLISECONDS, temp_dialog);
-				Digita("\n .::::::::::::: A BATALHA COMEÇA ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
-				batalha();	
+				Digita("[MESTRE]: Toninho, num instinto de sobrevivência tipicamente brasileiro resolveu enfrentar a Esfinge. Valeu-se de um tijolo que estava perto e num átimo de desespero, atirou-o contra a criatura.",
+						TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("\n .::::::::::::: A BATALHA COMEÇA ::::::::::::.\n", TimeUnit.MILLISECONDS, temp_dialog);
+				batalha();
 				break;
 			}
 
@@ -539,7 +538,7 @@ public class Intro {
 	static void capitulo_2() throws InterruptedException {
 
 		String escolha;
-		
+
 		Digita("\n[MESTRE]: Toninho continua avançando em direção ao som misterioso com seu machado em mãos.\r\n"
 				+ "\nToninho: Sou Toninho pedreiro matador de demônio. Aqui tem coragem!\r\n"
 				+ "\n[MESTRE:] Toninho vê uma latinha de Brahma duplo malte próximo a uma arvore e já vai em sua direção.\r\n"
@@ -559,76 +558,87 @@ public class Intro {
 				+ "\n[MESTRE]: Toninho se vê em um pico de desespero amarrado, e sem o que fazer, então volta a tentar argumentar com os pigmeus.\r\n"
 				+ "\nToninho: Então eu conheço a Sheylla, a gente derrotou a esfinge, assim sabe, talvez assim, eu posso tentar falar com esse pro player de free fire.\r\n"
 				+ "\n[MESTRE]: Ao ouvir o Toninho os pigmeus de assustam e um deles começa a falar de forma assustada\r\n"
-				+ "\nPigmeu: Sheeeylla!!!!! Você a conhece? \r\n"
-				+ "Toninho: Foi ela que me puxou pra cá!\r\n"
-				+ "\n[MESTRE]: Os pigmeus largam o tronco onde o Toninho estava amarrado e ele bruscamente no chão.\r\n"
+				+ "\nPigmeu: Sheeeylla!!!!! Você a conhece? \r\n" + "Toninho: Foi ela que me puxou pra cá!\r\n"
+				+ "\n[MESTRE]: Os pigmeus largam o tronco onde o Toninho estava amarrado e ele bruscamente cai no chão.\r\n"
 				+ "\nToninho: Ai! Caceta.\r\n"
-				+ "\n[MESTRE]: OS pigmeus correm de volta ao bosque e deixam o Toninho, mas um volta e corta as cordas que o amarravam e corre novamente para o bosque.\r\n"
-				+ "[MESTRE]: Toninho se solta e se levanta e vai em direção ao portão do labirinto em ruinas e nele se encontra um aviso.\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-		
+				+ "\n[MESTRE]: Os pigmeus correm de volta ao bosque e deixam o Toninho, mas um volta e corta as cordas que o amarravam e corre novamente para o bosque.\r\n"
+				+ "[MESTRE]: Toninho se solta, sacode a poeira e vai em direção ao portão do labirinto em ruinas e nele se encontra um aviso.\r\n",
+				TimeUnit.MILLISECONDS, temp_dialog);
+
 		// DESAFIO 1
 		desafioC2I();
-		
+
 		Digita("\n[MESTRE]: O portão se abre e Toninho adentra no labirinto em busca (pedaço do pergaminho?).\r\n"
-				+ "\n[MESTRE]: No primeiro cruzamento Toninho encontra ourto desafio\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-		
-		//DESAFIO 2
+				+ "\n[MESTRE]: No primeiro cruzamento Toninho encontra ourto desafio\r\n", TimeUnit.MILLISECONDS,
+				temp_dialog);
+
+		// DESAFIO 2
 		desafioC2II();
-		
-		Digita("\n[MESTRE]: Toninho avança seguindo o rastro e encontra o final do labirinto\r\n", TimeUnit.MILLISECONDS, temp_dialog);
-		
-		//DESAFIO 3
+
+		Digita("\n[MESTRE]: Toninho avança seguindo o rastro e encontra o final do labirinto\r\n",
+				TimeUnit.MILLISECONDS, temp_dialog);
+
+		// DESAFIO 3
 		desafioC2III();
-		
+
 		Digita("[MESTRE]:Toninho entra na porta final e ve aquela criatura se alimentando de um pigmeu\n"
 				+ "\nToninho: kkk eae man! \n" + "\n[MESTRE]: O minotauro volta seu olhar para o Toninho e berra\n"
 				+ "Minotauro: hahahaha! Opa parece que chegou a sobremesa\n" + "Toninho: Mas o que é isso!\n"
 				+ "\n[MESTRE]: Minotauro avança em direção ao toninho com seu machado! "
-				+ "\n .::::::::::::: A BATALHA COMEÇA ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
-		
-		//BATALHA CONTRA O MINOTAURO
+				+ "\n .::::::::::::: A BATALHA COMEÇA ::::::::::::.\n", TimeUnit.MILLISECONDS, temp_dialog);
+
+		// BATALHA CONTRA O MINOTAURO
 		batalha();
-		
+
 	}
 
 	static void capitulo_3() throws Exception {
 
-		//Historia
-		
-		//Desafio 1 
+		// Historia
+
+		// Desafio 1
 		desafioC3I();
-		
-		//Historia
-		
-		//Desafio 2
+
+		// Historia
+
+		// Desafio 2
 		desafioC3II();
-		
-		//Historia
-		
-		//Desafio 3
+
+		// Historia
+
+		// Desafio 3
 		desafioC3III();
-		
-		//Historia
-		
-		
-		//Desafio final
+
+		// Historia
+
+		// Desafio final
 		desafioC3IV();
-		
-		//Historia
-		
-		//Batalha ?
-		
-		Digita("\n .::::::::::::: A BATALHA COMEÇA ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+
+		// Historia
+
+		// Batalha ?
+
+		Digita("\n .::::::::::::: A BATALHA COMEÇA ::::::::::::.\n", TimeUnit.MILLISECONDS, temp_dialog);
 		batalha();
-		
-		//Historia
-		
-		//creditos finais
+
+		// Historia
+
+		// creditos finais
 		creditos();
 	}
 
 	static void instrucoes() throws Exception {
-		Digita("", TimeUnit.MILLISECONDS, temp_dialog);
+		Digita("Bem-vindo(a) a Diademmor! Em The Architect, você estará encarregado(a)\n"
+				+"de nosso herói Antônio, Toninho para os íntimos, um pedreiro (e brasileiro!)\n"
+				+ "aguerrido que, assim como muitos de nós, aprecia uma Itaipava aos fins de semanas\n"
+				+ "junto da companhia de seus amigos e é claro, de um bom churrasco na laje.\r\n"
+				+ "Após uma noite de algumas Itaipavas e muito sofrimento, o herói tem sua vida virada\n"
+				+ "de cabeça para baixo ao acordar no ano de 2021 em Diademmor, umarealidade paralela caótica.\n"
+				+ "Sua missão será auxiliá-lo durante esta jornada e salvá-lo de monstros, armadilhas, bem como\n"
+				+ "resolver enigmas e questões matemáticas que obstruirão o caminho de Toninho, cuja\n"
+				+ "habilidade matemática se restringe a dividir as contas do bar e estimar quantias de material para determinada obra. \r\n",
+				TimeUnit.MILLISECONDS, temp_dialog);
+		menu();
 	}
 
 	// CRÉDITOS FINAIS
@@ -647,9 +657,9 @@ public class Intro {
 			unit.sleep(tempo_mensagem);
 		}
 	}
-	
+
 	public static void desafioC1I() throws InterruptedException {
-		
+
 		boolean acertou = false;
 		int contador = 3;
 		String alternativa;
@@ -662,21 +672,21 @@ public class Intro {
 
 		do {
 
-			if(contador == 0) {
-				HP = HP -10;
-				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
-						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+			if (contador == 0) {
+				HP = HP - 10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
 				contador = 3;
-				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("\nSuas chances resetaram\n", TimeUnit.MILLISECONDS, temp_dialog);
 			}
 			if (HP <= 0) {
-				Digita("Você morreu!\n"
-						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				System.exit(0);
 			}
-			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nSabendo que a largura em milímetros do Del Rey de Sheylla é 185, determine o valor de x na seguinte expressão:\n"
-					+ "\n(2^4 : 4^2) . (16^1 * 2^3) + x = 185\n",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "\n(2^4 : 4^2) . (16^1 * 2^3) + x = 185\n", TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -758,7 +768,7 @@ public class Intro {
 	}
 
 	public static void desafioC1III() throws InterruptedException {
-		
+
 		boolean acertou = false;
 		int contador = 3;
 		String alternativa;
@@ -770,32 +780,32 @@ public class Intro {
 		r.add("5");
 
 		do {
-			/* Equação 1° grau 
-			 * Para que o nosso Heroi Toninho possa entender o que a Mestre Sheylla tem para apresentar a ele em Diademmor, ajude ele a resolver esta questão de 
-			 * equação de 1° grau que nosso heroi gosta de resolver, para que ele consiga superar esta etapa
-			 * Questão: 4x + 2 = 10
-			 * R. 4x = 10 – 2
-			 *     x = 10 – 2
-			              4
-			           x =  8
-			                4
-			              R.  x = 2 */
+			System.out.println("Ajude Toninho a resolver a seguinte equação que permitirá o acesso ao interior da sala:"
+					+ "4x + 2 = 10 ");
+			/*
+			 * Equação 1° grau Para que o nosso Heroi Toninho possa entender o que a Mestre
+			 * Sheylla tem para apresentar a ele em Diademmor, ajude ele a resolver esta
+			 * questão de equação de 1° grau que nosso heroi gosta de resolver, para que ele
+			 * consiga superar esta etapa Questão: 4x + 2 = 10 R. 4x = 10 – 2 x = 10 – 2 4 x
+			 * = 8 4 R. x = 2
+			 */
 
-			if(contador == 0) {
-				HP = HP -10;
-				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
-						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+			if (contador == 0) {
+				HP = HP - 10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
 				contador = 3;
-				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("\nSuas chances resetaram\n", TimeUnit.MILLISECONDS, temp_dialog);
 			}
 			if (HP <= 0) {
-				Digita("Você morreu!\n"
-						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				System.exit(0);
 			}
-			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\n 4x + 2 = 10 \r\n"
-					+ "O aviso é uma equação de 1° grau que Toninho precisa resolver, para que ele possa abrir a porta\n",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "O aviso é uma equação de 1° grau que Toninho precisa resolver, para que ele possa abrir a porta\n",
+					TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -875,129 +885,128 @@ public class Intro {
 		} while (!acertou);
 		Itaipava++;
 	}
-	
+
 	public static void desafioC1II() throws InterruptedException {
-	
-	boolean acertou = false;
-	int contador = 3;
-	String alternativa;
-	ArrayList<String> r = new ArrayList<String>();
-	r.add("1,8"); // resposta correta
-	r.add("3");
-	r.add("5,7");
-	r.add("2");
-	r.add("0");
 
-	/* Função do 1° grau
-	Questão: f(x) = ax + b, sabendo-se que f(3) = 6 e f (-2) = -3
-	f(3) = 6
-	f(3) = 3a + b -- 3a + b = 6
-	f(-2) = -3
-	f(-2) = -2a + b -- -2a + b = -3
-	3a + b = 6
-	-2a + b = -3
-	5a = 9
-	R. a = 9/5
-	*/
-	do {
+		boolean acertou = false;
+		int contador = 3;
+		String alternativa;
+		ArrayList<String> r = new ArrayList<String>();
+		r.add("1,8"); // resposta correta
+		r.add("3");
+		r.add("5,7");
+		r.add("2");
+		r.add("0");
 
-		if(contador == 0) {
-			HP = HP -10;
-			Digita("Você errou 3 vezes, por isso tonino levou dano\n"
-					+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
-			contador = 3;
-			Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
-		}
-		if (HP <= 0) {
-			Digita("Você morreu!\n"
-					+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
-			System.exit(0);
-		}
-		Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
-				+ "\n A esfinge apresenta a questão:"
-				+ "\nQual é a função: f(x) = ax + b, sabendo-se que f(3) = 6 e f (-2) = -3",TimeUnit.MILLISECONDS, temp_dialog);
-		System.out.println("a) " + r.get(0));
-		System.out.println("b) " + r.get(1));
-		System.out.println("c) " + r.get(2));
-		System.out.println("d) " + r.get(3));
-		System.out.println("e) " + r.get(4));
-		System.out.print("\nEscolha uma alternativa: ");
-		alternativa = entrada.next();
+		/*
+		 * Função do 1° grau Questão: f(x) = ax + b, sabendo-se que f(3) = 6 e f (-2) =
+		 * -3 f(3) = 6 f(3) = 3a + b -- 3a + b = 6 f(-2) = -3 f(-2) = -2a + b -- -2a + b
+		 * = -3 3a + b = 6 -2a + b = -3 (multiplica a segunda linha do sistema linear
+		 * por -1) 3a + b = 6 2a - b = 3 (+b com -b, elimina e sobra 5a = 9) 5a = 9 R. a
+		 * = 9/5 ou 1,8
+		 */
+		do {
+			System.out.println(
+					"Toninho optou pela diplomacia, não que isso facilite muito as coisas. Ajude-o no seguinte enigma proposto pela Esfinge:\n"
+							+ "Uma função de 1° grau é definida pela seguinte estrutura: f(x) = a.x + b. Sabendo que f(3) = 6 e f(-2) = -3, determine o valor de x:");
 
-		switch (alternativa) {
-
-		case "a":
-		case "A":
-			if (r.get(0) == "1,8") {
-				System.out.println("Resposta correta!\n");
-				acertou = true;
-				contador--;
-			} else {
-				System.out.println("Resposta incorreta!\n");
-				Collections.shuffle(r);
-				contador--;
+			if (contador == 0) {
+				HP = HP - 10;
+				Digita("Você errou 3 vezes, por isso Toninho levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
+				contador = 3;
+				Digita("\nSuas chances resetaram\n", TimeUnit.MILLISECONDS, temp_dialog);
 			}
-			break;
-		case "b":
-		case "B":
-			if (r.get(1) == "1,8") {
-				System.out.println("Resposta correta!\n");
-				acertou = true;
-				contador--;
-			} else {
-				System.out.println("Resposta incorreta!\n");
-				Collections.shuffle(r);
-				contador--;
+			if (HP <= 0) {
+				Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
+				System.exit(0);
 			}
-			break;
-		case "c":
-		case "C":
-			if (r.get(2) == "1,8") {
-				System.out.println("Resposta correta!\n");
-				acertou = true;
-				contador--;
-			} else {
-				System.out.println("Resposta incorreta!\n");
-				Collections.shuffle(r);
-				contador--;
-			}
-			break;
-		case "d":
-		case "D":
-			if (r.get(3) == "1,8") {
-				System.out.println("Resposta correta!\n");
-				acertou = true;
-				contador--;
-			} else {
-				System.out.println("Resposta incorreta!\n");
-				Collections.shuffle(r);
-				contador--;
-			}
-			break;
-		case "e":
-		case "E":
-			if (r.get(4) == "1,8") {
-				System.out.println("Resposta correta!\n");
-				acertou = true;
-				contador--;
-			} else {
-				System.out.println("Resposta incorreta!\n");
-				Collections.shuffle(r);
-				contador--;
-			}
-			break;
+			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
+					+ "\n A esfinge apresenta a questão:"
+					+ "\nQual é a função: f(x) = ax + b, sabendo-se que f(3) = 6 e f (-2) = -3", TimeUnit.MILLISECONDS,
+					temp_dialog);
+			System.out.println("a) " + r.get(0));
+			System.out.println("b) " + r.get(1));
+			System.out.println("c) " + r.get(2));
+			System.out.println("d) " + r.get(3));
+			System.out.println("e) " + r.get(4));
+			System.out.print("\nEscolha uma alternativa: ");
+			alternativa = entrada.next();
 
-		default:
-			System.out.println("Escolha invalida!");
-			Collections.shuffle(r);
-		}
+			switch (alternativa) {
 
-	} while (!acertou);
-	Itaipava++;
-}
+			case "a":
+			case "A":
+				if (r.get(0) == "1,8") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "b":
+			case "B":
+				if (r.get(1) == "1,8") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "c":
+			case "C":
+				if (r.get(2) == "1,8") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "d":
+			case "D":
+				if (r.get(3) == "1,8") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+			case "e":
+			case "E":
+				if (r.get(4) == "1,8") {
+					System.out.println("Resposta correta!\n");
+					acertou = true;
+					contador--;
+				} else {
+					System.out.println("Resposta incorreta!\n");
+					Collections.shuffle(r);
+					contador--;
+				}
+				break;
+
+			default:
+				System.out.println("Escolha invalida!");
+				Collections.shuffle(r);
+			}
+
+		} while (!acertou);
+		Itaipava++;
+	}
 
 	public static void desafioC2I() throws InterruptedException {
-
 
 		boolean acertou = false;
 		int contador = 3;
@@ -1010,23 +1019,25 @@ public class Intro {
 		r.add("Literal -  0 / a b / x x \n" + "Coficiente - 2 / 1 1 / 1 3\n");
 
 		do {
-			if(contador == 0) {
-				HP = HP -10;
-				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
-						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+			if (contador == 0) {
+				HP = HP - 10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
 				contador = 3;
-				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("\nSuas chances resetaram\n", TimeUnit.MILLISECONDS, temp_dialog);
 			}
 			if (HP <= 0) {
-				Digita("Você morreu!\n"
-						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				System.exit(0);
 			}
-			Digita(
-					"\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
+					+ "Fora corajoso o bastante para chegar até aqui, mas esteja ciente que o que se encontra além-portão não é para os fracos de espírito"
+					+ "e nem para os covardes. Nem mesmo os deuses, semi-deuses e titãs ousam vagar por estas terras sem uma boa razão.\n "
+					+ "São dignos de prosseguir apenas aqueles que sejam capaz de decifrar este enigma. Prossiga a sua própria conta e risco."
 					+ "\nOs polinômios são expressões algébricas formadas por números (coeficientes) e letras (partes literais).\r\n "
-							+ "Sabendo disso determine quais são as parte literais e os coefiencias das expressôes:\r\n"
-							+ "3x / a^2 - b^2 / x^2 + 3x + 7 \n",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "Sabendo disso determine quais são as parte literais e os coefiencias das expressôes:\r\n"
+					+ "3x / a^2 - b^2 / x^2 + 3x + 7 \n", TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1104,13 +1115,12 @@ public class Intro {
 			}
 
 		} while (!acertou);
-			Itaipava++;
-		
+		Itaipava++;
+
 	}
-	
+
 	public static void desafioC2II() throws InterruptedException {
 
-		
 		boolean acertou = false;
 		int contador = 3;
 		String alternativa;
@@ -1123,23 +1133,24 @@ public class Intro {
 
 		do {
 
-			if(contador == 0) {
-				HP = HP -10;
-				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
-						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+			if (contador == 0) {
+				HP = HP - 10;
+				Digita("Você errou 3 vezes, por isso Toninho levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
 				contador = 3;
-				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("\nSuas chances resetaram\n", TimeUnit.MILLISECONDS, temp_dialog);
 			}
 			if (HP <= 0) {
-				Digita("Você morreu!\n"
-						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				System.exit(0);
 			}
-			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nOs polinômios são formados por termos.\n"
 					+ "A única operação entre os elementos de um termo é a multiplicação"
 					+ "chegando em até 3 termos sendo  monomio(1 termo), binomio(2 termos) e trinomo(3 termos).\n"
-					+ "Sabendo disso termine qual é o polinomio das expressões:\n" + "3x+y / 3ab-4xy-10y / 5abc\n",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "Sabendo disso termine qual é o polinomio das expressões:\n" + "3x+y / 3ab-4xy-10y / 5abc\n",
+					TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1222,7 +1233,6 @@ public class Intro {
 
 	public static void desafioC2III() throws InterruptedException {
 
-
 		boolean acertou = false;
 		int contador = 3;
 		String alternativa;
@@ -1234,20 +1244,21 @@ public class Intro {
 		r.add("10x^3+2x^2+3x+1");
 
 		do {
-			if(contador == 0) {
-				HP = HP -10;
-				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
-						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+			if (contador == 0) {
+				HP = HP - 10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
 				contador = 3;
-				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("\nSuas chances resetaram\n", TimeUnit.MILLISECONDS, temp_dialog);
 			}
 			if (HP <= 0) {
-				Digita("Você morreu!\n"
-						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				System.exit(0);
 			}
-			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
-					+ "\nSome os polinômios:\n" + "a(x)=2x^3+2x^2-3x+1\n" + "b(x)=x^3+3x^2-2x+2\n",TimeUnit.MILLISECONDS, temp_dialog);
+			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
+					+ "\nSome os polinômios:\n" + "a(x)=2x^3+2x^2-3x+1\n" + "b(x)=x^3+3x^2-2x+2\n",
+					TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1327,7 +1338,7 @@ public class Intro {
 		} while (!acertou);
 		Itaipava++;
 	}
-	
+
 	public static void desafioC3I() throws InterruptedException {
 
 		boolean acertou = false;
@@ -1342,21 +1353,22 @@ public class Intro {
 
 		do {
 
-			if(contador == 0) {
-				HP = HP -10;
-				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
-						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+			if (contador == 0) {
+				HP = HP - 10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
 				contador = 3;
-				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("\nSuas chances resetaram\n", TimeUnit.MILLISECONDS, temp_dialog);
 			}
 			if (HP <= 0) {
-				Digita("Você morreu!\n"
-						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				System.exit(0);
 			}
-			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nOs numeros decimais 199 e 250 correspondem,\n"
-					+ "nos sistemas binario e hexadecimal, as seguintes representações:\n",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "nos sistemas binario e hexadecimal, as seguintes representações:\n", TimeUnit.MILLISECONDS,
+					temp_dialog);
 			System.out.println("\na) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1435,27 +1447,29 @@ public class Intro {
 			}
 
 		} while (!acertou);
-		
+
 		Itaipava++;
 	}
-	
+
 	public static void desafioC3II() throws InterruptedException {
-		/*opção para tenta encaixar no enrredo...
+		/*
+		 * opção para tenta encaixar no enrredo...
 		 * 
-		 * Toninho começa a ter alguns flashs de memeria e se lembra de quando estava no bar com seus amigos
-		 * lembra o valor que foi a conta mais não lembra quantas cervejas ele pagou e nem quantas cervejas o cleytinho
-		 * (ou outra pessoa) pagou.
+		 * Toninho começa a ter alguns flashs de memeria e se lembra de quando estava no
+		 * bar com seus amigos lembra o valor que foi a conta mais não lembra quantas
+		 * cervejas ele pagou e nem quantas cervejas o cleytinho (ou outra pessoa)
+		 * pagou.
 		 * 
 		 * 
 		 * se essse enrredo não ajudar a equação seria 2x +4x = 36 e o valor de 2.x � 12
 		 * 
 		 */
-		
+
 		boolean acertou = false;
 		int contador = 3;
 		String alternativa;
 		ArrayList<String> r = new ArrayList<String>();
-		r.add("18"); 
+		r.add("18");
 		r.add("14");
 		r.add("12"); // resposta correta
 		r.add("19");
@@ -1463,21 +1477,22 @@ public class Intro {
 
 		do {
 
-			if(contador == 0) {
-				HP = HP -10;
-				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
-						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+			if (contador == 0) {
+				HP = HP - 10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
 				contador = 3;
-				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("\nSuas chances resetaram\n", TimeUnit.MILLISECONDS, temp_dialog);
 			}
 			if (HP <= 0) {
-				Digita("Você morreu!\n"
-						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				System.exit(0);
 			}
-			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nSabendo que a conta deu R$ 36.00 e Toninho pediu 2 garrafas,\n"
-					+ "e seu amigo pediu 4 garrafas, qual foi o valor que Toninho pagou? \n",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "e seu amigo pediu 4 garrafas, qual foi o valor que Toninho pagou? \n", TimeUnit.MILLISECONDS,
+					temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1557,50 +1572,50 @@ public class Intro {
 
 		} while (!acertou && contador < 3);
 		Itaipava++;
-		
+
 	}
-	
+
 	public static void desafioC3III() throws InterruptedException {
-		
-		/*opção para tenta encaixar no enrredo...
+
+		/*
+		 * opção para tenta encaixar no enrredo...
 		 * 
-		 * Mais uma lembran�a vem a tona quando Toninho poe a mão no bolso e retira um papel
-		 * que parece ser um monte de codigo escrito,
-		 *  matutando um pouco ele se lembra do momento em que pensou em jogar
-		 * na mega sena com toda certeza que iria ganhar.  
-		 
+		 * Mais uma lembran�a vem a tona quando Toninho poe a mão no bolso e retira um
+		 * papel que parece ser um monte de codigo escrito, matutando um pouco ele se
+		 * lembra do momento em que pensou em jogar na mega sena com toda certeza que
+		 * iria ganhar.
+		 * 
 		 * 
 		 */
-		
+
 		boolean acertou = false;
 		int contador = 3;
 		String alternativa;
 		ArrayList<String> r = new ArrayList<String>();
-		r.add("18, 22, 53, 20, 11, 4"); 
+		r.add("18, 22, 53, 20, 11, 4");
 		r.add("14, 17, 23, 31, 48, 52");
-		r.add("12, 6, 54, 55, 39, 13"); 
+		r.add("12, 6, 54, 55, 39, 13");
 		r.add("19, 51, 7, 49, 35, 21");
 		r.add("7, 60, 55, 27, 18, 10");// resposta correta
 
 		do {
 
-			if(contador == 0) {
-				HP = HP -10;
-				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
-						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+			if (contador == 0) {
+				HP = HP - 10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
 				contador = 3;
-				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("\nSuas chances resetaram\n", TimeUnit.MILLISECONDS, temp_dialog);
 			}
 			if (HP <= 0) {
-				Digita("Você morreu!\n"
-						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				System.exit(0);
 			}
-			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\npara nenhum amigo saber os numeros que ele iria jogar,\n"
-					+ "colocou em um papel em hexadecimal os seguintes n�meros,\n "
-					+ "7, 3C, 37, 1B, 12, A"
-					+ "quais numeros representam essa sequencia em decimal?\n",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "colocou em um papel em hexadecimal os seguintes n�meros,\n " + "7, 3C, 37, 1B, 12, A"
+					+ "quais numeros representam essa sequencia em decimal?\n", TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1680,51 +1695,54 @@ public class Intro {
 
 		} while (!acertou && contador < 3);
 		Itaipava++;
-		
+
 	}
-	
+
 	public static void desafioC3IV() throws InterruptedException {
-		
-		/*op��o para tenta encaixar no enrredo...
+
+		/*
+		 * op��o para tenta encaixar no enrredo...
 		 * 
-		 *essa ultima pode ser bem no fim do jogo antes do Toninho tomar o Raio na cabe�a e acordar no
-		 *hospital saindo do coma alcoolico.
+		 * essa ultima pode ser bem no fim do jogo antes do Toninho tomar o Raio na
+		 * cabe�a e acordar no hospital saindo do coma alcoolico.
 		 *
-		 * Toninho pensa em fugir a todo instante quando fixa seu olhar em um muro proximo
-		 * pelas contas de toninho ele est� a 2 metros do muro e o muro tem 1,5 metros de altura
-		 * para se safar dessa toninho tem que calcula friamente seu pulo
+		 * Toninho pensa em fugir a todo instante quando fixa seu olhar em um muro
+		 * proximo pelas contas de toninho ele est� a 2 metros do muro e o muro tem 1,5
+		 * metros de altura para se safar dessa toninho tem que calcula friamente seu
+		 * pulo
 		 * 
 		 *
 		 * 
 		 */
-		
+
 		boolean acertou = false;
 		int contador = 3;
 		String alternativa;
 		ArrayList<String> r = new ArrayList<String>();
-		r.add("x = 2 y = 2"); 
+		r.add("x = 2 y = 2");
 		r.add("x = 0 y = 1,5");// resposta correta
-		r.add("x = 1,6 y = 0"); 
+		r.add("x = 1,6 y = 0");
 		r.add("x = 3 y = 1,45");
 		r.add("x = 1, y = 1,5");
 
 		do {
 
-			if(contador == 0) {
-				HP = HP -10;
-				Digita("Você errou 3 vezes, por isso tonino levou dano\n"
-						+ "HP Toninho - 10 = "+ HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
+			if (contador == 0) {
+				HP = HP - 10;
+				Digita("Você errou 3 vezes, por isso tonino levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
+						TimeUnit.MILLISECONDS, temp_dialog);
 				contador = 3;
-				Digita("\nSuas chances resetaram\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("\nSuas chances resetaram\n", TimeUnit.MILLISECONDS, temp_dialog);
 			}
 			if (HP <= 0) {
-				Digita("Você morreu!\n"
-						+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
+				Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
+						temp_dialog);
 				System.exit(0);
 			}
-			Digita("\nVocê tem "+contador+" chances de acertar antes de levar dano(-10 no HP)\n"
+			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nPensando em formato de gráfico,\n"
-					+ "qual seria a posição de 'x' e 'y' quando Toninho estiver em cima do muro? \n",TimeUnit.MILLISECONDS, temp_dialog);
+					+ "qual seria a posição de 'x' e 'y' quando Toninho estiver em cima do muro? \n",
+					TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1806,205 +1824,199 @@ public class Intro {
 		Itaipava++;
 
 	}
-	
+
 	public static void batalha() throws InterruptedException {
 		boolean morreu = false;
 		int hpI = 100;
 		String escolha;
-		
+
 		int d6 = new Random().nextInt(6) + 1;
 		do {
-			if(hpI <= 0) {
+			if (hpI <= 0) {
 				morreu = true;
 				break;
-			}else if (HP <= 0) {
+			} else if (HP <= 0) {
 				morreu = true;
 				break;
 			}
 			int d20 = new Random().nextInt(20) + 1;
-			int n=d20;
-			System.out.println("\nO que deseja fazer:\n"
-					+ "[1] - Atacar.\n"
-					+ "[2] - Beber Itaipiva\n");
+			int n = d20;
+			System.out.println("\nO que deseja fazer:\n" + "[1] - Atacar.\n" + "[2] - Beber Itaipiva\n");
 			escolha = entrada.next();
 
-			switch(escolha) {
+			switch (escolha) {
 			case "1":
-				Digita("\nJogando os dados...\n"
-						+ "O numero do dado: "+n+"\n",TimeUnit.MILLISECONDS, temp_dialog);
-				if(n > 15 && n <= 25) {
+				Digita("\nJogando os dados...\n" + "O numero do dado: " + n + "\n", TimeUnit.MILLISECONDS, temp_dialog);
+				if (n > 15 && n <= 25) {
 					hpI = hpI - 20;
-					Digita("\nToninho causou 20 de dano no inimigo\n"
-							+ "\nHP do Toninho = " +HP
-							+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
-									
-				}else if(n > 10 && n <= 15) {
+					Digita("\nToninho causou 20 de dano no inimigo\n" + "\nHP do Toninho = " + HP + "\nHP do Inimigo = "
+							+ hpI, TimeUnit.MILLISECONDS, temp_dialog);
+
+				} else if (n > 10 && n <= 15) {
 					hpI = hpI - 10;
-					Digita("\nToninho causou 10 de dano no inimigo\n"
-							+ "\nHP do Toninho = " +HP
-							+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
-						
-				}else if(n > 5 && n <= 10) {
+					Digita("\nToninho causou 10 de dano no inimigo\n" + "\nHP do Toninho = " + HP + "\nHP do Inimigo = "
+							+ hpI, TimeUnit.MILLISECONDS, temp_dialog);
+
+				} else if (n > 5 && n <= 10) {
 					HP = HP - 5;
 					Digita("\nToninho errou o ataque causou 0 de dano no inimigo e tomou 5 de dano\n"
-							+ "\nHP do Toninho = " +HP
-							+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
-					
-				}else if(n >= 0 && n <= 5) {
+							+ "\nHP do Toninho = " + HP + "\nHP do Inimigo = " + hpI, TimeUnit.MILLISECONDS,
+							temp_dialog);
+
+				} else if (n >= 0 && n <= 5) {
 					HP = HP - 10;
 					Digita("\nToninho errou o ataque causou 0 de dano no inimigo e tomou 10 de dano\n"
-							+ "\nHP do Toninho = " +HP
-							+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
-						
+							+ "\nHP do Toninho = " + HP + "\nHP do Inimigo = " + hpI, TimeUnit.MILLISECONDS,
+							temp_dialog);
+
 				}
-				
+
 				break;
 			case "2":
 				if (Itaipava > 0) {
-					Itaipava --;
+					Itaipava--;
 					HP = HP + 10;
-					Digita("Toninho usa a itaipava e ganha +10 de HP e +5 na contagem de dados\n"
-							+ "\nHP do Toninho = " +HP+"\n",TimeUnit.MILLISECONDS, temp_dialog);
-					n = n +5;
-					Digita("\nJogando os dados...\n"
-							+ "O numero do dado: "+n+"\n",TimeUnit.MILLISECONDS, temp_dialog);
-					if(n > 15 && n <= 25) {
+					Digita("Toninho usa a itaipava e ganha +10 de HP e +5 na contagem de dados\n" + "\nHP do Toninho = "
+							+ HP + "\n", TimeUnit.MILLISECONDS, temp_dialog);
+					n = n + 5;
+					Digita("\nJogando os dados...\n" + "O numero do dado: " + n + "\n", TimeUnit.MILLISECONDS,
+							temp_dialog);
+					if (n > 15 && n <= 25) {
 						hpI = hpI - 20;
-						Digita("\nToninho causou 20 de dano no inimigo\n"
-								+ "\nHP do Toninho = " +HP
-								+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
-						break;	
-					}else if(n > 10 && n <= 15) {
+						Digita("\nToninho causou 20 de dano no inimigo\n" + "\nHP do Toninho = " + HP
+								+ "\nHP do Inimigo = " + hpI, TimeUnit.MILLISECONDS, temp_dialog);
+						break;
+					} else if (n > 10 && n <= 15) {
 						hpI = hpI - 10;
-						Digita("\nToninho causou 10 de dano no inimigo\n"
-								+ "\nHP do Toninho = " +HP
-								+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
-						break;	
-					}else if(n > 5 && n <= 10) {
+						Digita("\nToninho causou 10 de dano no inimigo\n" + "\nHP do Toninho = " + HP
+								+ "\nHP do Inimigo = " + hpI, TimeUnit.MILLISECONDS, temp_dialog);
+						break;
+					} else if (n > 5 && n <= 10) {
 						HP = HP - 5;
 						Digita("\nToninho errou o ataque causou 0 de dano no inimigo e tomou 5 de dano\n"
-								+ "\nHP do Toninho = " +HP
-								+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
-						break;	
-					}else if(n >= 0 && n <= 5) {
+								+ "\nHP do Toninho = " + HP + "\nHP do Inimigo = " + hpI, TimeUnit.MILLISECONDS,
+								temp_dialog);
+						break;
+					} else if (n >= 0 && n <= 5) {
 						HP = HP - 10;
 						Digita("\nToninho errou o ataque causou 0 de dano no inimigo e tomou 10 de dano\n"
-								+ "\nHP do Toninho = " +HP
-								+ "\nHP do Inimigo = "+hpI,TimeUnit.MILLISECONDS, temp_dialog);
-						break;	
+								+ "\nHP do Toninho = " + HP + "\nHP do Inimigo = " + hpI, TimeUnit.MILLISECONDS,
+								temp_dialog);
+						break;
 					}
 				} else {
 					System.out.println("Toninho não possui itaipaiva");
 					break;
 				}
-				
+
 				break;
 
 			default:
 				System.out.println("\nOpção invalida!");
 			}
-			
-			
-		}while(morreu == false);
-		
+
+		} while (morreu == false);
+
 		System.out.println("\nProximo estagio");
-		if(hpI <= 0) {
-			Digita("\nVoce matou o boss",TimeUnit.MILLISECONDS, temp_dialog);
-		}else if (HP <= 0) {
-			Digita("Você morreu!\n"
-					+ "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n",TimeUnit.MILLISECONDS, temp_dialog);
-			System.exit(0);;
+		if (hpI <= 0) {
+			Digita("\nVoce matou o boss", TimeUnit.MILLISECONDS, temp_dialog);
+		} else if (HP <= 0) {
+			Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
+					temp_dialog);
+			System.exit(0);
+			;
 		}
 	}
-	
+
 	public static void batalhaMino() throws InterruptedException {
 		int hpMino = 100;
-		String escolha="", decisao ="", decisao1="";
-		
+		String escolha = "", decisao = "", decisao1 = "";
+
 		// int d20 = rand.nextInt(21); // DADO DE 20 FACES - GLOBAL
 		// int d6 = rand.nextInt(7); // DADO DE 6 FACES - GLOBAL
-
 
 		do {
 
 			System.out.println("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n");
-		escolha = entrada.next();
+			escolha = entrada.next();
 			int n;
 			switch (escolha) {
 			case "1":
 				n = d20;
-				System.out.println("\nO numero do dado: "+n);
+				System.out.println("\nO numero do dado: " + n);
 				if (n >= 15 && n <= 20) {
-					Digita(
-							"[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
-									+ "[MESTRE]: Toninho aproveita a oportunidade e decepa a cabeça da criatura\n ",TimeUnit.MILLISECONDS, temp_dialog);
+					Digita("[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
+							+ "[MESTRE]: Toninho aproveita a oportunidade e decepa a cabeça da criatura\n ",
+							TimeUnit.MILLISECONDS, temp_dialog);
 					break;
 				} else if (n >= 10 && n < 15) {
 					hpMino = hpMino - 50;
-					Digita(
-							"[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
-									+ "\n HP Minotauro - 50 = " + hpMino
-									+ "\n[MESTRE]: Toninho vai finalizar a criatura, mas escorrega e da tempo do minotauro se levantar\n",TimeUnit.MILLISECONDS, temp_dialog);
-
-					
+					Digita("[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
+							+ "\n HP Minotauro - 50 = " + hpMino
+							+ "\n[MESTRE]: Toninho vai finalizar a criatura, mas escorrega e da tempo do minotauro se levantar\n",
+							TimeUnit.MILLISECONDS, temp_dialog);
 
 					do {
-						Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n",TimeUnit.MILLISECONDS, temp_dialog);
+						Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n", TimeUnit.MILLISECONDS,
+								temp_dialog);
 						decisao = entrada.next();
 						switch (decisao) {
 						case "1":
 							n = d20;
-							Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+							Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
 							if (n >= 10 && n <= 20) {
-								Digita(
-										"[MESTRE]: Minotauro enfurecido pega seu machado em tenta acertar o Toninho, mas o mesmo consegue esquivar e decepa a cabeça da criatura",TimeUnit.MILLISECONDS, temp_dialog);
+								Digita("[MESTRE]: Minotauro enfurecido pega seu machado em tenta acertar o Toninho, mas o mesmo consegue esquivar e decepa a cabeça da criatura",
+										TimeUnit.MILLISECONDS, temp_dialog);
 								break;
 							} else if (n >= 0 && n < 10) {
 								HP = HP - 20;
 								Digita("[MESTRE]: O minotauro erra machadada, mas o impacto joga toninho a parede\n"
-										+ "\n HP Toninho - 20 = \" + hpMino" + HP,TimeUnit.MILLISECONDS, temp_dialog);
-								
+										+ "\n HP Toninho - 20 = \" + hpMino" + HP, TimeUnit.MILLISECONDS, temp_dialog);
 
-								Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n",TimeUnit.MILLISECONDS, temp_dialog);
+								Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n",
+										TimeUnit.MILLISECONDS, temp_dialog);
 								decisao1 = entrada.next();
 
 								do {
 									switch (decisao1) {
 									case "1":
 										n = d20;
-										Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+										Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
 										if (n >= 5 && n <= 20) {
 											Digita("[MESTRE]: O minotauro avança novamente em direção a Toninho, mas se levanta rapidamente e se esquiva no tempo exato, fazendo o minotauro acertar a parede, ficando atordoado\n"
-													+ "[MESTRE]: Aproveitando a situação Toninho e acerta a cabeça do minotauro, dacapitando-a\n",TimeUnit.MILLISECONDS, temp_dialog);
+													+ "[MESTRE]: Aproveitando a situação Toninho e acerta a cabeça do minotauro, dacapitando-a\n",
+													TimeUnit.MILLISECONDS, temp_dialog);
 											break;
 										} else if (n < 5) {
-											Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
+											Digita("Toninho morre ou perde e a sheylla o ajuda!", TimeUnit.MILLISECONDS,
+													temp_dialog);
 											System.exit(0);
 											break;
 										}
 									case "2":
 										if (Itaipava > 0) {
-											Itaipava --;
+											Itaipava--;
 											n = d20 + 3;
-											Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+											Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
 											if (n >= 5 && n <= 20) {
 												Digita("[MESTRE]: O minotauro avança novamente em direção a Toninho, mas se levanta rapidamente e se esquiva no tempo exato, fazendo o minotauro acertar a parede, ficando atordoado\n"
-														+ "[MESTRE]: Aproveitando a situação Toninho e acerta a cabeça do minotauro, dacapitando-a\n",TimeUnit.MILLISECONDS, temp_dialog);
+														+ "[MESTRE]: Aproveitando a situação Toninho e acerta a cabeça do minotauro, dacapitando-a\n",
+														TimeUnit.MILLISECONDS, temp_dialog);
 												break;
 											} else if (n < 5) {
 												Digita("Toninho morre ou perde e a sheylla o ajuda!\n"
-														+ "GAME OVER!!!!",TimeUnit.MILLISECONDS, temp_dialog);
+														+ "GAME OVER!!!!", TimeUnit.MILLISECONDS, temp_dialog);
 												System.exit(0);
 												break;
 											}
 										} else {
-											Digita("Toninho não possui itaipaiva",TimeUnit.MILLISECONDS, temp_dialog);
+											Digita("Toninho não possui itaipaiva", TimeUnit.MILLISECONDS, temp_dialog);
 											decisao1 = "a";
 											break;
 										}
 									default:
 										System.out.println("\nOpção invalida!");
-										
+
 									}
 
 								} while (!decisao1.equals("1") && !decisao1.equals("2"));
@@ -2014,74 +2026,76 @@ public class Intro {
 							break;
 						case "2":
 							if (Itaipava > 0) {
-								Itaipava --;
+								Itaipava--;
 								n = d20 + 3;
-								Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+								Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
 								if (n >= 5 && n <= 20) {
-									Digita(
-											"[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
-													+ "[MESTRE]: Toninho aproveita a oportunidade e decepa a cabeça da criatura\n ",TimeUnit.MILLISECONDS, temp_dialog);
+									Digita("[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
+											+ "[MESTRE]: Toninho aproveita a oportunidade e decepa a cabeça da criatura\n ",
+											TimeUnit.MILLISECONDS, temp_dialog);
 									break;
 								} else if (n < 5) {
-									Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
+									Digita("Toninho morre ou perde e a sheylla o ajuda!", TimeUnit.MILLISECONDS,
+											temp_dialog);
 									System.exit(0);
 									break;
 								}
 							} else {
-								Digita("Toninho não possui itaipaiva",TimeUnit.MILLISECONDS, temp_dialog);
+								Digita("Toninho não possui itaipaiva", TimeUnit.MILLISECONDS, temp_dialog);
 								decisao = "a";
 								break;
 							}
 
 						default:
 							System.out.println("\nOpção invalida!");
-							
+
 						}
 
 					} while (!decisao.equals("1") && !decisao.equals("2"));
 					break;
-				}else if (n >= 0 && n < 10) {
-					Digita("[MESTRE]: colocar algo do toninho tomando dano",TimeUnit.MILLISECONDS, temp_dialog);
+				} else if (n >= 0 && n < 10) {
+					Digita("[MESTRE]: colocar algo do toninho tomando dano", TimeUnit.MILLISECONDS, temp_dialog);
 					HP = HP - 20;
 
-					
-
 					do {
-						Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n",TimeUnit.MILLISECONDS, temp_dialog);
+						Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n", TimeUnit.MILLISECONDS,
+								temp_dialog);
 						decisao1 = entrada.next();
 						switch (decisao1) {
 						case "1":
 							n = d20;
-							Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+							Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
 							if (n >= 5 && n <= 20) {
-								Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+								Digita(" fazer algo que o toninho ganhe", TimeUnit.MILLISECONDS, temp_dialog);
 								break;
 							} else if (n < 5) {
-								Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
+								Digita("Toninho morre ou perde e a sheylla o ajuda!", TimeUnit.MILLISECONDS,
+										temp_dialog);
 								System.exit(0);
 								break;
 							}
 						case "2":
 							if (Itaipava > 0) {
-								Itaipava --;
+								Itaipava--;
 								n = d20 + 3;
-								Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+								Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
 								if (n >= 5 && n <= 20) {
-									Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+									Digita(" fazer algo que o toninho ganhe", TimeUnit.MILLISECONDS, temp_dialog);
 									break;
 								} else if (n < 5) {
-									Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
+									Digita("Toninho morre ou perde e a sheylla o ajuda!", TimeUnit.MILLISECONDS,
+											temp_dialog);
 									System.exit(0);
 									break;
 								}
 							} else {
-								Digita("Toninho não possui itaipaiva",TimeUnit.MILLISECONDS, temp_dialog);
+								Digita("Toninho não possui itaipaiva", TimeUnit.MILLISECONDS, temp_dialog);
 								decisao1 = "a";
 								break;
 							}
 						default:
 							System.out.println("\nOpção invalida!");
-							
+
 						}
 
 					} while (!decisao1.equals("1") && !decisao1.equals("2"));
@@ -2089,32 +2103,30 @@ public class Intro {
 				break;
 			case "2":
 				if (Itaipava > 0) {
-					Itaipava --;
+					Itaipava--;
 					n = d20 + 3;
-					Digita("\nO numero do dado: "+n,TimeUnit.MILLISECONDS, temp_dialog);
+					Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
 					if (n >= 5 && n <= 30) {
-						Digita(" fazer algo que o toninho ganhe",TimeUnit.MILLISECONDS, temp_dialog);
+						Digita(" fazer algo que o toninho ganhe", TimeUnit.MILLISECONDS, temp_dialog);
 						break;
 					} else if (n < 5) {
-						Digita("Toninho morre ou perde e a sheylla o ajuda!",TimeUnit.MILLISECONDS, temp_dialog);
+						Digita("Toninho morre ou perde e a sheylla o ajuda!", TimeUnit.MILLISECONDS, temp_dialog);
 						System.exit(0);
 						break;
 					}
 				} else {
-					Digita("Toninho não possui itaipaiva sdadsaddads",TimeUnit.MILLISECONDS, temp_dialog);
-					
+					Digita("Toninho não possui itaipaiva sdadsaddads", TimeUnit.MILLISECONDS, temp_dialog);
+
 					escolha = "a";
 					break;
 				}
 			default:
 				System.out.println("\nOpção invalida!");
-				
+
 			}
-			
+
 		} while (!escolha.equals("1") && !escolha.equals("2"));
 		System.out.println("\nToninho foi para o proximo desafio");
 	}
-	
-	
-}
 
+}
