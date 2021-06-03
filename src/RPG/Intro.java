@@ -76,9 +76,12 @@ public class Intro {
 				intro();
 			case "1":
 				capitulo_1();
+				capitulo_2();
+				capitulo_3();
 				break;
 			case "2":
 				capitulo_2();
+				capitulo_3();
 				break;
 			case "3":
 				capitulo_3();
