@@ -14,7 +14,7 @@ public class Intro {
 
 	// TEMPO DE DELAY DAS MENSAGENS: MODIFIQUE PARA ZERO PARA JOGAR SEM DELAY.
 	// PADRÃO 70,150,25
-	static int temp_dialog = 70, temp_narrativa = 150, temp_transicao = 25;
+	static int temp_dialog = 15, temp_narrativa = 15, temp_transicao = 5;
 
 	public static void main(String[] args) throws Exception {
 
@@ -223,16 +223,16 @@ public class Intro {
 						Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
 								+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
 								+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
-								+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n",
+								+ "Sheylla:E a ultima e mais perigosa, eu.\r\n",
 								TimeUnit.MILLISECONDS, temp_dialog);
 
 						Digita("\n[MESTRE]: Segredos", TimeUnit.MILLISECONDS, temp_dialog);
 
-						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n",
+						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu o arquétipo de sua última obra, motivo pelo qual você está aqui. \r\n",
 								TimeUnit.MILLISECONDS, temp_dialog);
 						break;
 					case "2":
-						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n",
+						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu o arquétipo de sua obra final, motivo pelo qual você está aqui.\r\n",
 								TimeUnit.MILLISECONDS, temp_dialog);
 
 						Digita("\n[MESTRE]: Criaturas", TimeUnit.MILLISECONDS, temp_dialog);
@@ -240,7 +240,7 @@ public class Intro {
 						Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
 								+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
 								+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
-								+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n",
+								+ "Sheylla:E a ultima e mais perigosa, eu.\r\n",
 								TimeUnit.MILLISECONDS, temp_dialog);
 						break;
 					default:
@@ -256,7 +256,7 @@ public class Intro {
 				Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
 						+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
 						+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
-						+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n",
+						+ "Sheylla:E a ultima e mais perigosa, eu.\r\n",
 						TimeUnit.MILLISECONDS, temp_dialog);
 
 				Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
@@ -269,11 +269,11 @@ public class Intro {
 						Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n",
 								TimeUnit.MILLISECONDS, temp_dialog);
 						Digita("\n[MESTRE]: Segredos", TimeUnit.MILLISECONDS, temp_dialog);
-						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n",
+						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu o arquétipo de sua obra final, motivo pelo qual você está aqui.\r\n",
 								TimeUnit.MILLISECONDS, temp_dialog);
 						break;
 					case "2":
-						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n",
+						Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu o arquétipo de sua obra final, motivo pelo qual você está aqui.\r\n",
 								TimeUnit.MILLISECONDS, temp_dialog);
 						Digita("\n[MESTRE]: Criador", TimeUnit.MILLISECONDS, temp_dialog);
 						Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n",
@@ -289,7 +289,7 @@ public class Intro {
 				} while (!escolha.equals("1") && !escolha.equals("2"));
 				break;
 			case "3":
-				Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu algo de extremo valor (depois pensamos nisso)\r\n",
+				Digita("Sheylla: Há boatos de que antes de abandonar Diademmor, o criador escondeu o arquétipo de sua obra final, motivo pelo qual você está aqui.\r\n",
 						TimeUnit.MILLISECONDS, temp_dialog);
 
 				Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
@@ -305,14 +305,14 @@ public class Intro {
 						Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
 								+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
 								+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
-								+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n",
+								+ "Sheylla:E a ultima e mais perigosa, eu.\r\n",
 								TimeUnit.MILLISECONDS, temp_dialog);
 						break;
 					case "2":
 						Digita("Sheylla: existem 3 grandes criaturas que guardam o segredo dessa masmorra\r\n"
 								+ "Sheylla:A Esfinge é um monstro alado com corpo de muher e leão que afligia a cidade de Tebas, e quem erra seus enigmas é devorado!\r\n"
 								+ "Sheylla:O Minotauro, um monstro com cabeça e cauda de touro e corpo de homem, possue um grande machado e uma força fisica descomunal\r\n"
-								+ "Sheylla:E a ultima e mais perigosa, Medusa uma criatura do sexo feminino, uma das três Górgonas, com cabelos de serpente e quem quer que olhe diretamente para ela, vira pedra em instantes\r\n",
+								+ "Sheylla:E a ultima e mais perigosa, eu.\r\n",
 								TimeUnit.MILLISECONDS, temp_dialog);
 						Digita("\n[MESTRE]: Criador", TimeUnit.MILLISECONDS, temp_dialog);
 						Digita("Sheylla: Pouco se sabe sobre ele, mas os boatos são de que esta é a última obra de Dédalo antes de sua derrocada. \r\n",
@@ -350,7 +350,7 @@ public class Intro {
 		desafioC1I();
 
 		Digita("[MESTRE] Após o conserto, Toninho e Sheylla seguem viagem. \r\n"
-				+ "Sheylla: Não foi tão ruim assim, foi, Antônio? \r\n" + "[blablabla]\r\n"
+				+ "Sheylla: Não foi tão ruim assim, foi, Antônio? \r\n" + "Toninho: Poderia ter sido pior.\r\n"
 				+ "\n[MESTRE] Após uma breve jornada, Sheylla e Toninho chegam ao destino pretendido. Observa-se uma cratera intransponível à frente, e o conteúdo que guarda o outro lado é obstruído pela ainda densa névoa.\r\n"
 				+ "\nSheylla: Chegamos. Sabe o porquê de eu trazê-lo aqui, Antônio?\r\n"
 				+ "Toninho: Nem sei se quero saber...\r\n" + "Sheylla: Preciso que você construa uma ponte. \r\n"
@@ -385,15 +385,13 @@ public class Intro {
 				temp_dialog);
 
 		Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n" + "[1] Diplomacia\r\n"
-				+ "[2] Sair no soco com a Esfinge.\r\n"
-				+ "Toninho estará munido de um tijolo que achou entre os escombros.\r\n", TimeUnit.MILLISECONDS,
-				temp_dialog);
+				+ "[2] Sair no soco com a Esfinge.\r\n", TimeUnit.MILLISECONDS,	temp_dialog);
 		escolha = entrada.next();
 
 		do {
 			switch (escolha) {
 			case "1":
-				System.out.println(" - Resolver uma questão proposta pela Esfinge.");
+				System.out.println(" - Resolva uma questão proposta pela Esfinge.");
 				// desafio 2
 				desafioC1II();
 				break;
@@ -446,7 +444,7 @@ public class Intro {
 				+ "\n[MESTRE] Toninho, com a obra em mãos, dirige-se à saída onde encontra Sheylla com um ar de quem falhou em seu objetivo.\r\n"
 				+ "\nToninho: Ô dona Shirlley, veja se é isso o que você queria. \r\n"
 				+ "Sheylla: Devo admitir Antônio, você excedeu minhas expectativas! Até pensei que estaria mor... er... digo, mortificado pela arquitetura do prédio. \r\n"
-				+ "Toninho: Que nada, já construí casa muito “mais melhor” que isso. – detalhe nas aspas\r\n"
+				+ "Toninho: Que nada, já construí casa muito “mais melhor” que isso.\r\n"
 				+ "Sheylla: Tenho certeza que sim.\r\n" + "Toninho: Também achei esse bilhete no meio.\r\n"
 				+ "\n[MESTRE]: Sheylla silencia-se enquanto lê atentamente. \r\n"
 				+ "\nSheylla: Aqui diz que isso é apenas uma parte do projeto. \r\n"
@@ -488,20 +486,18 @@ public class Intro {
 			default:
 				System.out.println("\nOpção inválida!");
 				Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-						+ "[1 - DESCANSAR] Nois é merecedor. \r" + "+ 10HP\r\n"
-						+ "[2 – PROSSEGUIR] Confia que o pai tá monstro.\r\n"
-						+ "O jogador receberá um “buff” no seu ataque ou na defesa, vou analisar melhor depois.\r\n",
-						TimeUnit.MILLISECONDS, temp_dialog);
+						+ "[1 - DESCANSAR] Nois é merecedor. + 10HP\r\n"
+						+ "[2 – PROSSEGUIR] Confia que o pai tá monstro.\r\n", TimeUnit.MILLISECONDS, temp_dialog);
 				escolha = entrada.next();
 			}
 
 		} while (!escolha.equals("1") && !escolha.equals("2"));
 
 		Digita("Horas se passam, e ao momento que ambos chegam em seu próximo destino, a escuridão da noite já começa a pairar.\r\n"
-				+ "Sheylla: Antônio, creio que esteja mais ou menos inteirado dos perigos que aqui habitam. De agora em diante você deverá"
+				+ "Sheylla: Antônio, creio que esteja mais ou menos inteirado dos perigos que aqui habitam. De agora em diante você deverá "
 				+ "prosseguir sozinho.\r\n" + "Toninho: A senhora não virá por quê?\r\n"
 				+ "Sheylla: É que... é... hm... eu tenho coisas a fazer. Estou contando com sua bravura.\r\n"
-				+ "[MESTRE]: Sheylla sai do carro e vai em direção ao porta-malas. Toninho ouve os passos e percebe que ela retorna com algo em mãos."
+				+ "[MESTRE]: Sheylla sai do carro e vai em direção ao porta-malas. Toninho ouve os passos e percebe que ela retorna com algo em mãos.\n"
 				+ "Sheylla: Leve isso contigo, creio que lhe será útil.\r\n"
 				+ "Toninho: Um machado, dona Sheylla? Para que eu precisaria disso?\r\n"
 				+ "Sheylla: Eu pensei que você já estivesse ciente do porquê... E não é um machado qualquer, dizem que pertenceu a Hefesto, filho de Zeus e ferreiro dos deuses.\r\n"
@@ -519,7 +515,7 @@ public class Intro {
 				+ "Sheylla: MAS QUE DIABOS! E EU ESPERANDO QUE FOSSE ALGO SÉRIO! Já nem sei por que eu ainda me impressiono com sua futilidade.\r\n"
 				+ "Toninho: Mas e aí, tem?\r\n" + "Sheylla: NÃO! VÁ LOGO!\r\n"
 				+ "Toninho: Ouch, mas não precisava gritar também!\r\n"
-				+ "Sheylla: Faça tua parte e eu providenciarei, está bom assim?\r\nnnnn" + "Toninho: Justo.\r\n"
+				+ "Sheylla: Faça tua parte e eu providenciarei, está bom assim?\r\n" + "Toninho: Justo.\r\n"
 				+ "Sheylla: Boa sorte.\r\n"
 				+ "[MESTRE]: Sheylla entra em seu Del Rey e volta pelo mesmo caminho que percorrera anteriormente, enquanto Toninho observa os faróis "
 				+ "se estreitarem na escuridão.\r\n"
@@ -539,8 +535,6 @@ public class Intro {
 	}
 
 	static void capitulo_2() throws InterruptedException {
-
-		String escolha;
 
 		Digita("\n[MESTRE]: Toninho continua avançando em direção ao som misterioso com seu machado em mãos.\r\n"
 				+ "\nToninho: Sou Toninho pedreiro matador de demônio. Aqui tem coragem!\r\n"
@@ -759,14 +753,14 @@ public class Intro {
 		Digita("\n[MESTRE]: Após o desembaraço da situação, a obra segue seu ritmo. \r\n"
 				+ "[MESTRE]: Ao passo que o fim é eminente, Toninho começa a se questionar sobre o que Nelson lhe disse anteriormente. \r\n"
 				+ "[MESTRE]: Os constantes murmúrios entre Sheylla e Perdix aumentam ainda mais a desconfiança, ao ponto que ele começa a pensar consigo mesmo. \r\n"
-				+ "Toninho: [será que estou fazendo o certo? E se Nelson tiver mesmo razão?] \r\n"
+				+ "Toninho: Será que estou fazendo o certo? E se Nelson tiver mesmo razão? \r\n"
 				+ "Sheylla: Está tudo bem, Antônio? Há algo te incomodando? \r\n"
 				+ "Toninho: Na verdade, tem sim. Eu sei de tudo, Sheylla! Tudo! Dos seus planos de dominar ‘nois’ humano tudo. Só por cima do meu cadáver!\r\n"
 				+ "Sheylla: HAHAHAHA HUMANO INOCENTE! VOCÊ JÁ NÃO É MAIS NECESSÁRIO À NOSSA CAUSA! LOGO A SUA RAÇA SE CURVARÁ DIANTE DE NOSSOS DESIGNIOS!\r\n"
 				, TimeUnit.MILLISECONDS, temp_dialog);
 		
 		Digita("\nSelecione a sua resposta de acordo com o numero correspondente: \n"
-				+ "[1]: Dar o sinal ás criaturas de Nelson. \r\n" + "[2]: Atacar Sheylla.\r\n", TimeUnit.MILLISECONDS,
+				+ "[1]: Dar o sinal às criaturas de Nelson. \r\n" + "[2]: Atacar Sheylla.\r\n", TimeUnit.MILLISECONDS,
 				temp_dialog);
 		escolha = entrada.next();
 
@@ -826,7 +820,7 @@ public class Intro {
 				+ "\nTV: Na manhã desta segunda-feira, uma estranha rachadura surgiu no solo, na parte central de Diadema. \r\n"
 				+ "TV: A prefeitura isolou o local e engenheiros do município investigam o ocorrido. \r\n"
 				+ "TV: De acordo com informações fornecidas por funcionários da secretaria municipal de obras e infraestrutura de Diadema que preferiram ficar anônimos,\r\n"
-				+ "TV: a tendência é que esta aumente caso nada seja feito, ao ponte de, em 2021, \r\n"
+				+ "TV: a tendência é que esta aumente caso nada seja feito, ao ponto de, em 2021, \r\n"
 				+ "TV: tornar-se uma cratera intransponível, impedindo o fluxo de automóveis e transeuntes, \r\n"
 				+ "TV: bem como afetando os edifícios nas redondezas. \r\n"
 				+ "Toninho: ESTÁ ACONTECENDO! AAAAAAAAAA MISERICÓRDIA\r\n"
@@ -841,7 +835,7 @@ public class Intro {
 	static void instrucoes() throws Exception {
 		Digita("Bem-vindo(a) a Diademmor! Em The Architect, você estará encarregado(a)\n"
 				+"de nosso herói Antônio, Toninho para os íntimos, um pedreiro (e brasileiro!)\n"
-				+ "aguerrido que, assim como muitos de nós, aprecia uma Itaipava aos fins de semanas\n"
+				+ "aguerrido que, assim como muitos de nós, aprecia uma Itaipira aos fins de semana\n"
 				+ "junto da companhia de seus amigos e é claro, de um bom churrasco na laje.\r\n"
 				+ "Após uma noite de algumas Itaipavas e muito sofrimento, o herói tem sua vida virada\n"
 				+ "de cabeça para baixo ao acordar no ano de 2021 em Diademmor, umarealidade paralela caótica.\n"
@@ -989,6 +983,8 @@ public class Intro {
 		r.add("8");
 		r.add("9");
 		r.add("5");
+		
+		Collections.shuffle(r);
 
 		do {
 			System.out.println("Ajude Toninho a resolver a seguinte equação que permitirá o acesso ao interior da sala:"
@@ -1003,7 +999,7 @@ public class Intro {
 
 			if (contador == 0) {
 				HP = HP - 10;
-				Digita("Você errou 3 vezes, por isso tonino levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
+				Digita("Você errou 3 vezes, por isso Toninho levou dano\n" + "HP Toninho - 10 = " + HP + "\n",
 						TimeUnit.MILLISECONDS, temp_dialog);
 				contador = 3;
 				Digita("\nSuas chances resetaram\n", TimeUnit.MILLISECONDS, temp_dialog);
@@ -1108,6 +1104,8 @@ public class Intro {
 		r.add("5,7");
 		r.add("2");
 		r.add("0");
+		
+		Collections.shuffle(r);
 
 		/*
 		 * Função do 1° grau Questão: f(x) = ax + b, sabendo-se que f(3) = 6 e f (-2) =
@@ -1228,6 +1226,8 @@ public class Intro {
 		r.add("Literal -  3 / 1 1 / 1 3 7 \n" + "Coficiente - x / a^2 b^2 / x^2 x\n");
 		r.add("Literal -  3x / 2a^2 1^2 / 0^2 1 \n" + "Coficiente - 3 / 0 0 / x c 7\n");
 		r.add("Literal -  0 / a b / x x \n" + "Coficiente - 2 / 1 1 / 1 3\n");
+		
+		Collections.shuffle(r);
 
 		do {
 			if (contador == 0) {
@@ -1247,8 +1247,8 @@ public class Intro {
 					+ "e nem para os covardes. Nem mesmo os deuses, semi-deuses e titãs ousam vagar por estas terras sem uma boa razão.\n "
 					+ "São dignos de prosseguir apenas aqueles que sejam capaz de decifrar este enigma. Prossiga a sua própria conta e risco."
 					+ "\nOs polinômios são expressões algébricas formadas por números (coeficientes) e letras (partes literais).\r\n "
-					+ "Sabendo disso determine quais são as parte literais e os coefiencias das expressôes:\r\n"
-					+ "3x / a^2 - b^2 / x^2 + 3x + 7 \n", TimeUnit.MILLISECONDS, temp_dialog);
+					+ "Sabendo disso determine quais são as parte literais e os coeficientes das expressôes a seguir:\r\n"
+					+ "1) 3x / 2) a^2 - b^2 / 3) x^2 + 3x + 7 \n", TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1342,6 +1342,8 @@ public class Intro {
 		r.add("Monômio / Trinômio / Binômio");
 		r.add("Monômio / Monômio / Monômio");
 
+		Collections.shuffle(r);
+		
 		do {
 
 			if (contador == 0) {
@@ -1358,9 +1360,9 @@ public class Intro {
 			}
 			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
 					+ "\nOs polinômios são formados por termos.\n"
-					+ "A única operação entre os elementos de um termo é a multiplicação"
-					+ "chegando em até 3 termos sendo  monomio(1 termo), binomio(2 termos) e trinomo(3 termos).\n"
-					+ "Sabendo disso termine qual é o polinomio das expressões:\n" + "3x+y / 3ab-4xy-10y / 5abc\n",
+					+ "A única operação entre os elementos de um termo é a multiplicação "
+					+ ", sendo  monômio(1 termo), binômio(2 termos), trinômio(3 termos) e polinômio (+ de 3 termos).\n"
+					+ "Sabendo disso, termine qual é o grau das expressões a seguir:\n" + "1) 3x+y / 2) 3ab-4xy-10y / 3) 5abc\n",
 					TimeUnit.MILLISECONDS, temp_dialog);
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
@@ -1453,6 +1455,8 @@ public class Intro {
 		r.add("2x^3-2x^2+4x+18");
 		r.add("x^3-3x^2+5x-7");
 		r.add("10x^3+2x^2+3x+1");
+		
+		Collections.shuffle(r);
 
 		do {
 			if (contador == 0) {
@@ -1468,8 +1472,9 @@ public class Intro {
 				System.exit(0);
 			}
 			Digita("\nVocê tem " + contador + " chances de acertar antes de levar dano(-10 no HP)\n"
-					+ "\nSome os polinômios:\n" + "a(x)=2x^3+2x^2-3x+1\n" + "b(x)=x^3+3x^2-2x+2\n",
+					+ "\nSome os polinômios:\n" + "a(x) = 2x^3+2x^2-3x+1\n" + "b(x) = x^3+3x^2-2x+2\n",
 					TimeUnit.MILLISECONDS, temp_dialog);
+			System.out.println("\n");
 			System.out.println("a) " + r.get(0));
 			System.out.println("b) " + r.get(1));
 			System.out.println("c) " + r.get(2));
@@ -1561,7 +1566,9 @@ public class Intro {
 		r.add("11010111 e FA");
 		r.add("11000111 e F9	");
 		r.add("11100111 e FA.");
-
+		
+		Collections.shuffle(r);
+		
 		do {
 
 			if (contador == 0) {
@@ -1674,6 +1681,8 @@ public class Intro {
 		r.add("24 e 12"); // resposta correta
 		r.add("19 e 18");
 		r.add("10 e 17");
+		
+		Collections.shuffle(r);
 
 		do {
 
@@ -1789,6 +1798,8 @@ public class Intro {
 		r.add("12, 6, 54, 55, 39, 13");
 		r.add("19, 51, 7, 49, 35, 21");
 		r.add("7, 60, 55, 27, 18, 10");// resposta correta
+		
+		Collections.shuffle(r);
 
 		do {
 
@@ -1895,7 +1906,6 @@ public class Intro {
 		int hpI = 100;
 		String escolha;
 
-		int d6 = new Random().nextInt(6) + 1;
 		do {
 			if (hpI <= 0) {
 				morreu = true;
@@ -1906,7 +1916,7 @@ public class Intro {
 			}
 			int d20 = new Random().nextInt(20) + 1;
 			int n = d20;
-			System.out.println("\nO que deseja fazer:\n" + "[1] - Atacar.\n" + "[2] - Beber Itaipiva\n");
+			System.out.println("\nO que deseja fazer:\n" + "[1] - Atacar.\n" + "[2] - Beber Itaipira\n");
 			escolha = entrada.next();
 
 			switch (escolha) {
@@ -1941,7 +1951,7 @@ public class Intro {
 				if (Itaipira > 0) {
 					Itaipira--;
 					HP = HP + 10;
-					Digita("Toninho usa a itaipava e ganha +10 de HP e +5 na contagem de dados\n" + "\nHP do Toninho = "
+					Digita("Toninho usa a Itaipira e ganha +10 de HP e +5 na contagem de dados\n" + "\nHP do Toninho = "
 							+ HP + "\n", TimeUnit.MILLISECONDS, temp_dialog);
 					n = n + 5;
 					Digita("\nJogando os dados...\n" + "O numero do dado: " + n + "\n", TimeUnit.MILLISECONDS,
@@ -1983,7 +1993,7 @@ public class Intro {
 		} while (morreu == false);
 
 		if (hpI <= 0) {
-			Digita("\nVoce matou o boss", TimeUnit.MILLISECONDS, temp_dialog);
+			Digita("\nVocê matou o boss!\n", TimeUnit.MILLISECONDS, temp_dialog);
 		} else if (HP <= 0) {
 			Digita("Você morreu!\n" + "\n .::::::::::::: GAME OVER!!! ::::::::::::.\n", TimeUnit.MILLISECONDS,
 					temp_dialog);
@@ -1992,205 +2002,8 @@ public class Intro {
 		}
 	}
 
-	public static void batalhaMino() throws InterruptedException {
-		int hpMino = 100;
-		String escolha = "", decisao = "", decisao1 = "";
+	
 
-		// int d20 = rand.nextInt(21); // DADO DE 20 FACES - GLOBAL
-		// int d6 = rand.nextInt(7); // DADO DE 6 FACES - GLOBAL
-
-		do {
-
-			System.out.println("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n");
-			escolha = entrada.next();
-			int n;
-			switch (escolha) {
-			case "1":
-				n = d20;
-				System.out.println("\nO numero do dado: " + n);
-				if (n >= 15 && n <= 20) {
-					Digita("[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
-							+ "[MESTRE]: Toninho aproveita a oportunidade e decepa a cabeça da criatura\n ",
-							TimeUnit.MILLISECONDS, temp_dialog);
-					break;
-				} else if (n >= 10 && n < 15) {
-					hpMino = hpMino - 50;
-					Digita("[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
-							+ "\n HP Minotauro - 50 = " + hpMino
-							+ "\n[MESTRE]: Toninho vai finalizar a criatura, mas escorrega e da tempo do minotauro se levantar\n",
-							TimeUnit.MILLISECONDS, temp_dialog);
-
-					do {
-						Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n", TimeUnit.MILLISECONDS,
-								temp_dialog);
-						decisao = entrada.next();
-						switch (decisao) {
-						case "1":
-							n = d20;
-							Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
-							if (n >= 10 && n <= 20) {
-								Digita("[MESTRE]: Minotauro enfurecido pega seu machado em tenta acertar o Toninho, mas o mesmo consegue esquivar e decepa a cabeça da criatura",
-										TimeUnit.MILLISECONDS, temp_dialog);
-								break;
-							} else if (n >= 0 && n < 10) {
-								HP = HP - 20;
-								Digita("[MESTRE]: O minotauro erra machadada, mas o impacto joga toninho a parede\n"
-										+ "\n HP Toninho - 20 = \" + hpMino" + HP, TimeUnit.MILLISECONDS, temp_dialog);
-
-								Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n",
-										TimeUnit.MILLISECONDS, temp_dialog);
-								decisao1 = entrada.next();
-
-								do {
-									switch (decisao1) {
-									case "1":
-										n = d20;
-										Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
-										if (n >= 5 && n <= 20) {
-											Digita("[MESTRE]: O minotauro avança novamente em direção a Toninho, mas se levanta rapidamente e se esquiva no tempo exato, fazendo o minotauro acertar a parede, ficando atordoado\n"
-													+ "[MESTRE]: Aproveitando a situação Toninho e acerta a cabeça do minotauro, dacapitando-a\n",
-													TimeUnit.MILLISECONDS, temp_dialog);
-											break;
-										} else if (n < 5) {
-											Digita("Toninho morre ou perde e a sheylla o ajuda!", TimeUnit.MILLISECONDS,
-													temp_dialog);
-											System.exit(0);
-											break;
-										}
-									case "2":
-										if (Itaipira > 0) {
-											Itaipira--;
-											n = d20 + 3;
-											Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
-											if (n >= 5 && n <= 20) {
-												Digita("[MESTRE]: O minotauro avança novamente em direção a Toninho, mas se levanta rapidamente e se esquiva no tempo exato, fazendo o minotauro acertar a parede, ficando atordoado\n"
-														+ "[MESTRE]: Aproveitando a situação Toninho e acerta a cabeça do minotauro, dacapitando-a\n",
-														TimeUnit.MILLISECONDS, temp_dialog);
-												break;
-											} else if (n < 5) {
-												Digita("Toninho morre ou perde e a sheylla o ajuda!\n"
-														+ "GAME OVER!!!!", TimeUnit.MILLISECONDS, temp_dialog);
-												System.exit(0);
-												break;
-											}
-										} else {
-											Digita("Toninho não possui Itaipira", TimeUnit.MILLISECONDS, temp_dialog);
-											decisao1 = "a";
-											break;
-										}
-									default:
-										System.out.println("\nOpção invalida!");
-
-									}
-
-								} while (!decisao1.equals("1") && !decisao1.equals("2"));
-
-								break;
-							}
-							break;
-						case "2":
-							if (Itaipira > 0) {
-								Itaipira--;
-								n = d20 + 3;
-								Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
-								if (n >= 5 && n <= 20) {
-									Digita("[MESTRE]: Toninho esquiva do ataque do minotauro passando por de baixo de suas pernas e acerta um golpe certeiro na bunda do minotauro o fazendo cair\n"
-											+ "[MESTRE]: Toninho aproveita a oportunidade e decepa a cabeça da criatura\n ",
-											TimeUnit.MILLISECONDS, temp_dialog);
-									break;
-								} else if (n < 5) {
-									Digita("Toninho morre ou perde e a sheylla o ajuda!", TimeUnit.MILLISECONDS,
-											temp_dialog);
-									System.exit(0);
-									break;
-								}
-							} else {
-								Digita("Toninho não possui itaipaiva", TimeUnit.MILLISECONDS, temp_dialog);
-								decisao = "a";
-								break;
-							}
-
-						default:
-							System.out.println("\nOpção invalida!");
-
-						}
-
-					} while (!decisao.equals("1") && !decisao.equals("2"));
-					break;
-				} else if (n >= 0 && n < 10) {
-					Digita("[MESTRE]: colocar algo do toninho tomando dano", TimeUnit.MILLISECONDS, temp_dialog);
-					HP = HP - 20;
-
-					do {
-						Digita("Escolha:\n" + "[1 - jogar os dados]\n" + "[2 - Usar itaipava]\n", TimeUnit.MILLISECONDS,
-								temp_dialog);
-						decisao1 = entrada.next();
-						switch (decisao1) {
-						case "1":
-							n = d20;
-							Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
-							if (n >= 5 && n <= 20) {
-								Digita(" fazer algo que o toninho ganhe", TimeUnit.MILLISECONDS, temp_dialog);
-								break;
-							} else if (n < 5) {
-								Digita("Toninho morre ou perde e a sheylla o ajuda!", TimeUnit.MILLISECONDS,
-										temp_dialog);
-								System.exit(0);
-								break;
-							}
-						case "2":
-							if (Itaipira > 0) {
-								Itaipira--;
-								n = d20 + 3;
-								Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
-								if (n >= 5 && n <= 20) {
-									Digita(" fazer algo que o toninho ganhe", TimeUnit.MILLISECONDS, temp_dialog);
-									break;
-								} else if (n < 5) {
-									Digita("Toninho morre ou perde e a sheylla o ajuda!", TimeUnit.MILLISECONDS,
-											temp_dialog);
-									System.exit(0);
-									break;
-								}
-							} else {
-								Digita("Toninho não possui itaipaiva", TimeUnit.MILLISECONDS, temp_dialog);
-								decisao1 = "a";
-								break;
-							}
-						default:
-							System.out.println("\nOpção invalida!");
-
-						}
-
-					} while (!decisao1.equals("1") && !decisao1.equals("2"));
-				}
-				break;
-			case "2":
-				if (Itaipira > 0) {
-					Itaipira--;
-					n = d20 + 3;
-					Digita("\nO numero do dado: " + n, TimeUnit.MILLISECONDS, temp_dialog);
-					if (n >= 5 && n <= 30) {
-						Digita(" fazer algo que o toninho ganhe", TimeUnit.MILLISECONDS, temp_dialog);
-						break;
-					} else if (n < 5) {
-						Digita("Toninho morre ou perde e a sheylla o ajuda!", TimeUnit.MILLISECONDS, temp_dialog);
-						System.exit(0);
-						break;
-					}
-				} else {
-					Digita("Toninho não possui itaipaiva sdadsaddads", TimeUnit.MILLISECONDS, temp_dialog);
-
-					escolha = "a";
-					break;
-				}
-			default:
-				System.out.println("\nOpção invalida!");
-
-			}
-
-		} while (!escolha.equals("1") && !escolha.equals("2"));
-		System.out.println("\nToninho foi para o proximo desafio");
-	}
 
 }
+
