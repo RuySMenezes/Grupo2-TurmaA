@@ -14,7 +14,7 @@ public class Intro {
 
 	// TEMPO DE DELAY DAS MENSAGENS: MODIFIQUE PARA ZERO PARA JOGAR SEM DELAY.
 	// PADRÃO 70,150,25
-	static int temp_dialog = 15, temp_narrativa = 15, temp_transicao = 5;
+	static int temp_dialog = 70, temp_narrativa = 150, temp_transicao = 25;
 
 	public static void main(String[] args) throws Exception {
 
